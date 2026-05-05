@@ -38,6 +38,7 @@
             --brand-purple: #381b3e; 
             --brand-purple-light: #4d2655;
             --brand-gold: #a37c4f; 
+            --brand-gold-light: #c19a6b;
             --brand-gold-dark: #8b6841;
             --text-main: #1d1d1f; 
             --text-muted: #6e6e73;
@@ -64,14 +65,8 @@
         a { text-decoration: none; transition: all 0.3s ease; }
 
         /* Typography */
-        h1, h2, h3, h4 {
-            letter-spacing: -0.03em;
-            font-weight: 800;
-            line-height: 1.1;
-        }
-
-        h1 { font-size: 4.5rem; margin-bottom: 0.5rem; color: var(--text-light); }
-        h2 { font-size: 3rem; margin-bottom: 1.5rem; color: var(--brand-purple); }
+        h1, h2, h3, h4 { letter-spacing: -0.03em; font-weight: 800; line-height: 1.1; color: var(--brand-purple); }
+        h2 { font-size: 2.5rem; margin-bottom: 1.5rem; }
         h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-main); font-weight: 700; }
         p { font-size: 1.125rem; color: var(--text-muted); margin-bottom: 1.5rem; font-weight: 400; }
 
@@ -107,12 +102,8 @@
         .nav-menu ul { list-style: none; padding: 0; margin: 0; }
         .nav-menu a { color: var(--text-light); font-size: 1.5rem; font-weight: 600; margin: 1.5rem 0; display: block; position: relative; }
         .nav-menu a:hover { color: var(--brand-gold); }
-
         .header-actions { display: flex; align-items: center; gap: 1rem; z-index: 1001; }
-        .btn-header-call {
-            background-color: var(--brand-gold); color: var(--text-light); padding: 0.6rem 1.5rem;
-            font-size: 0.875rem; font-weight: 700; border-radius: 50px;
-        }
+        .btn-header-call { background-color: var(--brand-gold); color: var(--text-light); padding: 0.6rem 1.5rem; font-size: 0.875rem; font-weight: 700; border-radius: 50px; }
         .btn-header-call:hover { background-color: var(--brand-gold-dark); transform: scale(1.02); }
 
         /* Buttons */
@@ -128,23 +119,36 @@
         .btn-outline { border: 2px solid var(--text-main); color: var(--text-main); background: transparent; }
         .btn-outline:hover { background-color: var(--text-main); color: var(--text-light); }
 
-        /* Full Background Hero */
+        /* --- INNOVATIVE HERO SECTION --- */
+        @keyframes panImage {
+            0% { transform: scale(1.05) translate(0, 0); }
+            100% { transform: scale(1.1) translate(-2%, 2%); }
+        }
+
         .hero {
             position: relative;
-            padding: 8rem 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            margin-top: calc(var(--nav-height) * -1); /* Pull up under header */
+            padding-top: var(--nav-height);
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
             background-image: url('home1.png');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
-            min-height: 80vh;
-            display: flex;
-            align-items: center;
+            z-index: 0;
+            animation: panImage 25s ease-in-out infinite alternate;
         }
 
         .hero-overlay {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
+            background: linear-gradient(135deg, rgba(56, 27, 62, 0.95) 0%, rgba(56, 27, 62, 0.6) 45%, rgba(0, 0, 0, 0.4) 100%);
             z-index: 1;
         }
 
@@ -153,84 +157,182 @@
             z-index: 2;
             display: grid;
             grid-template-columns: 1fr;
-            gap: 4rem;
+            gap: 3rem;
             align-items: center;
-        }
-
-        .hero-content h1 { line-height: 1; }
-        .hero-content h2 { font-size: 2rem; color: var(--brand-gold); font-weight: 500; margin-top: 1rem; }
-
-        /* Frosted Glass Form Card */
-        .hero-form-card {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            padding: 3rem;
-            border-radius: 24px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-            border: 1px solid rgba(255,255,255,0.3);
-        }
-
-        .hero-form-card h3 { margin-bottom: 1.5rem; color: var(--text-main); font-size: 2rem; }
-
-        .form-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
-        .form-group { display: flex; flex-direction: column; gap: 0.25rem; }
-        .form-group label { font-size: 0.875rem; font-weight: 600; color: var(--text-main); }
-        .form-control {
-            padding: 1rem 1.25rem; border: 1px solid var(--border-color); border-radius: 8px;
-            font-family: var(--font-stack); font-size: 1rem; background-color: var(--bg-surface);
-            transition: all 0.3s ease; color: var(--text-main); width: 100%;
-        }
-        .form-control:focus { outline: none; border-color: var(--brand-gold); box-shadow: 0 0 0 3px rgba(163, 124, 79, 0.1); }
-
-        /* Why Choose Us - Apple Rows */
-        .features-section { background-color: var(--bg-surface); padding-bottom: 2rem; }
-        .section-header { text-align: center; margin-bottom: 4rem; }
-        
-        .feature-row {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
             padding: 4rem 0;
-            border-bottom: 1px solid var(--border-color);
-            align-items: center;
         }
 
-        .feature-row:last-child { border-bottom: none; }
-        .feature-title { font-size: 1.75rem; color: var(--brand-purple); font-weight: 700; line-height: 1.2; }
-        .feature-text { font-size: 1.125rem; color: var(--text-muted); line-height: 1.6; }
-        .feature-btn { justify-self: start; }
+        .hero-content { color: var(--text-light); }
+        
+        .hero-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(163, 124, 79, 0.2);
+            border: 1px solid rgba(163, 124, 79, 0.5);
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--brand-gold-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(4px);
+        }
 
-        /* About Us Split */
+        .hero-content h1 {
+            font-size: 3.5rem;
+            line-height: 1.05;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-content h2 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            /* Gold Gradient Text */
+            background: linear-gradient(90deg, var(--brand-gold-light) 0%, var(--brand-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 500px;
+        }
+
+        /* Next-Gen Frosted Glass Form */
+        .glass-form-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(24px) saturate(150%);
+            -webkit-backdrop-filter: blur(24px) saturate(150%);
+            padding: 3rem 2.5rem;
+            border-radius: 32px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.3);
+        }
+
+        .glass-form-card h3 {
+            color: var(--text-light);
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .glass-form-card p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .form-row { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+        
+        /* Floating Labels CSS */
+        .floating-group {
+            position: relative;
+            margin-bottom: 1.25rem;
+        }
+
+        .floating-input {
+            width: 100%;
+            padding: 1.25rem 1rem 0.5rem 1rem;
+            font-size: 1rem;
+            color: var(--text-light);
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            font-family: var(--font-stack);
+        }
+
+        .floating-input:focus {
+            outline: none;
+            background: rgba(0, 0, 0, 0.4);
+            border-color: var(--brand-gold);
+            box-shadow: 0 0 0 4px rgba(163, 124, 79, 0.2);
+        }
+
+        .floating-label {
+            position: absolute;
+            top: 50%;
+            left: 1rem;
+            transform: translateY(-50%);
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.6);
+            pointer-events: none;
+            transition: all 0.2s ease;
+        }
+
+        /* Float the label up when focused or has content */
+        .floating-input:focus ~ .floating-label,
+        .floating-input:not(:placeholder-shown) ~ .floating-label {
+            top: 0.8rem;
+            font-size: 0.75rem;
+            color: var(--brand-gold-light);
+            font-weight: 600;
+        }
+
+        .btn-submit-glass {
+            width: 100%;
+            padding: 1.125rem;
+            margin-top: 1rem;
+            background: var(--brand-gold);
+            color: var(--text-light);
+            border: none;
+            border-radius: 12px;
+            font-size: 1.125rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(163, 124, 79, 0.3);
+        }
+
+        .btn-submit-glass:hover {
+            background: var(--brand-gold-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 15px 25px rgba(163, 124, 79, 0.4);
+        }
+
+        /* --- REST OF THE SITE (Bento Grid, About, etc.) --- */
+        
+        .features-section { background-color: var(--bg-base); }
+        .section-header { text-align: center; margin-bottom: 3rem; }
+        
+        .bento-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+
+        .bento-card {
+            background-color: var(--bg-surface); padding: 3rem; border-radius: 24px;
+            border: 1px solid var(--border-color); transition: all 0.4s ease; position: relative; overflow: hidden;
+            display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start;
+        }
+        .bento-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.05); border-color: var(--brand-gold); }
+        .bento-card h3 { color: var(--brand-purple); margin-bottom: 1rem; }
+        .bento-card p { margin-bottom: 2rem; flex-grow: 1; }
+        .bento-large { background-color: var(--brand-purple); color: var(--text-light); }
+        .bento-large h3 { color: var(--brand-gold); }
+        .bento-large p { color: rgba(255,255,255,0.8); }
+
         .about-section { background-color: var(--bg-base); padding: 6rem 0; }
         .about-grid { display: grid; grid-template-columns: 1fr; gap: 4rem; align-items: center; }
         .about-img-container { width: 100%; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.08); background-color: var(--brand-purple-light); }
         .about-img-container img { width: 100%; height: auto; display: block; object-fit: cover; }
         
-        /* Services Section (Dark Mode) */
         .services-section { background-color: var(--text-main); padding: 6rem 0; color: var(--text-light); text-align: center; }
         .services-section h2 { color: var(--text-light); margin-bottom: 4rem; }
         .services-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; text-align: left; }
         .service-card h3 { color: var(--text-light); border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem; margin-bottom: 1.5rem; }
         .service-card p { color: rgba(255,255,255,0.7); }
 
-        /* Full Width Parallax Images */
-        .parallax-divider {
-            width: 100%;
-            height: 400px;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed; /* Creates parallax effect */
-        }
+        .parallax-divider { width: 100%; height: 400px; background-size: cover; background-position: center; background-attachment: fixed; }
 
-        /* Testimonials */
         .testimonials { background-color: var(--bg-surface); }
         .test-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
         .test-card { padding: 3rem; background-color: var(--bg-base); border-radius: 24px; border: 1px solid var(--border-color); }
         .test-card h4 { color: var(--text-main); margin-bottom: 1rem; font-size: 1.25rem; }
         .test-card p { font-style: italic; font-size: 1rem; color: var(--text-muted); }
 
-        /* FAQ Accordions */
         .faq-section { background-color: var(--bg-base); }
         details { background-color: var(--bg-surface); border: 1px solid var(--border-color); border-radius: 16px; margin-bottom: 1rem; transition: all 0.3s ease; overflow: hidden; }
         details:hover { border-color: var(--brand-gold); }
@@ -240,7 +342,6 @@
         summary::-webkit-details-marker { display: none; }
         .faq-answer { padding: 0 1.5rem 1.5rem 1.5rem; color: var(--text-muted); font-size: 1.05rem; line-height: 1.6; }
 
-        /* Standardized Footer */
         footer { background-color: var(--brand-purple); padding: 5rem 0 2rem 0; color: var(--text-light); border-top: 4px solid var(--brand-gold); }
         .footer-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; margin-bottom: 4rem; }
         .logo-img-footer { max-height: 60px; width: auto; display: block; }
@@ -254,7 +355,6 @@
         .footer-legal-links a { color: rgba(255, 255, 255, 0.5); font-size: 0.875rem; text-decoration: underline; }
         .footer-legal-links a:hover { color: var(--brand-gold); }
 
-        /* Desktop Optimization */
         @media (min-width: 992px) {
             .menu-icon { display: none; }
             .nav-menu { position: static; height: auto; width: auto; background-color: transparent; flex-direction: row; align-items: center; }
@@ -266,14 +366,14 @@
             .header-actions { margin-left: auto; }
             
             .hero-grid { grid-template-columns: 1.2fr 0.8fr; gap: 6rem; }
-            .form-grid.row-2 { grid-template-columns: 1fr 1fr; }
+            .hero-content h1 { font-size: 5.5rem; }
+            .hero-content h2 { font-size: 3rem; }
+            .form-row { grid-template-columns: 1fr 1fr; }
 
-            /* Tech-Spec Rows */
-            .feature-row { grid-template-columns: 1fr 1.5fr auto; gap: 4rem; }
-            .feature-btn { justify-self: end; }
+            .bento-grid { grid-template-columns: repeat(2, 1fr); }
+            .bento-large { grid-column: span 2; }
             
             .about-grid { grid-template-columns: 1fr 1.5fr; gap: 6rem; }
-            
             .services-grid { grid-template-columns: repeat(3, 1fr); gap: 4rem; }
             .test-grid { grid-template-columns: repeat(3, 1fr); }
             
@@ -307,38 +407,40 @@
     <main>
         
         <section class="hero">
+            <div class="hero-bg"></div>
             <div class="hero-overlay"></div>
             <div class="container hero-grid">
                 
                 <div class="hero-content">
-                    <h1>Lioness Roofing</h1>
-                    <h2>Tough Like A Mother</h2>
+                    <div class="hero-badge">Georgia's Premium Roofing Contractor</div>
+                    <h1>Lioness<br>Roofing</h1>
+                    <h2>Tough Like A Mother.</h2>
+                    <p>Engineered for ultimate protection. Crafted with absolute precision. Secure your den today.</p>
                 </div>
 
-                <div class="hero-form-card">
+                <div class="glass-form-card">
                     <h3>Get In Touch</h3>
+                    <p>Request your professional inspection.</p>
                     <form action="/contact" method="POST">
-                        <div class="form-grid row-2">
-                            <div class="form-group">
-                                <label for="firstName">First name *</label>
-                                <input type="text" id="firstName" name="firstName" class="form-control" required>
+                        <div class="form-row">
+                            <div class="floating-group">
+                                <input type="text" id="firstName" name="firstName" class="floating-input" placeholder=" " required>
+                                <label for="firstName" class="floating-label">First name *</label>
                             </div>
-                            <div class="form-group">
-                                <label for="lastName">Last name *</label>
-                                <input type="text" id="lastName" name="lastName" class="form-control" required>
+                            <div class="floating-group">
+                                <input type="text" id="lastName" name="lastName" class="floating-input" placeholder=" " required>
+                                <label for="lastName" class="floating-label">Last name *</label>
                             </div>
                         </div>
-                        <div class="form-grid" style="margin-top: 1rem;">
-                            <div class="form-group">
-                                <label for="phone">Phone *</label>
-                                <input type="tel" id="phone" name="phone" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email *</label>
-                                <input type="email" id="email" name="email" class="form-control" required>
-                            </div>
-                            <button type="submit" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Submit</button>
+                        <div class="floating-group">
+                            <input type="tel" id="phone" name="phone" class="floating-input" placeholder=" " required>
+                            <label for="phone" class="floating-label">Phone number *</label>
                         </div>
+                        <div class="floating-group">
+                            <input type="email" id="email" name="email" class="floating-input" placeholder=" " required>
+                            <label for="email" class="floating-label">Email address *</label>
+                        </div>
+                        <button type="submit" class="btn-submit-glass">Submit Request</button>
                     </form>
                 </div>
 
@@ -351,36 +453,33 @@
                     <h2>Why Choose Lioness</h2>
                 </div>
 
-                <div class="feature-row">
-                    <div class="feature-title">Code-Compliant<br>Craftsmanship</div>
-                    <div class="feature-text">Every roof we install is engineered to meet - and exceed - building code standards. We don't just replace shingles; we design complete roofing systems built for longevity. From matching proper materials to the roof's pitch to ensuring precise ventilation and watertight protection, every detail is evaluated with durability and compliance in mind. We build our roofs to last - because a Lioness protects her den for life.</div>
-                    <div class="feature-btn"><a href="tel:7705888830" class="btn btn-primary">Call Now</a></div>
+                <div class="bento-grid">
+                    <div class="bento-card bento-large">
+                        <h3>Code-Compliant Craftsmanship</h3>
+                        <p>Every roof we install is engineered to meet - and exceed - building code standards. We don't just replace shingles; we design complete roofing systems built for longevity. From matching proper materials to the roof's pitch to ensuring precise ventilation and watertight protection, every detail is evaluated with durability and compliance in mind. We build our roofs to last - because a Lioness protects her den for life.</p>
+                        <a href="tel:7705888830" class="btn btn-gold" style="align-self: flex-start;">Call Now</a>
+                    </div>
+                    <div class="bento-card">
+                        <h3>Flashing Done Right</h3>
+                        <p>Most roof failures begin where flashing fails. That’s why we go above and beyond - custom-fitting every piece with the proper gauge metal and precision detailing. While many roofers overlook this critical step or skip cutting flashing into brick, stone, or stucco, we never do. Our flashing is engineered, not improvised, because lasting protection starts at the details.</p>
+                        <a href="/contact" class="btn btn-outline">Get in Touch</a>
+                    </div>
+                    <div class="bento-card">
+                        <h3>Enhanced Protection at All Penetrations</h3>
+                        <p>We apply ice and water shield around all roof penetrations - and wherever your roof meets a wall, not just where it is required like the valleys - to ensure your home stays protected from water intrusion, even in vulnerable areas.</p>
+                        <a href="/services" class="btn btn-outline">Protect Your Home</a>
+                    </div>
+                    <div class="bento-card">
+                        <h3>Lifetime-Grade Materials</h3>
+                        <p>Every roof includes lifetime silicone pipe jacks, not the cheap rubber ones that dry out and crack within a decade. We believe in doing it once - and doing it right.</p>
+                        <a href="/roofinspections" class="btn btn-outline">Call For Inspection</a>
+                    </div>
+                    <div class="bento-card">
+                        <h3>Detail-Driven Service</h3>
+                        <p>We’re obsessed with the little things — the details most roofers assume you’ll never notice. Like leaving no caulked nails showing, granulating every caulked nail, and designing our roofs to be not only functionally long lasting, but aesthetically seamless. From start to finish, we prioritize long-term quality over shortcuts.</p>
+                        <a href="/about" class="btn btn-outline">See For Yourself</a>
+                    </div>
                 </div>
-
-                <div class="feature-row">
-                    <div class="feature-title">Flashing<br>Done Right</div>
-                    <div class="feature-text">Most roof failures begin where flashing fails. That’s why we go above and beyond - custom-fitting every piece with the proper gauge metal and precision detailing. While many roofers overlook this critical step or skip cutting flashing into brick, stone, or stucco, we never do. Our flashing is engineered, not improvised, because lasting protection starts at the details.</div>
-                    <div class="feature-btn"><a href="/contact" class="btn btn-primary">Get in Touch</a></div>
-                </div>
-
-                <div class="feature-row">
-                    <div class="feature-title">Enhanced Protection<br>at All Penetrations</div>
-                    <div class="feature-text">We apply ice and water shield around all roof penetrations - and wherever your roof meets a wall, not just where it is required like the valleys - to ensure your home stays protected from water intrusion, even in vulnerable areas.</div>
-                    <div class="feature-btn"><a href="/services" class="btn btn-outline">Protect Your Home</a></div>
-                </div>
-
-                <div class="feature-row">
-                    <div class="feature-title">Lifetime-Grade<br>Materials</div>
-                    <div class="feature-text">Every roof includes lifetime silicone pipe jacks, not the cheap rubber ones that dry out and crack within a decade. We believe in doing it once - and doing it right.</div>
-                    <div class="feature-btn"><a href="/roofinspections" class="btn btn-outline">Call For Inspection</a></div>
-                </div>
-
-                <div class="feature-row">
-                    <div class="feature-title">Detail-Driven<br>Service</div>
-                    <div class="feature-text">We’re obsessed with the little things — the details most roofers assume you’ll never notice. Like leaving no caulked nails showing, granulating every caulked nail, and designing our roofs to be not only functionally long lasting, but aesthetically seamless. That is why most of our roofs are featured on our social media platforms. From start to finish, we prioritize long-term quality over shortcuts.</div>
-                    <div class="feature-btn"><a href="/about" class="btn btn-outline">See For Yourself</a></div>
-                </div>
-
             </div>
         </section>
 
@@ -428,22 +527,18 @@
                     <h2>Client Testimonials</h2>
                 </div>
                 <div class="test-grid">
-                    
                     <div class="test-card">
                         <h4>Chris</h4>
                         <p>"Talon was referred by a friend. He did a full roof replacement for them and came out to inspect mine. I was very impressed by Talon's honesty, because he said he would take a look at the roof and if it had a lot of issues he would show me what the problem was... Talon fixed all of that and it took him less than an hour, and he didn't charge me a thing. He let me know that I have another 10 to 15 years on my roof... Highly recommend this guy."</p>
                     </div>
-
                     <div class="test-card">
                         <h4>John B.</h4>
                         <p>"Talon is the best! He helped us through a difficult process with our insurance company Allstate. Turns out I had a bad policy and there was nothing I could do so Talon helped negotiate with Allstate to get me a max settlement. Then he gave me a big discount on the roof! We financed it through our bank, and Talon gave us a lifetime roof package! The work was done in a day and it was very impressive... Call this company, you won't regret it!"</p>
                     </div>
-
                     <div class="test-card">
                         <h4>Kristine B.</h4>
                         <p>"Talon is the best roofer by far! We were in a spot where we had hail damage to our roof and our insurance company Allstate was denying us. Talon and one of his associates came by and helped us through what seemed like a very complicated process, and got us completely covered... He didn't even stop with our roof, he made sure that we got paid for everything that was damaged... High level of communication, definitely satisfied with the product that he gave us."</p>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -453,21 +548,18 @@
                 <div class="section-header">
                     <h2>Frequently Asked Questions</h2>
                 </div>
-                
                 <details>
                     <summary>What sets Lioness Roofing apart from other roofers?</summary>
                     <div class="faq-answer">
                         We don’t just “shingle and go.” We design and install complete roofing systems with precision - overseeing the decking, underlayment, ventilation, flashing, and finishing stages with a plan to go above manufacture and building code standards - a lioness watches over every corner of her den. Our approach is rooted in craftsmanship, honesty, and doing the job right the first time.
                     </div>
                 </details>
-
                 <details>
                     <summary>Do you help with storm damage and insurance claims?</summary>
                     <div class="faq-answer">
                         Yes. It’s one of our specialties. From free inspections to claim documentation and meeting with adjusters, we stand by your side like a lioness shielding her cubs. We ensure your claim reflects true damage, not shortcuts.
                     </div>
                 </details>
-
                 <details>
                     <summary>Are you licensed, insured, and local?</summary>
                     <div class="faq-answer">
