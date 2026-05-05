@@ -24,6 +24,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <script type="application/ld+json">
     {
@@ -73,23 +74,11 @@
         a { text-decoration: none; transition: all 0.3s ease; }
 
         /* Typography */
-        h1, h2, h3, h4 {
-            letter-spacing: -0.03em;
-            font-weight: 800;
-            line-height: 1.1;
-            color: var(--brand-purple);
-        }
-
-        h1 { font-size: 4rem; margin-bottom: 1.5rem; text-align: center; }
+        h1, h2, h3, h4 { letter-spacing: -0.03em; font-weight: 800; line-height: 1.1; color: var(--brand-purple); }
+        h1 { font-size: 3.5rem; margin-bottom: 1.5rem; text-align: center; } /* Scaled down slightly for mobile */
         h2 { font-size: 2.5rem; margin-bottom: 1rem; }
         h3 { font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--brand-purple); font-weight: 700; }
-        
-        p {
-            font-size: 1.125rem;
-            color: var(--text-muted);
-            margin-bottom: 1.5rem;
-            font-weight: 400;
-        }
+        p { font-size: 1.125rem; color: var(--text-muted); margin-bottom: 1.5rem; font-weight: 400; }
 
         /* Layout Utilities */
         .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
@@ -139,145 +128,50 @@
             text-transform: uppercase; letter-spacing: 0.5px; transition: all 0.3s ease;
             cursor: pointer; border: none; width: 100%;
         }
-        .btn-primary:hover {
-            background-color: var(--brand-purple-light); transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(56, 27, 62, 0.2);
-        }
+        .btn-primary:hover { background-color: var(--brand-purple-light); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(56, 27, 62, 0.2); }
 
-        /* Page Layout Blocks */
-        .page-header {
-            padding: 6rem 0 3rem 0;
-            background-color: var(--bg-surface);
-            text-align: center;
-        }
-
-        .page-header p {
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 1.25rem;
-            line-height: 1.8;
-            color: var(--text-main);
-        }
+        /* Page Layout Blocks - Mobile Tightened Padding */
+        .page-header { padding: 4rem 0 2rem 0; background-color: var(--bg-surface); text-align: center; }
+        .page-header p { max-width: 800px; margin: 0 auto; font-size: 1.125rem; line-height: 1.8; color: var(--text-main); }
 
         /* Contact Grid Layout */
-        .contact-section {
-            padding: 4rem 0 8rem 0;
-            background-color: var(--bg-base);
-        }
-
-        .contact-wrapper {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 4rem;
-        }
+        .contact-section { padding: 3rem 0 5rem 0; background-color: var(--bg-base); }
+        .contact-wrapper { display: grid; grid-template-columns: 1fr; gap: 3rem; }
 
         /* Left Side: Contact Info */
-        .contact-info-block {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
+        .contact-info-block { display: flex; flex-direction: column; justify-content: center; }
+        .contact-info-block p { color: var(--text-muted); margin-bottom: 2.5rem; font-size: 1.125rem; }
+        
+        .info-group { margin-bottom: 2rem; }
+        .info-group h4 { font-size: 0.875rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 0.25rem; }
+        .info-group a, .info-group span { font-size: 1.25rem; color: var(--brand-purple); font-weight: 600; text-decoration: none; transition: color 0.3s ease; }
+        .info-group a:hover { color: var(--brand-gold); }
 
-        .contact-info-block p {
-            color: var(--text-muted);
-            margin-bottom: 3rem;
-            font-size: 1.125rem;
-        }
+        .social-icons { display: flex; gap: 1.5rem; margin-top: 1rem; }
+        .social-icons a { color: var(--brand-purple); font-size: 1.5rem; transition: transform 0.3s ease, color 0.3s ease; }
+        .social-icons a:hover { color: var(--brand-gold); transform: translateY(-3px); }
 
-        .info-group {
-            margin-bottom: 2rem;
-        }
-
-        .info-group h4 {
-            font-size: 0.875rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--text-muted);
-            margin-bottom: 0.25rem;
-        }
-
-        .info-group a, .info-group span {
-            font-size: 1.25rem;
-            color: var(--brand-purple);
-            font-weight: 600;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .info-group a:hover {
-            color: var(--brand-gold);
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 1.5rem;
-            margin-top: 1rem;
-        }
-
-        .social-icons a {
-            color: var(--brand-purple);
-            font-size: 1.5rem;
-            transition: transform 0.3s ease, color 0.3s ease;
-        }
-
-        .social-icons a:hover {
-            color: var(--brand-gold);
-            transform: translateY(-3px);
-        }
-
-        /* Right Side: Form */
+        /* Right Side: Form - Reduced mobile padding to give inputs more room */
         .form-card {
-            background-color: var(--bg-surface);
-            padding: 3rem;
-            border-radius: 24px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.04);
+            background-color: var(--bg-surface); padding: 2.5rem 1.5rem; border-radius: 24px;
+            border: 1px solid var(--border-color); box-shadow: 0 20px 40px rgba(0,0,0,0.04);
         }
 
-        .form-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-
+        .form-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
         .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
-
-        .form-group label {
-            font-size: 0.875rem; font-weight: 700; color: var(--text-main); 
-        }
-
-        .form-group label span {
-            color: var(--brand-gold);
-        }
-
+        .form-group label { font-size: 0.875rem; font-weight: 700; color: var(--text-main); }
+        .form-group label span { color: var(--brand-gold); }
+        
         .form-control {
-            padding: 1rem 1.25rem;
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            font-family: var(--font-stack);
-            font-size: 1rem;
-            background-color: var(--bg-base);
-            transition: all 0.3s ease;
-            color: var(--text-main);
-            width: 100%;
+            padding: 1rem 1.25rem; border: 1px solid var(--border-color); border-radius: 12px;
+            font-family: var(--font-stack); font-size: 1rem; background-color: var(--bg-base);
+            transition: all 0.3s ease; color: var(--text-main); width: 100%;
         }
+        .form-control:focus { outline: none; border-color: var(--brand-gold); box-shadow: 0 0 0 4px rgba(163, 124, 79, 0.1); background-color: var(--bg-surface); }
+        textarea.form-control { resize: vertical; min-height: 150px; }
 
-        .form-control:focus {
-            outline: none;
-            border-color: var(--brand-gold);
-            box-shadow: 0 0 0 4px rgba(163, 124, 79, 0.1);
-            background-color: var(--bg-surface);
-        }
-
-        textarea.form-control {
-            resize: vertical;
-            min-height: 150px;
-        }
-
-        /* Standardized Footer */
-        footer {
-            background-color: var(--brand-purple); padding: 5rem 0 2rem 0; color: var(--text-light); border-top: 4px solid var(--brand-gold);
-        }
+        /* Footer */
+        footer { background-color: var(--brand-purple); padding: 5rem 0 2rem 0; color: var(--text-light); border-top: 4px solid var(--brand-gold); }
         .footer-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; margin-bottom: 4rem; }
         .logo-img-footer { max-height: 120px; width: auto; display: block; margin-bottom: 1.5rem; }
         .footer-col p { color: rgba(255, 255, 255, 0.7); font-size: 1rem; margin-top: 1.5rem; }
@@ -295,34 +189,25 @@
             .menu-icon { display: none; }
             
             /* The Grid trick that perfectly centers the menu */
-            .nav-container { 
-                display: grid; 
-                grid-template-columns: 1fr auto 1fr; 
-                align-items: center; 
-                gap: 0;
-            }
-            
+            .nav-container { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 0; }
             .logo { justify-self: start; }
-            
-            .nav-menu { 
-                justify-self: center; /* Centers the links in the middle column */
-                position: static; 
-                height: auto; 
-                width: auto; 
-                background-color: transparent; 
-                flex-direction: row; 
-            }
-            
+            .nav-menu { justify-self: center; position: static; height: auto; width: auto; background-color: transparent; flex-direction: row; }
             .nav-menu ul { display: flex; list-style: none; gap: 3rem; margin: 0; padding: 0; }
             .nav-menu a { font-size: 1rem; margin: 0; font-weight: 500; color: var(--text-light); }
             .nav-menu a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0; background-color: var(--brand-gold); transition: width 0.3s ease; }
             .nav-menu a:hover::after { width: 100%; }
+            .header-actions { justify-self: end; margin-left: 0; }
             
-            .header-actions { justify-self: end; margin-left: 0; } /* Pushes button to far right */
-            
-            /* ... (keep the rest of your desktop optimizations below here) ... */
+            /* Restore expansive desktop padding */
+            h1 { font-size: 4rem; }
+            .page-header { padding: 6rem 0 3rem 0; }
+            .page-header p { font-size: 1.25rem; }
+            .contact-section { padding: 4rem 0 8rem 0; }
             
             .contact-wrapper { grid-template-columns: 1fr 1.5fr; gap: 6rem; align-items: start; }
+            
+            /* Restores thicker padding on the form card for desktop */
+            .form-card { padding: 3rem; }
             .form-grid { grid-template-columns: 1fr 1fr; }
             .full-width { grid-column: span 2; }
             
