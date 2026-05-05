@@ -36,7 +36,7 @@
     </script>
 
     <style>
-        /* CSS Variables - Light Premium Identity */
+        /* CSS Variables - Bold Premium Identity */
         :root {
             --bg-base: #fafafa;
             --bg-surface: #ffffff;
@@ -44,11 +44,12 @@
             --brand-purple-light: #512b75;
             --brand-gold: #c5a059; 
             --brand-gold-dark: #a68444;
-            --text-main: #1d1d1f; /* Apple-like dark grey */
-            --text-muted: #86868b;
+            --text-main: #1d1d1f; 
+            --text-muted: #6e6e73;
+            --text-light: #f5f5f7;
             --border-color: rgba(0, 0, 0, 0.08);
             --font-stack: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            --nav-height: 70px;
+            --nav-height: 80px;
         }
 
         /* Reset & Base Styles */
@@ -83,17 +84,18 @@
             letter-spacing: -0.03em;
             font-weight: 800;
             line-height: 1.1;
-            color: var(--brand-purple);
         }
 
         h1 {
             font-size: 3.5rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            color: var(--brand-purple);
         }
 
         h2 {
             font-size: 2.5rem;
             margin-bottom: 1.5rem;
+            color: var(--brand-purple);
         }
 
         p {
@@ -101,7 +103,6 @@
             color: var(--text-muted);
             margin-bottom: 2rem;
             font-weight: 400;
-            max-width: 700px;
         }
 
         /* Buttons */
@@ -121,7 +122,7 @@
 
         .btn-primary {
             background-color: var(--brand-purple);
-            color: #ffffff;
+            color: var(--text-light);
             box-shadow: 0 4px 14px rgba(53, 28, 77, 0.2);
         }
 
@@ -133,11 +134,13 @@
 
         .btn-accent {
             background-color: var(--brand-gold);
-            color: #ffffff;
+            color: var(--brand-purple);
+            font-weight: 700;
         }
 
         .btn-accent:hover {
             background-color: var(--brand-gold-dark);
+            color: #fff;
         }
 
         /* Layout Utilities */
@@ -149,20 +152,18 @@
         }
 
         .section-padding {
-            padding: 6rem 0;
+            padding: 8rem 0;
         }
 
-        /* Header & Navigation (Mobile First) */
+        /* Header & Navigation - Bold Purple Theme */
         header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: var(--nav-height);
-            background-color: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border-color);
+            background-color: var(--brand-purple);
+            border-bottom: 1px solid rgba(197, 160, 89, 0.2); /* Subtle gold border */
             z-index: 1000;
             display: flex;
             align-items: center;
@@ -181,23 +182,14 @@
             align-items: center;
         }
 
-        /* Logo Sizing */
         .logo-img {
-            max-height: 45px; /* Scales perfectly within the 70px nav height */
-            width: auto;
-            display: block;
-        }
-
-        .logo-img-footer {
-            max-height: 60px;
+            max-height: 50px; 
             width: auto;
             display: block;
         }
 
         /* Hamburger Menu Setup */
-        .menu-toggle {
-            display: none;
-        }
+        .menu-toggle { display: none; }
 
         .menu-icon {
             cursor: pointer;
@@ -207,7 +199,7 @@
         }
 
         .navicon {
-            background: var(--text-main);
+            background: var(--brand-gold); /* Gold hamburger icon */
             display: block;
             height: 2px;
             position: relative;
@@ -217,7 +209,7 @@
 
         .navicon:before,
         .navicon:after {
-            background: var(--text-main);
+            background: var(--brand-gold);
             content: '';
             display: block;
             height: 100%;
@@ -239,7 +231,7 @@
             right: -100%;
             width: 100%;
             height: 100vh;
-            background-color: var(--bg-surface);
+            background-color: var(--brand-purple);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -248,16 +240,15 @@
             z-index: 1000;
         }
 
-        .menu-toggle:checked ~ .nav-menu {
-            right: 0;
-        }
+        .menu-toggle:checked ~ .nav-menu { right: 0; }
 
         .nav-menu a {
-            color: var(--text-main);
+            color: var(--text-light);
             font-size: 1.5rem;
             font-weight: 600;
             margin: 1.5rem 0;
             display: block;
+            position: relative;
         }
 
         .nav-menu a:hover {
@@ -271,55 +262,100 @@
             z-index: 1001;
         }
 
-        .btn-call {
-            padding: 0.6rem 1.2rem;
+        /* Gold Call Button in Header */
+        .btn-header-call {
+            background-color: var(--brand-gold);
+            color: var(--brand-purple);
+            padding: 0.6rem 1.5rem;
             font-size: 0.875rem;
+            font-weight: 700;
+            border-radius: 50px;
         }
 
-        /* Hero Section */
+        .btn-header-call:hover {
+            background-color: #e0c184;
+            transform: scale(1.02);
+        }
+
+        /* Upgraded Hero Section */
         .hero {
-            padding: 6rem 0 4rem 0;
-            text-align: center;
-            background: linear-gradient(180deg, var(--bg-surface) 0%, var(--bg-base) 100%);
+            position: relative;
+            padding: 4rem 0;
+            background-color: var(--bg-surface);
+            overflow: hidden;
+        }
+
+        /* Design Accent Block */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 40%;
+            background-color: var(--brand-purple);
+            z-index: 0;
+            border-bottom-left-radius: 40px;
+        }
+
+        .hero-content-wrapper {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .hero-text-box {
+            background: var(--bg-surface);
+            padding: 3rem 2rem;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            border: 1px solid var(--border-color);
         }
 
         .hero h1 span {
             color: var(--brand-gold);
+            display: block;
+            margin-top: 0.5rem;
         }
 
-        .hero p {
-            margin: 0 auto 2.5rem auto;
-            font-size: 1.25rem;
-            color: var(--text-main);
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 2rem;
         }
 
         .hero-stats {
             display: flex;
             flex-direction: column;
             gap: 2rem;
-            margin-top: 4rem;
-            border-top: 1px solid var(--border-color);
-            padding-top: 3rem;
+            padding: 2rem;
+            background-color: var(--bg-base);
+            border-radius: 24px;
         }
 
         .stat-item h3 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             color: var(--brand-gold);
             margin-bottom: 0.25rem;
+            line-height: 1;
         }
 
         .stat-item p {
             font-size: 0.875rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin: 0 auto;
-            font-weight: 600;
-            color: var(--text-main);
+            margin: 0;
+            font-weight: 700;
+            color: var(--brand-purple);
         }
 
         /* Services Grid */
         .services {
-            background-color: var(--bg-surface);
+            background-color: var(--bg-base);
         }
 
         .services-header {
@@ -329,6 +365,7 @@
 
         .services-header p {
             margin: 0 auto;
+            max-width: 600px;
         }
 
         .grid {
@@ -338,41 +375,43 @@
         }
 
         .card {
-            background-color: var(--bg-base);
+            background-color: var(--bg-surface);
             border: 1px solid var(--border-color);
             border-radius: 24px;
-            padding: 3rem 2rem;
+            padding: 3rem 2.5rem;
             text-align: left;
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
         }
 
-        /* Subtle Gold Accent Line on Cards */
         .card::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 4px;
-            background-color: transparent;
-            transition: background-color 0.4s ease;
+            width: 4px;
+            height: 100%;
+            background-color: var(--brand-gold);
+            transform: scaleY(0);
+            transform-origin: bottom;
+            transition: transform 0.4s ease;
         }
 
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            box-shadow: 0 20px 40px rgba(53, 28, 77, 0.08);
+            border-color: transparent;
         }
 
         .card:hover::before {
-            background-color: var(--brand-gold);
+            transform: scaleY(1);
         }
 
         .card h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
-            color: var(--text-main);
+            color: var(--brand-purple);
         }
 
         .card p {
@@ -380,72 +419,72 @@
             margin-bottom: 0;
         }
 
-        /* Footer */
+        /* Footer - Bold Purple Theme */
         footer {
-            border-top: 1px solid var(--border-color);
-            padding: 4rem 0 2rem 0;
-            background-color: var(--bg-surface);
+            background-color: var(--brand-purple);
+            padding: 5rem 0 2rem 0;
+            color: var(--text-light);
+            border-top: 4px solid var(--brand-gold);
         }
 
         .footer-grid {
             display: grid;
             grid-template-columns: 1fr;
             gap: 3rem;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .logo-img-footer {
+            max-height: 60px;
+            width: auto;
+            display: block;
+        }
+
+        .footer-col p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1rem;
+            margin-top: 1.5rem;
         }
 
         .footer-col h4 {
             font-size: 1.125rem;
-            color: var(--brand-purple);
-            margin-bottom: 1.25rem;
+            color: var(--brand-gold);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .footer-col a {
             display: block;
-            color: var(--text-muted);
-            margin-bottom: 0.75rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            font-weight: 300;
         }
 
         .footer-col a:hover {
             color: var(--brand-gold);
+            transform: translateX(5px);
         }
 
         .footer-bottom {
             text-align: center;
             padding-top: 2rem;
-            border-top: 1px solid var(--border-color);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .footer-bottom p {
             font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.5);
             margin-bottom: 0.5rem;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         /* Desktop Optimization */
         @media (min-width: 992px) {
             h1 { font-size: 4.5rem; }
-            h2 { font-size: 3rem; }
+            h2 { font-size: 3.5rem; }
             
-            .hero-stats {
-                flex-direction: row;
-                justify-content: center;
-                gap: 6rem;
-            }
-
-            .grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            .footer-grid {
-                grid-template-columns: 2fr 1fr 1fr;
-            }
-
             /* Desktop Navigation */
-            .menu-icon {
-                display: none;
-            }
+            .menu-icon { display: none; }
 
             .nav-menu {
                 position: static;
@@ -459,23 +498,74 @@
             .nav-menu ul {
                 display: flex;
                 list-style: none;
-                gap: 2.5rem;
+                gap: 3rem;
             }
 
             .nav-menu a {
                 font-size: 1rem;
                 margin: 0;
                 font-weight: 500;
+                color: var(--text-light);
+            }
+
+            /* Gold underline hover effect for desktop nav */
+            .nav-menu a::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 2px;
+                bottom: -4px;
+                left: 0;
+                background-color: var(--brand-gold);
+                transition: width 0.3s ease;
+            }
+
+            .nav-menu a:hover::after {
+                width: 100%;
             }
 
             .nav-container {
                 justify-content: flex-start;
-                gap: 3rem;
+                gap: 4rem;
             }
 
-            .header-actions {
-                margin-left: auto;
+            .header-actions { margin-left: auto; }
+
+            /* Desktop Hero Layout */
+            .hero { padding: 8rem 0; }
+            
+            .hero::before {
+                width: 45%;
+                height: 100%;
+                border-bottom-left-radius: 0;
             }
+
+            .hero-content-wrapper {
+                flex-direction: row;
+                align-items: center;
+                gap: 4rem;
+                margin-top: 0;
+            }
+
+            .hero-text-box {
+                flex: 1.2;
+                padding: 4rem;
+            }
+
+            .hero-stats {
+                flex: 0.8;
+                flex-direction: column;
+                gap: 3rem;
+                padding: 4rem;
+                box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            }
+
+            .hero-buttons {
+                flex-direction: row;
+            }
+
+            .grid { grid-template-columns: repeat(3, 1fr); }
+            .footer-grid { grid-template-columns: 2fr 1fr 1fr; }
         }
     </style>
 </head>
@@ -500,34 +590,40 @@
             </nav>
 
             <div class="header-actions">
-                <a href="tel:7705888830" class="btn btn-primary btn-call">Call Now</a>
+                <a href="tel:7705888830" class="btn-header-call">Call Now</a>
                 <label for="menu-toggle" class="menu-icon"><span class="navicon"></span></label>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="hero section-padding">
-            <div class="container">
-                <h1>Defend Your Domain.<br><span>With Precision.</span></h1>
-                <p>Uncompromising structural integrity. Engineered for ultimate protection. Crafted with absolute attention to detail.</p>
-                <a href="/contact" class="btn btn-primary" style="margin-right: 1rem;">Request Inspection</a>
-                <a href="/services" class="btn btn-accent">Our Systems</a>
+        <section class="hero">
+            <div class="container hero-content-wrapper">
+                
+                <div class="hero-text-box">
+                    <h1>Defend Your Domain. <span>With Precision.</span></h1>
+                    <p>Uncompromising structural integrity. Engineered for ultimate protection. Crafted with absolute attention to detail for Georgia homeowners.</p>
+                    <div class="hero-buttons">
+                        <a href="/contact" class="btn btn-primary">Request Inspection</a>
+                        <a href="/services" class="btn btn-accent">Our Systems</a>
+                    </div>
+                </div>
 
                 <div class="hero-stats">
                     <div class="stat-item">
-                        <h3>50</h3>
-                        <p>Year Material Warranty</p>
+                        <h3>50 <span style="font-size: 1.5rem;">Yrs</span></h3>
+                        <p>Material Warranty</p>
                     </div>
                     <div class="stat-item">
-                        <h3>25</h3>
-                        <p>Year Workmanship</p>
+                        <h3>25 <span style="font-size: 1.5rem;">Yrs</span></h3>
+                        <p>Workmanship Guarantee</p>
                     </div>
                     <div class="stat-item">
                         <h3>100%</h3>
                         <p>Veteran Integrity</p>
                     </div>
                 </div>
+
             </div>
         </section>
 
@@ -559,10 +655,10 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <div class="logo" style="margin-bottom: 1.5rem;">
+                    <div class="logo">
                         <img src="LionessRoofing.png" alt="Lioness Roofing Logo" class="logo-img-footer">
                     </div>
-                    <p style="font-size: 1rem;">We treat every home as if it were our own, ensuring absolute care for every family we serve.</p>
+                    <p>We treat every home as if it were our own, ensuring absolute care for every family we serve across Georgia.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Navigation</h4>
@@ -576,7 +672,7 @@
                     <h4>Contact</h4>
                     <a href="tel:7705888830">770.588.8830</a>
                     <a href="mailto:talon@lionessroofing.com">talon@lionessroofing.com</a>
-                    <a href="/contact">Request a Quote</a>
+                    <a href="/contact" style="color: var(--brand-gold); margin-top: 1rem; font-weight: 500;">Request a Quote &rarr;</a>
                 </div>
             </div>
             <div class="footer-bottom">
