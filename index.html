@@ -21,6 +21,7 @@
       "telephone": "770-588-8830",
       "email": "talon@lionessroofing.com",
       "url": "https://www.lionessroofing.com/",
+      "logo": "https://www.lionessroofing.com/LionessRoofing.png",
       "address": {
         "@type": "PostalAddress",
         "addressRegion": "GA",
@@ -175,16 +176,22 @@
         }
 
         .logo {
-            font-size: 1.25rem;
-            font-weight: 800;
-            color: var(--brand-purple);
-            letter-spacing: 1px;
-            text-transform: uppercase;
             z-index: 1001;
+            display: flex;
+            align-items: center;
         }
 
-        .logo span {
-            color: var(--brand-gold);
+        /* Logo Sizing */
+        .logo-img {
+            max-height: 45px; /* Scales perfectly within the 70px nav height */
+            width: auto;
+            display: block;
+        }
+
+        .logo-img-footer {
+            max-height: 60px;
+            width: auto;
+            display: block;
         }
 
         /* Hamburger Menu Setup */
@@ -476,7 +483,9 @@
 
     <header>
         <div class="container nav-container">
-            <a href="/" class="logo">Lioness <span>Roofing</span></a>
+            <a href="/" class="logo">
+                <img src="LionessRoofing.png" alt="Lioness Roofing Logo" class="logo-img">
+            </a>
             
             <input type="checkbox" id="menu-toggle" class="menu-toggle">
             
@@ -550,7 +559,9 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <div class="logo" style="margin-bottom: 1.5rem;">Lioness <span>Roofing</span></div>
+                    <div class="logo" style="margin-bottom: 1.5rem;">
+                        <img src="LionessRoofing.png" alt="Lioness Roofing Logo" class="logo-img-footer">
+                    </div>
                     <p style="font-size: 1rem;">We treat every home as if it were our own, ensuring absolute care for every family we serve.</p>
                 </div>
                 <div class="footer-col">
