@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Lioness Roofing: Tough Like A Mother. Premium, code-compliant roofing installations, repairs, and inspections in Georgia. Family-owned and operated.">
-    <meta name="keywords" content="Roofing, Lioness Roofing, Talon Brown, Roof Repair, Roof Replacement, Georgia Premium Contractor">
+    <meta name="description" content="Lioness Roofing: Premium, code-compliant roofing installations in Georgia. Full tear-offs, 1-day installs, and lifetime warranties.">
+    <meta name="keywords" content="Roof Installation, Roof Replacement, Lioness Roofing, Georgia Roof Installers, Roofing Contractor">
     <meta name="author" content="Lioness Roofing">
-    <title>Lioness Roofing | Tough Like A Mother</title>
+    <title>Roof Installations | Lioness Roofing</title>
 
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -14,10 +14,10 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
 
-    <meta property="og:title" content="Lioness Roofing | Tough Like A Mother">
-    <meta property="og:description" content="Premium, code-compliant roofing installations, repairs, and inspections in Georgia. Family-owned and operated.">
+    <meta property="og:title" content="Roof Installations | Lioness Roofing">
+    <meta property="og:description" content="Premium, code-compliant roofing installations in Georgia. Full tear-offs, 1-day installs, and lifetime warranties.">
     <meta property="og:image" content="https://www.lionessroofing.com/social-preview.jpg">
-    <meta property="og:url" content="https://www.lionessroofing.com/">
+    <meta property="og:url" content="https://www.lionessroofing.com/roofinstallations">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
 
@@ -25,6 +25,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Roof Installations",
+      "provider": {
+        "@type": "RoofingContractor",
+        "name": "Lioness Roofing",
+        "telephone": "770-588-8830",
+        "url": "https://www.lionessroofing.com/"
+      },
+      "description": "Premium, code-compliant roof installations with a full tear-off, decking inspection, and high-quality materials designed to last decades."
+    }
+    </script>
+
     <style>
         :root {
             --bg-base: #fafafa;
@@ -91,18 +106,18 @@
         .btn-gold { display: inline-flex; align-items: center; justify-content: center; padding: 1rem 2.5rem; border-radius: 50px; font-weight: 600; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.5px; transition: all 0.3s ease; cursor: pointer; border: none; text-align: center; background-color: var(--brand-gold); color: var(--text-light); box-shadow: 0 4px 14px rgba(163, 124, 79, 0.2); }
         .btn-gold:hover { background-color: var(--brand-gold-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(163, 124, 79, 0.3); }
 
-        /* Page Layout Blocks */
-        .page-header { padding: 6rem 0 3rem 0; background-color: var(--bg-surface); text-align: center; }
+        /* Page Layout Blocks - Tightened Mobile Padding */
+        .page-header { padding: 4rem 0 2rem 0; background-color: var(--bg-surface); text-align: center; }
         .page-header p { max-width: 800px; margin: 0 auto; font-size: 1.25rem; }
 
         /* Sleek Card Grid for Top Text */
-        .info-section { padding: 2rem 0 6rem 0; background-color: var(--bg-surface); }
+        .info-section { padding: 2rem 0 4rem 0; background-color: var(--bg-surface); }
         .info-grid-2 { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-bottom: 2rem; }
         .info-grid-3 { display: grid; grid-template-columns: 1fr; gap: 2rem; }
 
         .info-card {
             background-color: var(--bg-base);
-            padding: 3rem;
+            padding: 2.5rem 2rem;
             border-radius: 24px;
             border: 1px solid var(--border-color);
             box-shadow: 0 10px 30px rgba(0,0,0,0.02);
@@ -112,29 +127,25 @@
         }
 
         .info-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background-color: transparent;
-            transition: background-color 0.3s ease;
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px;
+            background-color: transparent; transition: background-color 0.3s ease;
         }
 
         .info-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.06); }
         .info-card:hover::before { background-color: var(--brand-gold); }
 
         /* The Process Gallery */
-        .process-section { padding: 6rem 0; background-color: var(--bg-base); border-top: 1px solid var(--border-color); }
-        .process-section-header { text-align: center; margin-bottom: 4rem; }
+        .process-section { padding: 4rem 0; background-color: var(--bg-base); border-top: 1px solid var(--border-color); }
+        .process-section-header { text-align: center; margin-bottom: 3rem; }
         .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; }
+        
         .process-card { display: flex; flex-direction: column; border-radius: 16px; overflow: hidden; background-color: var(--bg-surface); border: 1px solid var(--border-color); transition: transform 0.3s ease, box-shadow 0.3s ease; }
         .process-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.08); }
+        
         .process-img { width: 100%; aspect-ratio: 4/3; background-color: var(--brand-purple-light); object-fit: cover; border-bottom: 1px solid var(--border-color); }
         .process-card h4 { padding: 1.5rem; margin: 0; text-align: center; font-weight: 600; color: var(--brand-purple); }
 
-        .cta-bottom { padding: 5rem 0; text-align: center; background-color: var(--bg-surface); }
+        .cta-bottom { padding: 4rem 0; text-align: center; background-color: var(--bg-surface); }
 
         /* Footer */
         footer { background-color: var(--brand-purple); padding: 5rem 0 2rem 0; color: var(--text-light); border-top: 4px solid var(--brand-gold); }
@@ -153,34 +164,22 @@
         /* Desktop Optimization */
         @media (min-width: 992px) {
             .menu-icon { display: none; }
-            
-            /* The Grid trick that perfectly centers the menu */
-            .nav-container { 
-                display: grid; 
-                grid-template-columns: 1fr auto 1fr; 
-                align-items: center; 
-                gap: 0;
-            }
-            
+            .nav-container { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 0; }
             .logo { justify-self: start; }
-            
-            .nav-menu { 
-                justify-self: center; /* Centers the links in the middle column */
-                position: static; 
-                height: auto; 
-                width: auto; 
-                background-color: transparent; 
-                flex-direction: row; 
-            }
-            
+            .nav-menu { justify-self: center; position: static; height: auto; width: auto; background-color: transparent; flex-direction: row; }
             .nav-menu ul { display: flex; list-style: none; gap: 3rem; margin: 0; padding: 0; }
             .nav-menu a { font-size: 1rem; margin: 0; font-weight: 500; color: var(--text-light); }
             .nav-menu a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0; background-color: var(--brand-gold); transition: width 0.3s ease; }
             .nav-menu a:hover::after { width: 100%; }
+            .header-actions { justify-self: end; margin-left: 0; }
             
-            .header-actions { justify-self: end; margin-left: 0; } /* Pushes button to far right */
-            
-            /* ... (keep the rest of your desktop optimizations below here) ... */
+            /* Restores larger, airy padding for big screens */
+            .page-header { padding: 6rem 0 3rem 0; }
+            .info-section { padding: 2rem 0 6rem 0; }
+            .process-section { padding: 6rem 0; }
+            .process-section-header { margin-bottom: 4rem; }
+            .cta-bottom { padding: 6rem 0; }
+            .info-card { padding: 3rem; }
             
             .info-grid-2 { grid-template-columns: 1fr 1fr; }
             .info-grid-3 { grid-template-columns: repeat(3, 1fr); }
