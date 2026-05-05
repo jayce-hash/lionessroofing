@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lioness Roofing provides premium, uncompromising roofing services, replacements, and repairs. Led by Talon Brown. Licensed Contractor #25107976.">
+    <meta name="keywords" content="Roofing, Lioness Roofing, Talon Brown, Roof Repair, Roof Replacement, Premium Contractor">
+    <meta name="author" content="Lioness Roofing">
+    <title>Lioness Roofing | Precision Quality Roofing</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "RoofingContractor",
+      "name": "Lioness Roofing",
+      "founder": "Talon Brown",
+      "telephone": "612-799-9280",
+      "email": "talon@lionessroofing.com",
+      "url": "https://www.lionessroofing.com/",
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "Contractor ID",
+        "value": "25107976"
+      }
+    }
+    </script>
+
+    <style>
+        /* CSS Variables - Brand Identity */
+        :root {
+            --bg-base: #000000;
+            --bg-surface: #0a0a0c;
+            --brand-purple: #351c4d; /* Deep Royal Purple */
+            --brand-purple-light: #512b75;
+            --brand-gold: #c5a059; /* Metallic Gold */
+            --brand-gold-light: #dfbc77;
+            --text-main: #f5f5f7; /* Apple-like off-white */
+            --text-muted: #86868b;
+            --font-stack: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-stack);
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: var(--brand-gold);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--brand-gold-light);
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            letter-spacing: -0.02em;
+            font-weight: 800;
+            line-height: 1.1;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff 0%, var(--text-muted) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h2 {
+            font-size: 2.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            font-size: 1.125rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        /* Layout & Utilities */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .section-padding {
+            padding: 6rem 0;
+        }
+
+        /* Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--brand-gold);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            padding-top: 10rem;
+            padding-bottom: 8rem;
+            text-align: center;
+            background: radial-gradient(circle at 50% 0%, var(--brand-purple) 0%, var(--bg-base) 60%);
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin: 0 auto 2.5rem auto;
+            font-size: 1.25rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--brand-gold);
+            color: var(--bg-base);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--brand-gold-light);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(197, 160, 89, 0.2);
+        }
+
+        /* Services Grid */
+        .services {
+            background-color: var(--bg-surface);
+            border-top: 1px solid rgba(255,255,255,0.02);
+        }
+
+        .services-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .card {
+            background: linear-gradient(180deg, rgba(53, 28, 77, 0.3) 0%, rgba(0,0,0,0) 100%);
+            border: 1px solid rgba(197, 160, 89, 0.15);
+            border-radius: 24px;
+            padding: 3rem 2rem;
+            text-align: left;
+            transition: transform 0.4s ease, border-color 0.4s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--brand-gold);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .card p {
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+
+        /* About & Contact Section */
+        .dual-section {
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+        }
+
+        .info-block {
+            padding: 3rem;
+            background: #050505;
+            border-radius: 24px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .contact-data {
+            list-style: none;
+            margin-top: 2rem;
+        }
+
+        .contact-data li {
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-data span {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--brand-purple-light);
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-data strong {
+            font-weight: 400;
+            color: var(--text-main);
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding: 3rem 0;
+            text-align: center;
+            background-color: #000;
+        }
+
+        footer p {
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Desktop Optimization */
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 5rem;
+            }
+            h2 {
+                font-size: 3rem;
+            }
+            .grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .dual-section {
+                flex-direction: row;
+            }
+            .dual-section > div {
+                flex: 1;
+            }
+            .hero p {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-content">
+            <div class="logo">Lioness <span>Roofing</span></div>
+            <a href="#contact" class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Get Quote</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Defend Your Domain.</h1>
+                <p>Uncompromising structural integrity. Engineered for ultimate protection. Crafted with absolute precision.</p>
+                <a href="#contact" class="btn btn-primary">Request an Inspection</a>
+            </div>
+        </section>
+
+        <section id="services" class="services section-padding">
+            <div class="container">
+                <div class="services-header">
+                    <h2>Our Services.</h2>
+                    <p>Premium solutions tailored to secure your most valuable assets.</p>
+                </div>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Complete Replacement</h3>
+                        <p>Total architectural renewal. We strip away the old and engineer a flawless, weather-impervious barrier designed to last decades.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Precision Repairs</h3>
+                        <p>Targeted diagnostics and seamless restoration. We identify vulnerabilities and reinforce your roof with microscopic attention to detail.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Storm Restoration</h3>
+                        <p>Rapid response structural defense. When nature strikes, we restore safety, aesthetics, and total peace of mind without hesitation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section-padding">
+            <div class="container dual-section">
+                
+                <div class="info-block">
+                    <h2>The Standard of Excellence.</h2>
+                    <p>Led by owner Talon Brown, Lioness Roofing operates on a singular philosophy: uncompromising quality. We combine industry-leading materials with elite craftsmanship to deliver roofing systems that look incredible and perform flawlessly.</p>
+                    <p style="font-size: 0.875rem; color: var(--brand-gold);">State Licensed Contractor ID #25107976</p>
+                </div>
+
+                <div class="info-block">
+                    <h2>Get in Touch.</h2>
+                    <p>Connect with us directly to schedule your consultation.</p>
+                    <ul class="contact-data">
+                        <li>
+                            <span>Direct Line</span>
+                            <strong><a href="tel:6127999280">612.799.9280</a></strong>
+                        </li>
+                        <li>
+                            <span>Email Support</span>
+                            <strong><a href="mailto:talon@lionessroofing.com">talon@lionessroofing.com</a></strong>
+                        </li>
+                        <li>
+                            <span>Web</span>
+                            <strong><a href="https://www.lionessroofing.com/">lionessroofing.com</a></strong>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="logo" style="margin-bottom: 1rem;">Lioness <span>Roofing</span></div>
+            <p>&copy; 2026 Lioness Roofing. All rights reserved.</p>
+            <p>Owner: Talon Brown | Contractor ID: #25107976</p>
+        </div>
+    </footer>
+
+</body>
+</html>
