@@ -74,47 +74,16 @@
         a { text-decoration: none; transition: all 0.3s ease; }
 
         /* Typography */
-        h1, h2, h3, h4 {
-            letter-spacing: -0.03em;
-            font-weight: 800;
-            line-height: 1.1;
-            color: var(--brand-purple);
-        }
-
+        h1, h2, h3, h4 { letter-spacing: -0.03em; font-weight: 800; line-height: 1.1; color: var(--brand-purple); }
         h1 { font-size: 3.5rem; margin-bottom: 1.5rem; text-align: center; }
         h2 { font-size: 2.25rem; margin-bottom: 1.5rem; }
         h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-main); font-weight: 600; }
-
-        p {
-            font-size: 1.125rem;
-            color: var(--text-muted);
-            margin-bottom: 1.5rem;
-            font-weight: 400;
-        }
+        p { font-size: 1.125rem; color: var(--text-muted); margin-bottom: 1.5rem; font-weight: 400; }
 
         /* SCOPED LIST STYLING */
-        main ul {
-            margin-bottom: 1.5rem;
-            list-style: none;
-        }
-
-        main li {
-            margin-bottom: 0.75rem;
-            font-size: 1.125rem;
-            color: var(--text-muted);
-            position: relative;
-            padding-left: 1.5rem;
-        }
-
-        main li::before {
-            content: '•';
-            color: var(--brand-gold);
-            font-weight: bold;
-            font-size: 1.5rem;
-            position: absolute;
-            left: 0;
-            top: -5px;
-        }
+        main ul { margin-bottom: 1.5rem; list-style: none; }
+        main li { margin-bottom: 0.75rem; font-size: 1.125rem; color: var(--text-muted); position: relative; padding-left: 1.5rem; }
+        main li::before { content: '•'; color: var(--brand-gold); font-weight: bold; font-size: 1.5rem; position: absolute; left: 0; top: -5px; }
 
         /* Layout Utilities */
         .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
@@ -132,17 +101,13 @@
         /* Mobile Menu */
         .menu-toggle { display: none; }
         .menu-icon { cursor: pointer; padding: 1rem 0 1rem 1rem; z-index: 1001; display: block; }
-        .navicon {
-            background: var(--brand-gold); display: block; height: 2px; position: relative; transition: background .2s ease-out; width: 24px;
-        }
-        .navicon:before, .navicon:after {
-            background: var(--brand-gold); content: ''; display: block; height: 100%; position: absolute; transition: all .2s ease-out; width: 100%;
-        }
-        .navicon:before { top: 7px; }
-        .navicon:after { top: -7px; }
+        .navicon { background: var(--brand-gold); display: block; height: 2px; position: relative; transition: background .2s ease-out; width: 24px; }
+        .navicon:before, .navicon:after { background: var(--brand-gold); content: ''; display: block; height: 100%; position: absolute; transition: all .2s ease-out; width: 100%; }
+        .navicon:before { top: 7px; } .navicon:after { top: -7px; }
         .menu-toggle:checked ~ .menu-icon .navicon { background: transparent; }
         .menu-toggle:checked ~ .menu-icon .navicon:before { transform: rotate(-45deg); top: 0; }
         .menu-toggle:checked ~ .menu-icon .navicon:after { transform: rotate(45deg); top: 0; }
+        
         .nav-menu {
             position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; background-color: var(--brand-purple);
             display: flex; flex-direction: column; justify-content: center; align-items: center; transition: right 0.3s ease; z-index: 1000;
@@ -157,95 +122,44 @@
         .nav-menu a:hover { color: var(--brand-gold); }
 
         .header-actions { display: flex; align-items: center; gap: 1rem; z-index: 1001; }
-        .btn-header-call {
-            background-color: var(--brand-gold); color: var(--text-light); padding: 0.6rem 1.5rem;
-            font-size: 0.875rem; font-weight: 700; border-radius: 50px;
-        }
+        .btn-header-call { background-color: var(--brand-gold); color: var(--text-light); padding: 0.6rem 1.5rem; font-size: 0.875rem; font-weight: 700; border-radius: 50px; }
         .btn-header-call:hover { background-color: var(--brand-gold-dark); transform: scale(1.02); }
 
         /* Buttons */
         .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            border: none;
-            text-align: center;
+            display: inline-flex; align-items: center; justify-content: center; padding: 1rem 2.5rem; border-radius: 50px;
+            font-weight: 600; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.5px; transition: all 0.3s ease;
+            cursor: pointer; border: none; text-align: center;
         }
+        .btn-gold { background-color: var(--brand-gold); color: var(--text-light); box-shadow: 0 4px 14px rgba(163, 124, 79, 0.2); }
+        .btn-gold:hover { background-color: var(--brand-gold-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(163, 124, 79, 0.3); }
 
-        .btn-gold {
-            background-color: var(--brand-gold);
-            color: var(--text-light);
-            box-shadow: 0 4px 14px rgba(163, 124, 79, 0.2);
-        }
-
-        .btn-gold:hover {
-            background-color: var(--brand-gold-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(163, 124, 79, 0.3);
-        }
-
-        /* Page Layout Blocks */
-        .page-header {
-            padding: 6rem 0 2rem 0;
-            background-color: var(--bg-surface);
-        }
+        /* Page Layout Blocks - Tightened Mobile Padding */
+        .page-header { padding: 4rem 0 2rem 0; background-color: var(--bg-surface); }
 
         /* Alternating Split Sections for Photos */
-        .split-section {
-            padding: 4rem 0;
-            background-color: var(--bg-surface);
-        }
-
-        .split-section:nth-child(even) {
-            background-color: var(--bg-base);
-            border-top: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .split-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
+        .split-section { padding: 3rem 0; background-color: var(--bg-surface); }
+        .split-section:nth-child(even) { background-color: var(--bg-base); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); }
+        .split-grid { display: grid; grid-template-columns: 1fr; gap: 2.5rem; align-items: center; }
         .split-content h2 { margin-bottom: 1.5rem; }
         .split-content strong { color: var(--text-main); font-weight: 700; }
 
+        /* Formatted Image Container for Perfect Uniformity */
         .split-img-container {
-            width: 100%;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.06);
-            background-color: var(--bg-base);
-            border: 1px solid var(--border-color);
+            width: 100%; border-radius: 12px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+            background-color: var(--bg-base); border: 1px solid var(--border-color);
         }
-
         .split-img-container img {
-            width: 100%;
-            height: auto; /* Ensures full photo is visible without cropping */
-            display: block;
+            width: 100%; display: block;
+            aspect-ratio: 4 / 3; /* Forces all images to the same perfect rectangle */
+            object-fit: cover; /* Ensures image fills the box without stretching */
         }
 
         /* Bottom CTA */
-        .cta-bottom {
-            padding: 5rem 0;
-            text-align: center;
-            background-color: var(--bg-surface);
-        }
+        .cta-bottom { padding: 5rem 0; text-align: center; background-color: var(--bg-surface); }
 
         /* Standardized Footer */
-        footer {
-            background-color: var(--brand-purple); padding: 5rem 0 2rem 0; color: var(--text-light); border-top: 4px solid var(--brand-gold);
-        }
+        footer { background-color: var(--brand-purple); padding: 5rem 0 2rem 0; color: var(--text-light); border-top: 4px solid var(--brand-gold); }
         .footer-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; margin-bottom: 4rem; }
         .logo-img-footer { max-height: 120px; width: auto; display: block; margin-bottom: 1.5rem; }
         .footer-col p { color: rgba(255, 255, 255, 0.7); font-size: 1rem; margin-top: 1.5rem; }
@@ -263,38 +177,21 @@
             .menu-icon { display: none; }
             
             /* The Grid trick that perfectly centers the menu */
-            .nav-container { 
-                display: grid; 
-                grid-template-columns: 1fr auto 1fr; 
-                align-items: center; 
-                gap: 0;
-            }
-            
+            .nav-container { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 0; }
             .logo { justify-self: start; }
-            
-            .nav-menu { 
-                justify-self: center; /* Centers the links in the middle column */
-                position: static; 
-                height: auto; 
-                width: auto; 
-                background-color: transparent; 
-                flex-direction: row; 
-            }
-            
+            .nav-menu { justify-self: center; position: static; height: auto; width: auto; background-color: transparent; flex-direction: row; }
             .nav-menu ul { display: flex; list-style: none; gap: 3rem; margin: 0; padding: 0; }
             .nav-menu a { font-size: 1rem; margin: 0; font-weight: 500; color: var(--text-light); }
             .nav-menu a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0; background-color: var(--brand-gold); transition: width 0.3s ease; }
             .nav-menu a:hover::after { width: 100%; }
+            .header-actions { justify-self: end; margin-left: 0; }
             
-            .header-actions { justify-self: end; margin-left: 0; } /* Pushes button to far right */
-            
-            /* ... (keep the rest of your desktop optimizations below here) ... */
+            /* Restore expansive desktop padding */
+            .page-header { padding: 6rem 0 3rem 0; }
+            .split-section { padding: 6rem 0; }
             
             /* Alternating Desktop Grid Layout */
-            .split-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 5rem;
-            }
+            .split-grid { grid-template-columns: 1fr 1fr; gap: 5rem; }
             .split-grid.reverse .split-content { order: 2; }
             .split-grid.reverse .split-img-container { order: 1; }
             
@@ -400,7 +297,7 @@
 
         <section class="cta-bottom">
             <div class="container">
-                <a href="/services" class="btn btn-gold">Next Project &rarr;</a>
+                <a href="/services" class="btn-gold btn">Next Project &rarr;</a>
             </div>
         </section>
 
