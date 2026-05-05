@@ -80,12 +80,13 @@
             font-weight: 400;
         }
 
-        ul {
+        /* SCOPED LIST STYLING - Only affects main content, fixes header issue */
+        main ul {
             margin-bottom: 1.5rem;
             list-style: none;
         }
 
-        li {
+        main li {
             margin-bottom: 0.75rem;
             font-size: 1.125rem;
             color: var(--text-muted);
@@ -93,7 +94,7 @@
             padding-left: 1.5rem;
         }
 
-        li::before {
+        main li::before {
             content: '•';
             color: var(--brand-gold);
             font-weight: bold;
@@ -135,8 +136,14 @@
             display: flex; flex-direction: column; justify-content: center; align-items: center; transition: right 0.3s ease; z-index: 1000;
         }
         .menu-toggle:checked ~ .nav-menu { right: 0; }
+        
+        /* Fixed Nav Menu Styles */
+        .nav-menu ul { list-style: none; padding: 0; margin: 0; }
+        .nav-menu li { padding: 0; margin: 0; }
+        .nav-menu li::before { content: none; } /* Extra safety to remove bullets */
         .nav-menu a { color: var(--text-light); font-size: 1.5rem; font-weight: 600; margin: 1.5rem 0; display: block; position: relative; }
         .nav-menu a:hover { color: var(--brand-gold); }
+
         .header-actions { display: flex; align-items: center; gap: 1rem; z-index: 1001; }
         .btn-header-call {
             background-color: var(--brand-gold); color: var(--text-light); padding: 0.6rem 1.5rem;
