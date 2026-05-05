@@ -1,1 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lioness Roofing FAQ: Discover answers about complete roofing systems, impact-resistant shingles in Georgia, ventilation, and our 50-year warranties.">
+    <meta name="keywords" content="Roofing FAQ, Lioness Roofing, Georgia Roofing, Class 4 Shingles, Roof Replacement Questions, Roof Warranties">
+    <meta name="author" content="Lioness Roofing">
+    <title>FAQ | Lioness Roofing</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What’s included in a complete roofing system?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A true roofing system includes structural decking, synthetic underlayment, ice & water protection, drip edge, starter shingles, architectural or designer shingles, flashing at all vulnerable points, ridge cap shingles, balanced attic ventilation, and gutters with downspouts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are Class 3 and Class 4 impact shingles, and why are they important in Georgia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "They’re shingles designed to withstand hail, debris, and wind-driven impacts better than standard roofing. While Georgia isn’t a top hail state, we still get surprise hailstorms and falling branches from summer winds. Class 4 is the highest level, and it's becoming more popular in metro Atlanta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What kind of warranties do you offer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We offer a 50-year warranty on material, up to a 25-year warranty on workmanship, and full system warranties that cover installation, tear-off, and disposal when applicable."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        /* CSS Variables - Exact Brand Identity */
+        :root {
+            --bg-base: #fafafa;
+            --bg-surface: #ffffff;
+            --brand-purple: #381b3e; 
+            --brand-purple-light: #4d2655;
+            --brand-gold: #a37c4f; 
+            --brand-gold-dark: #8b6841;
+            --text-main: #1d1d1f; 
+            --text-muted: #6e6e73;
+            --text-light: #f5f5f7;
+            --border-color: rgba(0, 0, 0, 0.08);
+            --font-stack: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --nav-height: 80px;
+        }
+
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-stack);
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+            padding-top: var(--nav-height);
+        }
+
+        a { text-decoration: none; transition: all 0.3s ease; }
+
+        /* Typography */
+        h1, h2, h3 {
+            letter-spacing: -0.03em;
+            font-weight: 800;
+            line-height: 1.1;
+            color: var(--brand-purple);
+        }
+
+        h1 { font-size: 3rem; margin-bottom: 1.5rem; }
+        
+        h2 {
+            font-size: 2rem;
+            margin: 4rem 0 2rem 0;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        p {
+            font-size: 1.125rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
+
+        /* Layout Utilities */
+        .container {
+            width: 100%;
+            max-width: 900px; 
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        .header-container { max-width: 1200px; }
+        .footer-container { max-width: 1200px; }
+
+        .section-padding { padding: 5rem 0; }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--brand-purple);
+            color: var(--text-light);
+            box-shadow: 0 4px 14px rgba(56, 27, 62, 0.2);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--brand-purple-light);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(56, 27, 62, 0.3);
+        }
+
+        /* Header Navigation - Bold Purple Theme */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--nav-height);
+            background-color: var(--brand-purple);
+            border-bottom: 1px solid rgba(163, 124, 79, 0.2);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 0 1.5rem;
+            margin: 0 auto;
+        }
+
+        .logo { z-index: 1001; display: flex; align-items: center; }
+        .logo-img { max-height: 50px; width: auto; display: block; }
+
+        /* Hamburger Menu Setup */
+        .menu-toggle { display: none; }
+        .menu-icon { cursor: pointer; padding: 1rem 0 1rem 1rem; z-index: 1001; display: block; }
+
+        .navicon {
+            background: var(--brand-gold);
+            display: block;
+            height: 2px;
+            position: relative;
+            transition: background .2s ease-out;
+            width: 24px;
+        }
+        .navicon:before, .navicon:after {
+            background: var(--brand-gold);
+            content: ''; display: block; height: 100%; position: absolute; transition: all .2s ease-out; width: 100%;
+        }
+        .navicon:before { top: 7px; }
+        .navicon:after { top: -7px; }
+
+        .menu-toggle:checked ~ .menu-icon .navicon { background: transparent; }
+        .menu-toggle:checked ~ .menu-icon .navicon:before { transform: rotate(-45deg); top: 0; }
+        .menu-toggle:checked ~ .menu-icon .navicon:after { transform: rotate(45deg); top: 0; }
+
+        .nav-menu {
+            position: fixed;
+            top: 0; right: -100%; width: 100%; height: 100vh;
+            background-color: var(--brand-purple);
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            transition: right 0.3s ease; z-index: 1000;
+        }
+
+        .menu-toggle:checked ~ .nav-menu { right: 0; }
+
+        .nav-menu a {
+            color: var(--text-light); font-size: 1.5rem; font-weight: 600; margin: 1.5rem 0; display: block; position: relative;
+        }
+        .nav-menu a:hover { color: var(--brand-gold); }
+
+        .header-actions { display: flex; align-items: center; gap: 1rem; z-index: 1001; }
+        .btn-header-call {
+            background-color: var(--brand-gold); color: var(--text-light); padding: 0.6rem 1.5rem;
+            font-size: 0.875rem; font-weight: 700; border-radius: 50px;
+        }
+        .btn-header-call:hover { background-color: var(--brand-gold-dark); transform: scale(1.02); }
+
+        /* Page Header */
+        .page-header {
+            text-align: center;
+            padding: 4rem 0 2rem 0;
+        }
+
+        .page-header p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.25rem;
+        }
+
+        /* FAQ Accordions */
+        details {
+            background-color: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        details:hover {
+            border-color: var(--brand-gold);
+            box-shadow: 0 10px 20px rgba(163, 124, 79, 0.08);
+        }
+
+        summary {
+            padding: 1.5rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--brand-purple);
+        }
+
+        summary::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--brand-gold);
+            font-weight: 400;
+            transition: transform 0.3s ease;
+        }
+
+        details[open] summary::after {
+            content: '−';
+            transform: rotate(180deg);
+        }
+
+        summary::-webkit-details-marker { display: none; }
+
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            color: var(--text-muted);
+            font-weight: 400;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .faq-answer ul {
+            margin-top: 1rem;
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .faq-answer li { margin-bottom: 0.5rem; }
+
+        /* Contact Form Section */
+        .contact-section {
+            background-color: var(--bg-surface);
+            border-top: 1px solid var(--border-color);
+            padding: 6rem 0;
+            margin-top: 4rem;
+        }
+
+        .contact-header { text-align: center; margin-bottom: 3rem; }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+
+        .form-group label {
+            font-size: 0.875rem; font-weight: 600; color: var(--brand-purple); text-transform: uppercase; letter-spacing: 0.5px;
+        }
+
+        .form-control {
+            padding: 1rem 1.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            font-family: var(--font-stack);
+            font-size: 1rem;
+            background-color: var(--bg-base);
+            transition: all 0.3s ease;
+            color: var(--text-main);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--brand-gold);
+            box-shadow: 0 0 0 4px rgba(163, 124, 79, 0.1);
+        }
+
+        textarea.form-control { resize: vertical; min-height: 150px; }
+
+        /* Footer - Standardized */
+        footer {
+            background-color: var(--brand-purple);
+            padding: 5rem 0 2rem 0;
+            color: var(--text-light);
+            border-top: 4px solid var(--brand-gold);
+        }
+
+        .footer-grid {
+            display: grid; grid-template-columns: 1fr; gap: 3rem; margin-bottom: 4rem;
+        }
+
+        .logo-img-footer { max-height: 60px; width: auto; display: block; }
+
+        .footer-col p { color: rgba(255, 255, 255, 0.7); font-size: 1rem; margin-top: 1.5rem; }
+
+        .footer-col h4 {
+            font-size: 1.125rem; color: var(--brand-gold); margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 1px;
+        }
+
+        .footer-col a {
+            display: block; color: var(--text-light); margin-bottom: 1rem; font-weight: 300;
+        }
+
+        .footer-col a:hover { color: var(--brand-gold); transform: translateX(5px); }
+
+        .footer-bottom {
+            text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; flex-direction: column; gap: 1rem;
+        }
+
+        .footer-bottom p { font-size: 0.875rem; color: rgba(255, 255, 255, 0.5); margin: 0; }
+        
+        .footer-legal-links { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+        .footer-legal-links a { color: rgba(255, 255, 255, 0.5); font-size: 0.875rem; text-decoration: underline; }
+        .footer-legal-links a:hover { color: var(--brand-gold); }
+
+        /* Desktop Optimization */
+        @media (min-width: 992px) {
+            h1 { font-size: 4rem; }
+            .menu-icon { display: none; }
+            .nav-menu {
+                position: static; height: auto; width: auto; background-color: transparent; flex-direction: row; align-items: center;
+            }
+            .nav-menu ul { display: flex; list-style: none; gap: 3rem; margin: 0; padding: 0; }
+            .nav-menu a { font-size: 1rem; margin: 0; font-weight: 500; color: var(--text-light); }
+            .nav-menu a::after {
+                content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0; background-color: var(--brand-gold); transition: width 0.3s ease;
+            }
+            .nav-menu a:hover::after { width: 100%; }
+            .nav-container { justify-content: flex-start; gap: 4rem; }
+            .header-actions { margin-left: auto; }
+            
+            .form-grid { grid-template-columns: 1fr 1fr; }
+            .full-width { grid-column: span 2; }
+            .footer-grid { grid-template-columns: 2fr 1fr 1fr; }
+            
+            .footer-bottom { flex-direction: row; justify-content: space-between; align-items: center; text-align: left; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container nav-container">
+            <a href="/" class="logo">
+                <img src="LionessRoofing.png" alt="Lioness Roofing Logo" class="logo-img">
+            </a>
+            
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/faq">FAQ</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="tel:7705888830" class="btn-header-call">Call Now</a>
+                <label for="menu-toggle" class="menu-icon"><span class="navicon"></span></label>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header container">
+            <h1>Questions, Answered.</h1>
+            <p>Welcome to our FAQ page where protection meets precision, and no question goes unanswered. As a roofing company that treats every project like it’s guarding the pride, we believe in transparency, education, and complete roofing system knowledge.</p>
+        </section>
+
+        <section class="container" style="padding-bottom: 2rem;">
+
+            <h2>Roofing Systems & Services</h2>
+            
+            <details>
+                <summary>What’s included in a complete roofing system?</summary>
+                <div class="faq-answer">
+                    <p>A true roofing system includes:</p>
+                    <ul>
+                        <li>Structural decking</li>
+                        <li>Synthetic underlayment</li>
+                        <li>Ice & water protection</li>
+                        <li>Drip edge</li>
+                        <li>Starter shingles</li>
+                        <li>Architectural or designer shingles</li>
+                        <li>Flashing at all vulnerable points</li>
+                        <li>Ridge cap shingles</li>
+                        <li>Balanced attic ventilation (intake & exhaust)</li>
+                        <li>Gutters and downspouts</li>
+                    </ul>
+                    <p>Every component must work together - like a pride working in harmony - to provide strength, durability, and longevity.</p>
+                </div>
+            </details>
+
+            <details>
+                <summary>What roofing materials do you offer?</summary>
+                <div class="faq-answer">
+                    <p>We specialize in high-performance, long-lasting options:</p>
+                    <ul>
+                        <li>Architectural asphalt shingles</li>
+                        <li>Impact-resistant shingles (Class 3 & 4)</li>
+                        <li>Designer and dimensional shingles</li>
+                        <li>Metal roofing systems</li>
+                        <li>Flat roof systems</li>
+                    </ul>
+                    <p>Each option is carefully matched to your home, climate, and budget.</p>
+                </div>
+            </details>
+
+            <h2>Ventilation & Weather Protection</h2>
+
+            <details>
+                <summary>Why is attic ventilation so important?</summary>
+                <div class="faq-answer">
+                    Proper ventilation prevents overheating, moisture buildup, mold, and shingle deterioration. We install intake (soffit) and exhaust (ridge) vents to regulate airflow—a breath of fresh air for your entire roofing system.
+                </div>
+            </details>
+
+            <details>
+                <summary>Do you install ice & water protection and underlayment?</summary>
+                <div class="faq-answer">
+                    Absolutely. These hidden layers are critical. They shield your home from ice dams, wind-driven rain, and roof deck rot. We use premium synthetic underlayment and install ice & water protection in all high-risk areas.
+                </div>
+            </details>
+
+            <h2>Storm Damage & Insurance Claims</h2>
+
+            <details>
+                <summary>Do you help with storm damage and insurance claims?</summary>
+                <div class="faq-answer">
+                    Yes. It’s one of our specialties. From free inspections to claim documentation and meeting with adjusters, we stand by your side like a lioness shielding her cubs. We ensure your claim reflects true damage, not shortcuts.
+                </div>
+            </details>
+
+            <details>
+                <summary>What are Class 3 and Class 4 impact shingles, and why are they important in Georgia?</summary>
+                <div class="faq-answer">
+                    They’re shingles designed to withstand hail, debris, and wind-driven impacts better than standard roofing. While Georgia isn’t a top hail state, we still get surprise hailstorms and falling branches from summer winds. Class 4 is the highest level, and it's becoming more popular in metro Atlanta.
+                </div>
+            </details>
+
+            <details>
+                <summary>Do insurance companies in Georgia offer discounts for Class 3 and 4 roofs?</summary>
+                <div class="faq-answer">
+                    Yes, some do. Discounts may not be automatic or publicly advertised, but many Georgia providers offer discounted premiums if you install a Class 3 or 4 rated roof. You just need to call and confirm with them and we will help you give them proper documentation.
+                </div>
+            </details>
+
+            <details>
+                <summary>How much can I save with a Class 3 or 4 roof in Georgia?</summary>
+                <div class="faq-answer">
+                    Depending on your location, carrier, and policy, you can sometimes save anywhere from 5% to 15% on your homeowner’s insurance annually. Over 10–15 years, that can add up to hundreds or even thousands of dollars, not to mention fewer out-of-pocket storm repair costs.
+                </div>
+            </details>
+
+            <details>
+                <summary>Is it worth upgrading to Class 3 or 4 if hail isn’t constant here?</summary>
+                <div class="faq-answer">
+                    <p>Yes, especially if:</p>
+                    <ul>
+                        <li>You plan to stay in your home 5+ years</li>
+                        <li>You live in tree-heavy or rural areas with storm risk</li>
+                        <li>You want fewer repairs after wind/hail</li>
+                        <li>You’re looking for a long-term, worry-free roofing solution</li>
+                    </ul>
+                    <p>Even if your insurance doesn’t offer a discount, the added protection and resale value can still make it worthwhile.</p>
+                </div>
+            </details>
+
+            <h2>Maintenance, Warranties & Peace of Mind</h2>
+
+            <details>
+                <summary>Do you offer roof inspections or maintenance plans?</summary>
+                <div class="faq-answer">
+                    Yes! Like any strong den, your roof needs regular attention. We offer annual maintenance plans that help prevent surprise repairs and extend your roof’s life.
+                </div>
+            </details>
+
+            <details>
+                <summary>What kind of warranties do you offer?</summary>
+                <div class="faq-answer">
+                    <p>We offer:</p>
+                    <ul>
+                        <li>50 year warranty on material</li>
+                        <li>Up to 25 year warranty on workmanship</li>
+                        <li>Full system warranties that cover installation, tear-off, and disposal when applicable.</li>
+                    </ul>
+                </div>
+            </details>
+
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-header">
+                    <h2>Let’s Work Together.</h2>
+                    <p>Get in touch so we can get started securing your domain.</p>
+                </div>
+                
+                <form action="#" method="POST" class="form-grid">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" class="form-control" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" class="form-control" required></textarea>
+                    </div>
+                    <div class="form-group full-width" style="margin-top: 1rem; align-items: center;">
+                        <button type="submit" class="btn btn-primary" style="width: 100%; max-width: 300px;">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <img src="LionessRoofing.png" alt="Lioness Roofing Logo" class="logo-img-footer">
+                    </div>
+                    <p>We treat every home as if it were our own, ensuring absolute care for every family we serve across Georgia.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <a href="/">Home</a>
+                    <a href="/faq">FAQ</a>
+                    <a href="/about">About</a>
+                    <a href="/services">Services</a>
+                    <a href="/contact">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <a href="tel:7705888830">770.588.8830</a>
+                    <a href="mailto:contact@lionessroofing.com">contact@lionessroofing.com</a>
+                    <a href="/contact" style="color: var(--brand-gold); margin-top: 1rem; font-weight: 500;">Request an Inspection &rarr;</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lioness Roofing. All rights reserved. | Contractor ID: #25107976</p>
+                <div class="footer-legal-links">
+                    <a href="/privacy">Privacy Policy</a>
+                    <a href="/accessibility">Accessibility Statement</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
