@@ -65,12 +65,12 @@
             letter-spacing: -0.03em;
             font-weight: 800;
             line-height: 1.1;
-            color: var(--brand-purple);
+            color: var(--text-main); /* Keeping headings dark for readability like old site */
         }
 
-        h1 { font-size: 3.5rem; margin-bottom: 1.5rem; }
-        h2 { font-size: 2.5rem; margin-bottom: 1.5rem; }
-        h3 { font-size: 1.75rem; margin-bottom: 1rem; }
+        h1 { font-size: 3.5rem; margin-bottom: 1.5rem; text-align: center; }
+        h2 { font-size: 2.25rem; margin-bottom: 1.5rem; }
+        h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-main); font-weight: 600; }
 
         p {
             font-size: 1.125rem;
@@ -79,7 +79,7 @@
             font-weight: 400;
         }
 
-        ul {
+        ul, ol {
             margin-bottom: 1.5rem;
             margin-left: 1.5rem;
             color: var(--text-muted);
@@ -141,15 +141,30 @@
         }
         .btn-header-call:hover { background-color: var(--brand-gold-dark); transform: scale(1.02); }
 
-        /* Alternating Split Sections for 7 Photos */
-        .split-section {
-            padding: 5rem 0;
+        /* Page Header Title */
+        .page-header {
+            padding: 6rem 0 2rem 0;
             background-color: var(--bg-surface);
-            border-bottom: 1px solid var(--border-color);
         }
 
-        .split-section:nth-child(even) {
-            background-color: var(--bg-base);
+        .page-header h3 {
+            text-align: center;
+            font-weight: 400;
+            max-width: 800px;
+            margin: 0 auto;
+            color: var(--text-main);
+        }
+        
+        .page-header p {
+            text-align: center;
+            max-width: 800px;
+            margin: 1rem auto 0 auto;
+        }
+
+        /* Alternating Split Sections for Photos */
+        .split-section {
+            padding: 4rem 0;
+            background-color: var(--bg-surface);
         }
 
         .split-grid {
@@ -159,51 +174,37 @@
             align-items: center;
         }
 
-        .split-content h2 { margin-bottom: 1rem; }
+        .split-content h2 { margin-bottom: 1.5rem; }
 
         .split-img-container {
             width: 100%;
-            border-radius: 24px;
+            border-radius: 8px; /* Slightly sharper edges to look like documents/photos */
             overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-            background-color: var(--brand-purple-light);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            background-color: var(--bg-base);
+            border: 1px solid var(--border-color);
         }
 
         .split-img-container img {
             width: 100%;
-            height: auto;
+            height: auto; /* Ensures full photo is visible without cropping */
             display: block;
         }
 
         /* Buttons & Links */
         .btn-link {
-            display: inline-flex;
-            align-items: center;
-            border: 2px solid var(--brand-purple);
-            color: var(--brand-purple);
-            padding: 0.75rem 2rem;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1rem;
+            display: block;
+            color: var(--text-main);
+            font-weight: 500;
+            text-decoration: underline;
             transition: all 0.3s ease;
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-            margin-right: 1rem;
+            margin-top: 0.5rem;
+            font-style: italic;
+            font-size: 0.95rem;
         }
 
         .btn-link:hover {
-            background-color: var(--brand-purple);
-            color: var(--text-light);
-        }
-
-        .btn-link-gold {
-            border-color: var(--brand-gold);
-            color: var(--brand-gold-dark);
-        }
-
-        .btn-link-gold:hover {
-            background-color: var(--brand-gold);
-            color: var(--text-light);
+            color: var(--brand-purple);
         }
 
         /* Standardized Footer */
@@ -224,7 +225,6 @@
 
         /* Desktop Optimization */
         @media (min-width: 992px) {
-            h1 { font-size: 4.5rem; }
             .menu-icon { display: none; }
             .nav-menu { position: static; height: auto; width: auto; background-color: transparent; flex-direction: row; align-items: center; }
             .nav-menu ul { display: flex; list-style: none; gap: 3rem; margin: 0; padding: 0; }
@@ -273,133 +273,105 @@
 
     <main>
         
-        <section class="split-section">
-            <div class="container split-grid">
-                <div class="split-content">
-                    <h1>Roof Repair</h1>
-                    <h3>How We Ensure Every Roof Repair Is Done the Right Way</h3>
-                    <p>When your roof needs repair, it’s not just about patching holes or replacing a few shingles. It’s about doing the work correctly, using methods that meet code, preserve manufacturer warranties, and stand the test of time.</p>
-                </div>
-                <div class="split-img-container">
-                    <img src="roofrepairs1.png" alt="Lioness Roofing repairing a residential roof">
-                </div>
-            </div>
+        <section class="page-header container">
+            <h1>Roof Repair</h1>
+            <h3>How We Ensure Every Roof Repair Is Done the Right Way</h3>
+            <p>When your roof needs repair, it’s not just about patching holes or replacing a few shingles. It’s about doing the work correctly, using methods that meet code, preserve manufacturer warranties, and stand the test of time.</p>
         </section>
 
         <section class="split-section">
-            <div class="container split-grid reverse">
+            <div class="container split-grid">
+                <div class="split-img-container">
+                    <img src="roofrepairs1.png" alt="Lab analysis document of shingle sample">
+                </div>
                 <div class="split-content">
-                    <h2>Three Key Factors</h2>
-                    <p>At Lioness Roofing, we evaluate every potential repair using three key factors:</p>
-                    <ul>
+                    <h2>At Lioness Roofing, we evaluate every potential repair using three key factors:</h2>
+                    <ol>
                         <li><strong>Compatibility</strong> – Is the material suitable for today’s standards?</li>
                         <li><strong>Repairability</strong> – Can it actually be repaired without damage?</li>
                         <li><strong>Availability</strong> – Can it be sourced in adequate quantity?</li>
-                    </ul>
+                    </ol>
                     <p>This process ensures that every repair we perform can be warranted, documented, and indemnified through proper evidence and compliance.</p>
                 </div>
-                <div class="split-img-container">
-                    <img src="roofrepairs2.png" alt="Roof repair evaluation process">
-                </div>
-            </div>
-        </section>
-
-        <section class="split-section">
-            <div class="container split-grid">
-                <div class="split-content">
-                    <h2>1. Compatibility</h2>
-                    <h3>Is the Material Matchable and Code-Compliant?</h3>
-                    <p>Before any work begins, we verify whether the existing roofing material is compatible with the products currently available on the market. We identify the manufacturer, model, and specifications of your existing shingles.</p>
-                    <p>If there’s any indication of a discontinued product, we take precise measurements and, if needed, send samples to a lab for analysis. If the product is confirmed discontinued, we advise against mixing it with new materials — as doing so may violate manufacturer recommendations, void warranties, and conflict with building code.</p>
-                    
-                    <blockquote>
-                        <strong>2018 International Residential Code (IRC) Section R904.2:</strong><br>
-                        "Roof assemblies shall be of materials that are compatible with each other per manufacturers’ installation recommendations and with the building or structure to which the materials are applied."
-                    </blockquote>
-                    <p><strong>Why this matters:</strong> Compatibility protects your home’s integrity, helps prevent warranty loss, and ensures your roof system performs as designed.</p>
-                </div>
-                <div class="split-img-container">
-                    <img src="roofrepairs3.png" alt="Checking roof material compatibility and code compliance">
-                </div>
             </div>
         </section>
 
         <section class="split-section">
             <div class="container split-grid reverse">
                 <div class="split-content">
-                    <h2>2. Repairability</h2>
-                    <h3>Can the Material Be Repaired Without Further Damage?</h3>
-                    <p>Once compatibility is established, we assess repairability - meaning whether the shingle can physically withstand a repair. We test for:</p>
+                    <h2>Compatibility - Is the Material Matchable and Code-Compliant?</h2>
+                    <p>Before any work begins, we verify whether the existing roofing material is compatible with the products currently available on the market.</p>
                     <ul>
-                        <li><strong>Pliability and flexibility:</strong> Can shingles be lifted and resealed without cracking the fiberglass mat?</li>
-                        <li><strong>Seal separation:</strong> Can the adhesive bond be delaminated without material transfer or damage to the lower course?</li>
-                        <li><strong>Nail zone durability:</strong> Can a new fastener be driven without shingle fracture or loss of granules?</li>
+                        <li>We identify the manufacturer, model, and specifications of your existing shingles.</li>
+                        <li>If there’s any indication of a discontinued product, we take precise measurements and, if needed, send samples to a lab for analysis.</li>
+                        <li>If the product is confirmed discontinued, we advise against mixing it with new materials — as doing so may violate manufacturer recommendations, void warranties, and conflict with building code.</li>
                     </ul>
-                    <p>If the material fails these tests, we will not recommend a repair because it would not be warrantable or reliable. This process follows industry guidelines similar to those published by the National Academy of Forensic Engineers (NAFE).</p>
-                    
-                    <a href="https://journal.nafe.org/ojs/index.php/nafe/article/view/94/835" target="_blank" rel="noopener noreferrer" class="btn-link btn-link-gold">Read Official NAFE Article &rarr;</a>
-                    
-                    <p style="font-size: 0.875rem; margin-top: 1rem;">The NAFE article illustrates conditions we evaluate before approving any repair, such as transfer of asphalt, shingle tearing, and damage propagation across adjoining shingles.</p>
+                    <p><strong>Code Support:</strong></p>
+                    <p style="font-style: italic;">Per the 2018 International Residential Code (IRC) Section R904.2:</p>
+                    <p style="font-style: italic;">"Roof assemblies shall be of materials that are compatible with each other per manufacturers’ installation recommendations and with the building or structure to which the materials are applied."</p>
+                    <p>Why this matters:<br>Compatibility protects your home’s integrity, helps prevent warranty loss, and ensures your roof system performs as designed.</p>
                 </div>
                 <div class="split-img-container">
-                    <img src="roofrepairs4.png" alt="Testing shingle pliability and repairability">
+                    <img src="roofrepairs2.png" alt="Measuring shingle dimensions for compatibility">
                 </div>
             </div>
         </section>
 
         <section class="split-section">
             <div class="container split-grid">
+                <div class="split-img-container" style="display: flex; flex-direction: column; gap: 1rem; background-color: transparent; border: none; box-shadow: none;">
+                    <div style="border-radius: 8px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid var(--border-color);">
+                        <img src="roofrepairs3.png" alt="Testing shingle pliability and repairability">
+                    </div>
+                    <div style="border-radius: 8px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid var(--border-color);">
+                        <img src="roofrepairs4.png" alt="Documenting non-repairable shingle damage">
+                    </div>
+                </div>
                 <div class="split-content">
-                    <h2>3. Availability</h2>
-                    <h3>Can the Material Be Sourced in Quantity?</h3>
+                    <h2>Availability – Can the Material Be Sourced in Quantity?</h2>
                     <p>Even when a shingle passes both compatibility and repairability, we still have to locate the matching material.</p>
-                    <p>Some shingles are limited to specific regions or discontinued in certain colors. We confirm availability and quantity before approving a repair to ensure full, consistent coverage.</p>
-                    <p>If the material cannot be sourced or is prohibitively expensive to ship, we document this clearly for insurance consideration.</p>
-                </div>
-                <div class="split-img-container">
-                    <img src="roofrepairs5.png" alt="Sourcing available roofing materials">
-                </div>
-            </div>
-        </section>
+                    <ul>
+                        <li>Some shingles are limited to specific regions or discontinued in certain colors.</li>
+                        <li>We confirm availability and quantity before approving a repair to ensure full, consistent coverage.</li>
+                        <li>If the material cannot be sourced or is prohibitively expensive to ship, we document this clearly for insurance consideration.</li>
+                    </ul>
 
-        <section class="split-section">
-            <div class="container split-grid reverse">
-                <div class="split-content">
-                    <h2>Insurance Indemnification</h2>
-                    <h3>Through Objective Documentation</h3>
+                    <h2 style="margin-top: 3rem;">Insurance Indemnification Through Documentation</h2>
                     <p>Lioness Roofing performs insurance indemnification by providing objective documentation rather than opinion.</p>
                     <p>We do not speculate or make subjective claims - we provide verifiable evidence through photographs, videos, measurements, and field testing that align with forensic engineering standards such as those cited by NAFE.</p>
-                    <p>Our documentation allows insurance companies to make fair and accurate determinations while protecting homeowners from improper or unsupported denials.</p>
-                </div>
-                <div class="split-img-container">
-                    <img src="roofrepairs6.png" alt="Documenting roof damage for insurance claims">
                 </div>
             </div>
         </section>
 
         <section class="split-section">
-            <div class="container split-grid">
+            <div class="container split-grid reverse">
                 <div class="split-content">
                     <h2>When We Perform a Repair</h2>
-                    <p>Every step is photo and video documented before, during, and after completion. We follow manufacturer specifications, Georgia building code, and HAAG inspection methodology. We restore the roof exactly as it should be — not just patched, but professionally repaired.</p>
-                    
-                    <div>
-                        <a href="https://photos.app.goo.gl/Ww6g4Cr9rrE9KSFn6" target="_blank" rel="noopener noreferrer" class="btn-link">View Repair Example 1</a>
-                        <a href="https://photos.app.goo.gl/gXkJvRuhbupW1vCF6" target="_blank" rel="noopener noreferrer" class="btn-link">View Repair Example 2</a>
-                    </div>
-
-                    <h3 style="margin-top: 2rem;">Why homeowners trust Lioness Roofing</h3>
-                    <p>When you hire Lioness Roofing, you’re getting a contractor that prioritizes:</p>
                     <ul>
-                        <li>Compatibility with modern materials and code.</li>
-                        <li>Repairability proven through real-world testing.</li>
-                        <li>Availability to complete the repair correctly.</li>
+                        <li>Every step is photo and video documented before, during, and after completion.</li>
+                        <li>We follow manufacturer specifications, Georgia building code, and HAAG inspection methodology.</li>
+                        <li>We restore the roof exactly as it should be — not just patched, but professionally repaired.</li>
                     </ul>
-                    <p>And you’re also getting objective, insurer-ready documentation that upholds your right to full indemnification under your policy.</p>
-                    <p><strong>We don’t cut corners. We protect your home - like a lioness protects her den.</strong></p>
+                    
+                    <p style="margin-bottom: 0;">See for yourself:</p>
+                    <a href="https://photos.app.goo.gl/Ww6g4Cr9rrE9KSFn6" target="_blank" rel="noopener noreferrer" class="btn-link">Repair Example #1</a>
+                    <a href="https://photos.app.goo.gl/gXkJvRuhbupW1vCF6" target="_blank" rel="noopener noreferrer" class="btn-link">Repair Example #2</a>
+
+                    <h2 style="margin-top: 4rem;">Here’s why homeowners trust Lioness Roofing:</h2>
+                    <p>When you hire Lioness Roofing, you’re getting a contractor that prioritizes:</p>
+                    <ol>
+                        <li><strong>Compatibility</strong> with modern materials and code.</li>
+                        <li><strong>Repairability</strong> proven through real-world testing.</li>
+                        <li><strong>Availability</strong> to complete the repair correctly.</li>
+                    </ol>
                 </div>
-                <div class="split-img-container">
-                    <img src="roofrepairs7.png" alt="A completed, professional roof repair by Lioness Roofing">
+                <div class="split-img-container" style="display: flex; flex-direction: column; gap: 1rem; background-color: transparent; border: none; box-shadow: none;">
+                    <div style="border-radius: 8px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid var(--border-color);">
+                        <img src="roofrepairs5.png" alt="In-progress roof repair showing underlayment and new shingles">
+                    </div>
+                    <div style="border-radius: 8px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid var(--border-color);">
+                        <img src="roofrepairs6.png" alt="Professional installation of a new attic fan roof vent">
+                    </div>
                 </div>
             </div>
         </section>
