@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lioness Roofing performs comprehensive 10-point HAAG-style inspections, offering empirical evidence and ironclad advocacy for insurance claims.">
+    <meta name="keywords" content="Roof Inspections, HAAG Inspection, Roof Damage, Insurance Claims, Lioness Roofing, Georgia Roof Inspector">
+    <meta name="author" content="Lioness Roofing">
+    <title>Roof Inspections | Lioness Roofing</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Roof Inspections",
+      "provider": {
+        "@type": "RoofingContractor",
+        "name": "Lioness Roofing",
+        "telephone": "770-588-8830",
+        "url": "https://www.lionessroofing.com/"
+      },
+      "description": "Comprehensive 10-point HAAG-style inspections evaluating ventilation, moisture intrusion, and structural integrity for accurate insurance restoration."
+    }
+    </script>
+
+    <style>
+        /* CSS Variables - Exact Brand Identity */
+        :root {
+            --bg-base: #fafafa;
+            --bg-surface: #ffffff;
+            --brand-purple: #381b3e; 
+            --brand-purple-light: #4d2655;
+            --brand-gold: #a37c4f; 
+            --brand-gold-dark: #8b6841;
+            --text-main: #1d1d1f; 
+            --text-muted: #6e6e73;
+            --text-light: #f5f5f7;
+            --border-color: rgba(0, 0, 0, 0.08);
+            --font-stack: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --nav-height: 80px;
+        }
+
+        /* Reset & Base Styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--font-stack);
+            background-color: var(--bg-surface);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+            padding-top: var(--nav-height);
+        }
+
+        a { text-decoration: none; transition: all 0.3s ease; }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            letter-spacing: -0.03em;
+            font-weight: 800;
+            line-height: 1.1;
+            color: var(--brand-purple);
+        }
+
+        h1 { font-size: 3.5rem; margin-bottom: 1.5rem; text-align: center; }
+        h2 { font-size: 2.25rem; margin-bottom: 1.5rem; }
+        h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-main); font-weight: 600; }
+
+        p {
+            font-size: 1.125rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
+
+        /* SCOPED LIST STYLING */
+        main ul {
+            margin-bottom: 1.5rem;
+            list-style: none;
+        }
+
+        main li {
+            margin-bottom: 0.75rem;
+            font-size: 1.125rem;
+            color: var(--text-muted);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        main li::before {
+            content: '•';
+            color: var(--brand-gold);
+            font-weight: bold;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+
+        /* Layout Utilities */
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        
+        /* Header Navigation */
+        header {
+            position: fixed; top: 0; left: 0; width: 100%; height: var(--nav-height);
+            background-color: var(--brand-purple); border-bottom: 1px solid rgba(163, 124, 79, 0.2);
+            z-index: 1000; display: flex; align-items: center;
+        }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+        .logo { z-index: 1001; display: flex; align-items: center; }
+        .logo-img { max-height: 50px; width: auto; display: block; }
+
+        /* Mobile Menu */
+        .menu-toggle { display: none; }
+        .menu-icon { cursor: pointer; padding: 1rem 0 1rem 1rem; z-index: 1001; display: block; }
+        .navicon {
+            background: var(--brand-gold); display: block; height: 2px; position: relative; transition: background .2s ease-out; width: 24px;
+        }
+        .navicon:before, .navicon:after {
+            background: var(--brand-gold); content: ''; display: block; height: 100%; position: absolute; transition: all .2s ease-out; width: 100%;
+        }
+        .navicon:before { top: 7px; }
+        .navicon:after { top: -7px; }
+        .menu-toggle:checked ~ .menu-icon .navicon { background: transparent; }
+        .menu-toggle:checked ~ .menu-icon .navicon:before { transform: rotate(-45deg); top: 0; }
+        .menu-toggle:checked ~ .menu-icon .navicon:after { transform: rotate(45deg); top: 0; }
+        .nav-menu {
+            position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; background-color: var(--brand-purple);
+            display: flex; flex-direction: column; justify-content: center; align-items: center; transition: right 0.3s ease; z-index: 1000;
+        }
+        .menu-toggle:checked ~ .nav-menu { right: 0; }
+        
+        /* Fixed Nav Menu Styles */
+        .nav-menu ul { list-style: none; padding: 0; margin: 0; }
+        .nav-menu li { padding: 0; margin: 0; }
+        .nav-menu li::before { content: none; } /* Override custom bullet */
+        .nav-menu a { color: var(--text-light); font-size: 1.5rem; font-weight: 600; margin: 1.5rem 0; display: block; position: relative; }
+        .nav-menu a:hover { color: var(--brand-gold); }
+
+        .header-actions { display: flex; align-items: center; gap: 1rem; z-index: 1001; }
+        .btn-header-call {
+            background-color: var(--brand-gold); color: var(--text-light); padding: 0.6rem 1.5rem;
+            font-size: 0.875rem; font-weight: 700; border-radius: 50px;
+        }
+        .btn-header-call:hover { background-color: var(--brand-gold-dark); transform: scale(1.02); }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            text-align: center;
+        }
+
+        .btn-gold {
+            background-color: var(--brand-gold);
+            color: var(--text-light);
+            box-shadow: 0 4px 14px rgba(163, 124, 79, 0.2);
+        }
+
+        .btn-gold:hover {
+            background-color: var(--brand-gold-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(163, 124, 79, 0.3);
+        }
+
+        /* Page Layout Blocks */
+        .page-header {
+            padding: 6rem 0 2rem 0;
+            background-color: var(--bg-surface);
+        }
+
+        /* Alternating Split Sections for Photos */
+        .split-section {
+            padding: 4rem 0;
+            background-color: var(--bg-surface);
+        }
+
+        .split-section:nth-child(even) {
+            background-color: var(--bg-base);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .split-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .split-content h2 { margin-bottom: 1.5rem; }
+        .split-content strong { color: var(--text-main); font-weight: 700; }
+
+        .split-img-container {
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+            background-color: var(--bg-base);
+            border: 1px solid var(--border-color);
+        }
+
+        .split-img-container img {
+            width: 100%;
+            height: auto; /* Ensures full photo is visible without cropping */
+            display: block;
+        }
+
+        /* Bottom CTA */
+        .cta-bottom {
+            padding: 5rem 0;
+            text-align: center;
+            background-color: var(--bg-surface);
+        }
+
+        /* Standardized Footer */
+        footer {
+            background-color: var(--brand-purple); padding: 5rem 0 2rem 0; color: var(--text-light); border-top: 4px solid var(--brand-gold);
+        }
+        .footer-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; margin-bottom: 4rem; }
+        .logo-img-footer { max-height: 60px; width: auto; display: block; }
+        .footer-col p { color: rgba(255, 255, 255, 0.7); font-size: 1rem; margin-top: 1.5rem; }
+        .footer-col h4 { font-size: 1.125rem; color: var(--brand-gold); margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 1px; }
+        .footer-col a { display: block; color: var(--text-light); margin-bottom: 1rem; font-weight: 300; }
+        .footer-col a:hover { color: var(--brand-gold); transform: translateX(5px); }
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; flex-direction: column; gap: 1rem; }
+        .footer-bottom p { font-size: 0.875rem; color: rgba(255, 255, 255, 0.5); margin: 0; }
+        .footer-legal-links { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+        .footer-legal-links a { color: rgba(255, 255, 255, 0.5); font-size: 0.875rem; text-decoration: underline; }
+        .footer-legal-links a:hover { color: var(--brand-gold); }
+
+        /* Desktop Optimization */
+        @media (min-width: 992px) {
+            .menu-icon { display: none; }
+            .nav-menu { position: static; height: auto; width: auto; background-color: transparent; flex-direction: row; align-items: center; }
+            .nav-menu ul { display: flex; list-style: none; gap: 3rem; margin: 0; padding: 0; }
+            .nav-menu a { font-size: 1rem; margin: 0; font-weight: 500; color: var(--text-light); }
+            .nav-menu a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0; background-color: var(--brand-gold); transition: width 0.3s ease; }
+            .nav-menu a:hover::after { width: 100%; }
+            .nav-container { justify-content: flex-start; gap: 4rem; }
+            .header-actions { margin-left: auto; }
+            
+            /* Alternating Desktop Grid Layout */
+            .split-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 5rem;
+            }
+            .split-grid.reverse .split-content { order: 2; }
+            .split-grid.reverse .split-img-container { order: 1; }
+            
+            .footer-grid { grid-template-columns: 2fr 1fr 1fr; }
+            .footer-bottom { flex-direction: row; justify-content: space-between; align-items: center; text-align: left; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="/" class="logo">
+                <img src="LionessRoofing.png" alt="Lioness Roofing Logo" class="logo-img">
+            </a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/faq">FAQ</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="tel:7705888830" class="btn-header-call">Call Now</a>
+                <label for="menu-toggle" class="menu-icon"><span class="navicon"></span></label>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        
+        <section class="page-header container">
+            <h1>Roof Inspections</h1>
+        </section>
+
+        <section class="split-section">
+            <div class="container split-grid">
+                <div class="split-content">
+                    <h2>Comprehensive HAAG-Style Inspections</h2>
+                    <p>At Lioness Roofing, our inspections go far beyond a simple walk-around. We perform a <strong>comprehensive 10-point HAAG-style inspection</strong> that examines both the exterior and the attic interior to uncover issues most contractors overlook. By getting inside your attic, we can evaluate ventilation, moisture intrusion, and structural integrity—ensuring we understand your roof from the inside out.</p>
+                    <p>What sets us apart is our <strong>deep experience with insurance claims</strong>. Every inspection is conducted with the same precision and documentation standards required to stand up in an insurance review. We know exactly what carriers look for, and we make sure your inspection leaves no question about the condition or cause of damage.</p>
+                </div>
+                <div class="split-img-container">
+                    <img src="roofinspections1.png" alt="Lioness Roofing performing a comprehensive 10-point HAAG-style inspection">
+                </div>
+            </div>
+        </section>
+
+        <section class="split-section">
+            <div class="container split-grid reverse">
+                <div class="split-content">
+                    <h2>Diagnosing Problems and Building Solutions</h2>
+                    <p>During our inspection, we identify how your roof can be properly brought up to code and beyond. We look for design flaws like dead valleys or roof-to-wall terminations that are prone to leaking and develop a clear game plan to correct them. Whether that means adding pan metal, rolled roofing tie-ins, or custom-fitted flashing, our goal is to build a system that performs flawlessly—no matter how the original roof was designed.</p>
+                    <p>Because insurance restoration is one of our specialties, we also make sure every recommended repair or replacement is <strong>properly justified and documented</strong> for insurance adjusters. This ensures you get the full scope of work you’re entitled to—without unnecessary delays or denials.</p>
+                </div>
+                <div class="split-img-container">
+                    <img src="roofinspections2.png" alt="Diagnosing roof problems and identifying design flaws">
+                </div>
+            </div>
+        </section>
+
+        <section class="split-section">
+            <div class="container split-grid">
+                <div class="split-content">
+                    <h2>Documentation and Proof That Protects You</h2>
+                    <p>We thoroughly photograph and video every inspection, documenting existing damage and potential problem areas. This not only protects homeowners but also provides <strong>verifiable, timestamped evidence</strong> for insurance claims. Every elevation—gutters, downspouts, windows, siding, fascia, and soffit—is inspected so we can notify you of any issues and offer real solutions before they grow into bigger problems.</p>
+                    <p>Our reports are built to <strong>advocate for you</strong>, clearly showing the difference between normal wear and true storm-related damage. We bridge the gap between homeowner and insurer, ensuring your claim is supported by facts, not opinions.</p>
+                </div>
+                <div class="split-img-container">
+                    <img src="roofinspections3.png" alt="Thorough documentation and verifiable evidence for insurance claims">
+                </div>
+            </div>
+        </section>
+
+        <section class="split-section">
+            <div class="container split-grid reverse">
+                <div class="split-content">
+                    <h2>Empirical Evidence. Ironclad Advocacy.</h2>
+                    <p>When we’re on your roof, we take our time—documenting shingle conditions, checking repairability, and verifying whether materials are discontinued or unavailable. If they are, we build <strong>strong, evidence-based cases</strong> with insurers grounded in irreparability, incompatibility, and unavailability.</p>
+                    <p>We understand insurance language, carrier guidelines, and policy standards—and we use that knowledge to <strong>protect our clients and maximize their rightful coverage</strong>. We leave no stone unturned and no doubt unproven, ensuring every inspection stands up to scrutiny.</p>
+                </div>
+                <div class="split-img-container">
+                    <img src="roofinspections4.png" alt="Gathering empirical evidence for roof damage claims">
+                </div>
+            </div>
+        </section>
+
+        <section class="split-section">
+            <div class="container split-grid">
+                <div class="split-content">
+                    <h2>Our Promise</h2>
+                    <p>In summary, we inspect to uncover storm damage, builder errors, code violations, and hidden flaws, then craft a precise plan to correct them with proper materials and expert workmanship. And when it comes to insurance, <strong>we’re more than contractors—we’re advocates.</strong></p>
+                    <p>At Lioness Roofing, we stand beside you through the entire process, from inspection to final approval, making sure your roof—and your home—get the justice they deserve.</p>
+                </div>
+                <div class="split-img-container">
+                    <img src="roofinspections5.png" alt="Lioness Roofing stands beside you through the entire process">
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-bottom">
+            <div class="container">
+                <a href="/services" class="btn btn-gold">Next Project &rarr;</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <img src="LionessRoofing.png" alt="Lioness Roofing Logo" class="logo-img-footer">
+                    </div>
+                    <p>We treat every home as if it were our own, ensuring absolute care for every family we serve across Georgia.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <a href="/">Home</a>
+                    <a href="/faq">FAQ</a>
+                    <a href="/about">About</a>
+                    <a href="/services">Services</a>
+                    <a href="/contact">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <a href="tel:7705888830">770.588.8830</a>
+                    <a href="mailto:contact@lionessroofing.com">contact@lionessroofing.com</a>
+                    <a href="/contact" style="color: var(--brand-gold); margin-top: 1rem; font-weight: 500;">Request an Inspection &rarr;</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lioness Roofing. All rights reserved. | Contractor ID: #25107976</p>
+                <div class="footer-legal-links">
+                    <a href="/privacy">Privacy Policy</a>
+                    <a href="/accessibility">Accessibility Statement</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
