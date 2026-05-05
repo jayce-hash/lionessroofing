@@ -192,28 +192,9 @@
             backdrop-filter: blur(4px);
         }
 
-        .hero-content h1 {
-            font-size: 3.5rem;
-            line-height: 1.05;
-            color: var(--text-light);
-            margin-bottom: 0.5rem;
-        }
-
-        .hero-content h2 {
-            font-size: 2.25rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            /* Gold Gradient Text */
-            background: linear-gradient(90deg, var(--brand-gold-light) 0%, var(--brand-gold) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero-content p {
-            font-size: 1.25rem;
-            color: rgba(255, 255, 255, 0.85);
-            max-width: 500px;
-        }
+        .hero-content h1 { font-size: 3.5rem; line-height: 1.05; color: var(--text-light); margin-bottom: 0.5rem; }
+        .hero-content h2 { font-size: 2.25rem; font-weight: 700; margin-bottom: 1.5rem; background: linear-gradient(90deg, var(--brand-gold-light) 0%, var(--brand-gold) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-content p { font-size: 1.25rem; color: rgba(255, 255, 255, 0.85); max-width: 500px; }
 
         /* Next-Gen Frosted Glass Form */
         .glass-form-card {
@@ -275,18 +256,37 @@
         }
         .about-img-container img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center 20%; }
 
-        /* Mobile Swipe Carousels for Services & Testimonials */
-        .services-section { background-color: var(--text-main); padding: 4rem 0; color: var(--text-light); text-align: center; }
-        .services-section h2 { color: var(--text-light); margin-bottom: 4rem; }
+        /* --- BULLETPROOF MOBILE SWIPE CAROUSELS --- */
+        .services-section { background-color: var(--text-main); padding: 4rem 0; color: var(--text-light); text-align: center; overflow: hidden; }
+        .services-section h2 { color: var(--text-light); margin-bottom: 3rem; }
         
         .services-grid, .test-grid { 
-            display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 1.5rem; 
-            padding-bottom: 1.5rem; -webkit-overflow-scrolling: touch; scrollbar-width: none; 
+            display: flex; 
+            flex-wrap: nowrap;
+            overflow-x: auto; 
+            overflow-y: hidden;
+            scroll-snap-type: x mandatory; 
+            gap: 1.5rem; 
+            /* This margin trick lets the cards bleed to the edges of the phone screen */
+            margin: 0 -1.5rem; 
+            padding: 0.5rem 1.5rem 2.5rem 1.5rem; 
+            -webkit-overflow-scrolling: touch; 
+            scrollbar-width: none; 
         }
         .services-grid::-webkit-scrollbar, .test-grid::-webkit-scrollbar { display: none; }
         
+        /* Spacer to allow the final card to scroll all the way left */
+        .services-grid::after, .test-grid::after { content: ''; flex: 0 0 1px; }
+
         .service-card, .test-card { 
-            min-width: 85vw; scroll-snap-align: center; flex-shrink: 0; text-align: left; 
+            flex: 0 0 85vw; /* Forces cards to exactly 85% of screen width */
+            max-width: 350px; /* Prevents them from getting too wide on tablets */
+            scroll-snap-align: start; 
+            text-align: left; 
+            white-space: normal; /* CRITICAL: Forces text to wrap properly */
+            box-sizing: border-box; /* CRITICAL: Keeps padding inside the card width */
+            display: flex;
+            flex-direction: column;
         }
         
         .service-card { padding: 2.5rem; background-color: rgba(255,255,255,0.05); border-radius: 24px; border: 1px solid rgba(255,255,255,0.1); }
@@ -294,13 +294,13 @@
         .service-card p { color: rgba(255,255,255,0.7); }
 
         /* Parallax Fix for Mobile (Normal scroll so it doesn't disappear) */
-        .parallax-divider { width: 100%; height: 300px; background-size: cover; background-position: center; background-attachment: scroll; }
+        .parallax-divider { width: 100%; height: 350px; background-size: cover; background-position: center; background-attachment: scroll; display: block; }
 
         /* Testimonials */
-        .testimonials { background-color: var(--bg-surface); }
+        .testimonials { background-color: var(--bg-surface); overflow: hidden; }
         .test-card { padding: 2.5rem; background-color: var(--bg-base); border-radius: 24px; border: 1px solid var(--border-color); }
-        .test-card h4 { color: var(--text-main); margin-bottom: 1rem; font-size: 1.25rem; }
-        .test-card p { font-style: italic; font-size: 1rem; color: var(--text-muted); }
+        .test-card h4 { color: var(--brand-purple); margin-bottom: 1rem; font-size: 1.25rem; }
+        .test-card p { font-style: italic; font-size: 1.05rem; color: var(--text-muted); line-height: 1.6; }
 
         /* FAQ Accordions */
         .faq-section { background-color: var(--bg-base); }
@@ -357,10 +357,18 @@
             .parallax-divider { height: 400px; background-attachment: fixed; }
 
             /* Restore Desktop Grids (Turns off the mobile swipe effect) */
-            .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4rem; overflow-x: visible; padding-bottom: 0; }
-            .test-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; overflow-x: visible; padding-bottom: 0; }
-            .service-card, .test-card { min-width: auto; }
-            .service-card { background-color: transparent; border: none; padding: 0; }
+            .services-grid, .test-grid { 
+                display: grid; 
+                margin: 0; 
+                padding: 0; 
+                overflow-x: visible; 
+            }
+            .services-grid { grid-template-columns: repeat(3, 1fr); gap: 3rem; }
+            .test-grid { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+            
+            .service-card, .test-card { flex: none; width: auto; max-width: none; }
+            .service-card { padding: 3rem; }
+            .test-card { padding: 3rem; }
             
             .footer-grid { grid-template-columns: 2fr 1fr 1fr; }
             .footer-bottom { flex-direction: row; justify-content: space-between; align-items: center; text-align: left; }
@@ -390,10 +398,12 @@
     </header>
 
     <main>
+        
         <section class="hero">
             <div class="hero-bg"></div>
             <div class="hero-overlay"></div>
             <div class="container hero-grid">
+                
                 <div class="hero-content">
                     <div class="hero-badge">Georgia's Premium Roofing Contractor</div>
                     <h1>Lioness<br>Roofing</h1>
@@ -426,6 +436,7 @@
                         <button type="submit" class="btn-submit-glass">Submit Request</button>
                     </form>
                 </div>
+
             </div>
         </section>
 
