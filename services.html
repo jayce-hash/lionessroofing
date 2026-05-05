@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<<head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Lioness Roofing: Tough Like A Mother. Premium, code-compliant roofing installations, repairs, and inspections in Georgia. Family-owned and operated.">
@@ -83,12 +83,7 @@
         }
 
         /* Reset & Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
 
         body {
@@ -105,56 +100,23 @@
         a { text-decoration: none; transition: all 0.3s ease; }
 
         /* Typography */
-        h1, h2, h3, h4 {
-            letter-spacing: -0.03em;
-            font-weight: 800;
-            line-height: 1.1;
-            color: var(--brand-purple);
-        }
-
+        h1, h2, h3, h4 { letter-spacing: -0.03em; font-weight: 800; line-height: 1.1; color: var(--brand-purple); }
         h1 { font-size: 3.5rem; margin-bottom: 1.5rem; }
         h2 { font-size: 2.5rem; margin-bottom: 1.5rem; }
         h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-main); }
-
-        p {
-            font-size: 1.125rem;
-            color: var(--text-muted);
-            margin-bottom: 1.5rem;
-            font-weight: 400;
-        }
+        p { font-size: 1.125rem; color: var(--text-muted); margin-bottom: 1.5rem; font-weight: 400; }
 
         /* Layout Utilities */
-        .container {
-            width: 100%;
-            max-width: 1200px; 
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-        
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
         .narrow-container { max-width: 900px; margin: 0 auto; }
-        .section-padding { padding: 6rem 0; }
 
         /* Header Navigation */
         header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: var(--nav-height);
-            background-color: var(--brand-purple);
-            border-bottom: 1px solid rgba(163, 124, 79, 0.2);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
+            position: fixed; top: 0; left: 0; width: 100%; height: var(--nav-height);
+            background-color: var(--brand-purple); border-bottom: 1px solid rgba(163, 124, 79, 0.2);
+            z-index: 1000; display: flex; align-items: center;
         }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-        }
-
+        .nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
         .logo { z-index: 1001; display: flex; align-items: center; }
         .logo-img { max-height: 65px; width: auto; display: block; }
 
@@ -162,38 +124,20 @@
         .menu-toggle { display: none; }
         .menu-icon { cursor: pointer; padding: 1rem 0 1rem 1rem; z-index: 1001; display: block; }
 
-        .navicon {
-            background: var(--brand-gold);
-            display: block;
-            height: 2px;
-            position: relative;
-            transition: background .2s ease-out;
-            width: 24px;
-        }
-        .navicon:before, .navicon:after {
-            background: var(--brand-gold);
-            content: ''; display: block; height: 100%; position: absolute; transition: all .2s ease-out; width: 100%;
-        }
-        .navicon:before { top: 7px; }
-        .navicon:after { top: -7px; }
+        .navicon { background: var(--brand-gold); display: block; height: 2px; position: relative; transition: background .2s ease-out; width: 24px; }
+        .navicon:before, .navicon:after { background: var(--brand-gold); content: ''; display: block; height: 100%; position: absolute; transition: all .2s ease-out; width: 100%; }
+        .navicon:before { top: 7px; } .navicon:after { top: -7px; }
 
         .menu-toggle:checked ~ .menu-icon .navicon { background: transparent; }
         .menu-toggle:checked ~ .menu-icon .navicon:before { transform: rotate(-45deg); top: 0; }
         .menu-toggle:checked ~ .menu-icon .navicon:after { transform: rotate(45deg); top: 0; }
 
         .nav-menu {
-            position: fixed;
-            top: 0; right: -100%; width: 100%; height: 100vh;
-            background-color: var(--brand-purple);
-            display: flex; flex-direction: column; justify-content: center; align-items: center;
-            transition: right 0.3s ease; z-index: 1000;
+            position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; background-color: var(--brand-purple);
+            display: flex; flex-direction: column; justify-content: center; align-items: center; transition: right 0.3s ease; z-index: 1000;
         }
-
         .menu-toggle:checked ~ .nav-menu { right: 0; }
-
-        .nav-menu a {
-            color: var(--text-light); font-size: 1.5rem; font-weight: 600; margin: 1.5rem 0; display: block; position: relative;
-        }
+        .nav-menu a { color: var(--text-light); font-size: 1.5rem; font-weight: 600; margin: 1.5rem 0; display: block; position: relative; }
         .nav-menu a:hover { color: var(--brand-gold); }
 
         .header-actions { display: flex; align-items: center; gap: 1rem; z-index: 1001; }
@@ -203,156 +147,75 @@
         }
         .btn-header-call:hover { background-color: var(--brand-gold-dark); transform: scale(1.02); }
 
-        /* Page Intro */
-        .page-header {
-            text-align: center;
-            padding: 6rem 0 3rem 0;
-            background-color: var(--bg-surface);
-        }
+        /* Page Intro - Tightened for mobile */
+        .page-header { text-align: center; padding: 4rem 0 2rem 0; background-color: var(--bg-surface); }
+        .page-header p { font-size: 1.125rem; line-height: 1.8; color: var(--text-muted); }
 
-        .page-header p {
-            font-size: 1.125rem;
-            line-height: 1.8;
-            color: var(--text-muted);
-        }
-
-        /* Services Custom Grid */
-        .services-section {
-            background-color: var(--bg-base);
-            padding-bottom: 8rem;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 4rem;
-        }
+        /* Services Custom Grid - Tightened for mobile */
+        .services-section { background-color: var(--bg-base); padding: 2rem 0 4rem 0; }
+        .services-grid { display: grid; grid-template-columns: 1fr; gap: 4rem; }
 
         /* Unique Overlapping Card Style */
-        .service-card {
-            display: flex;
-            flex-direction: column;
-        }
+        .service-card { display: flex; flex-direction: column; }
 
         .service-img-wrapper {
-            width: 100%;
-            height: 350px;
-            background-color: var(--brand-purple-light); /* Fallback */
-            overflow: hidden;
+            width: 100%; height: 350px; background-color: var(--brand-purple-light);
+            overflow: hidden; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
-
-        .service-img-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+        .service-img-wrapper img { width: 100%; height: 100%; object-fit: cover; }
 
         .service-content {
-            background-color: var(--bg-surface);
-            margin-top: -5rem; /* Creates the overlap */
-            margin-left: 2rem; /* Keeps the left side of the image visible */
-            padding: 2.5rem 2rem 2rem 2rem;
-            position: relative;
-            z-index: 2;
+            background-color: var(--bg-surface); margin-top: -5rem; margin-left: 2rem;
+            padding: 2.5rem 2.5rem 2.5rem 2.5rem; position: relative; z-index: 2;
+            border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.08); border: 1px solid var(--border-color);
+            display: flex; flex-direction: column; align-items: flex-start;
         }
 
         .service-content p {
-            font-size: 1rem;
-            line-height: 1.6;
-            margin-bottom: 2rem;
-            font-weight: 500;
-            color: var(--text-main);
+            font-size: 1rem; line-height: 1.6; margin-bottom: 2rem; font-weight: 500; color: var(--text-main);
+            flex-grow: 1; /* Pushes the button perfectly to the bottom on all cards */
         }
 
         .btn-outline {
-            display: inline-block;
-            border: 2px solid var(--brand-gold);
-            color: var(--brand-gold);
-            padding: 0.75rem 2.5rem;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 0.875rem;
-            text-align: center;
-            transition: all 0.3s ease;
+            display: inline-block; border: 2px solid var(--brand-gold); color: var(--brand-gold);
+            padding: 0.75rem 2.5rem; border-radius: 50px; font-weight: 600; font-size: 0.875rem;
+            text-align: center; transition: all 0.3s ease;
         }
-
-        .btn-outline:hover {
-            background-color: var(--brand-gold);
-            color: var(--text-light);
-        }
+        .btn-outline:hover { background-color: var(--brand-gold); color: var(--text-light); }
 
         /* Footer */
-        footer {
-            background-color: var(--brand-purple);
-            padding: 5rem 0 2rem 0;
-            color: var(--text-light);
-            border-top: 4px solid var(--brand-gold);
-        }
-
-        .footer-grid {
-            display: grid; grid-template-columns: 1fr; gap: 3rem; margin-bottom: 4rem;
-        }
-
+        footer { background-color: var(--brand-purple); padding: 5rem 0 2rem 0; color: var(--text-light); border-top: 4px solid var(--brand-gold); }
+        .footer-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; margin-bottom: 4rem; }
         .logo-img-footer { max-height: 120px; width: auto; display: block; margin-bottom: 1.5rem; }
-
         .footer-col p { color: rgba(255, 255, 255, 0.7); font-size: 1rem; margin-top: 1.5rem; }
-
-        .footer-col h4 {
-            font-size: 1.125rem; color: var(--brand-gold); margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 1px;
-        }
-
-        .footer-col a {
-            display: block; color: var(--text-light); margin-bottom: 1rem; font-weight: 300;
-        }
-
+        .footer-col h4 { font-size: 1.125rem; color: var(--brand-gold); margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 1px; }
+        .footer-col a { display: block; color: var(--text-light); margin-bottom: 1rem; font-weight: 300; }
         .footer-col a:hover { color: var(--brand-gold); transform: translateX(5px); }
-
-        .footer-bottom {
-            text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; flex-direction: column; gap: 1rem;
-        }
-
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; flex-direction: column; gap: 1rem; }
         .footer-bottom p { font-size: 0.875rem; color: rgba(255, 255, 255, 0.5); margin: 0; }
-        
         .footer-legal-links { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
         .footer-legal-links a { color: rgba(255, 255, 255, 0.5); font-size: 0.875rem; text-decoration: underline; }
         .footer-legal-links a:hover { color: var(--brand-gold); }
-/* Desktop Optimization */
+
+        /* Desktop Optimization */
         @media (min-width: 992px) {
             .menu-icon { display: none; }
             
-            /* The Grid trick that perfectly centers the menu */
-            .nav-container { 
-                display: grid; 
-                grid-template-columns: 1fr auto 1fr; 
-                align-items: center; 
-                gap: 0;
-            }
-            
+            .nav-container { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 0; }
             .logo { justify-self: start; }
-            
-            .nav-menu { 
-                justify-self: center; /* Centers the links in the middle column */
-                position: static; 
-                height: auto; 
-                width: auto; 
-                background-color: transparent; 
-                flex-direction: row; 
-            }
-            
+            .nav-menu { justify-self: center; position: static; height: auto; width: auto; background-color: transparent; flex-direction: row; }
             .nav-menu ul { display: flex; list-style: none; gap: 3rem; margin: 0; padding: 0; }
             .nav-menu a { font-size: 1rem; margin: 0; font-weight: 500; color: var(--text-light); }
             .nav-menu a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0; background-color: var(--brand-gold); transition: width 0.3s ease; }
             .nav-menu a:hover::after { width: 100%; }
+            .header-actions { justify-self: end; margin-left: 0; }
             
-            .header-actions { justify-self: end; margin-left: 0; } /* Pushes button to far right */
-            
-            /* ... (keep the rest of your desktop optimizations below here) ... */
+            /* Expand padding back out for desktop */
+            .page-header { padding: 6rem 0 3rem 0; }
+            .services-section { padding: 4rem 0 8rem 0; }
             
             /* Services Grid Desktop */
-            .services-grid { 
-                grid-template-columns: repeat(3, 1fr); 
-                gap: 2.5rem; 
-            }
+            .services-grid { grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
             .service-img-wrapper { height: 300px; }
             .service-content { margin-left: 3rem; margin-top: -6rem; }
             
@@ -395,12 +258,12 @@
             <p>We also provide expert repairs and routine maintenance to extend the life of every roof we touch. What sets us apart is our unwavering commitment to the community. We regularly give back through service and outreach. When you choose us, you're choosing a roofing partner that stands by your side, every step of the way.</p>
         </section>
 
-        <section class="services-section section-padding">
+        <section class="services-section">
             <div class="container services-grid">
                 
                 <div class="service-card">
                     <div class="service-img-wrapper">
-                        <img src="repairs-placeholder.jpg" alt="Roof Repairs">
+                        <img src="roofrepairs1.png" alt="Roof Repairs">
                     </div>
                     <div class="service-content">
                         <h3>Roof Repairs</h3>
@@ -411,7 +274,7 @@
 
                 <div class="service-card">
                     <div class="service-img-wrapper">
-                        <img src="installations-placeholder.jpg" alt="Roof Installations">
+                        <img src="home1.png" alt="Roof Installations">
                     </div>
                     <div class="service-content">
                         <h3>Roof Installations</h3>
@@ -422,12 +285,11 @@
 
                 <div class="service-card">
                     <div class="service-img-wrapper">
-                        <img src="inspections-placeholder.jpg" alt="Roof Inspections">
+                        <img src="roofinspections1.png" alt="Roof Inspections">
                     </div>
                     <div class="service-content">
                         <h3>Roof Inspections</h3>
                         <p>Everything starts with a thorough, 10-point inspection to ensure we understand exactly what type of damage your roof has and which service will best meet your needs.</p>
-                        <br>
                         <a href="/roofinspections" class="btn-outline">Find out more</a>
                     </div>
                 </div>
