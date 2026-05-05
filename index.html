@@ -263,7 +263,6 @@
             transition: all 0.2s ease;
         }
 
-        /* Float the label up when focused or has content */
         .floating-input:focus ~ .floating-label,
         .floating-input:not(:placeholder-shown) ~ .floating-label {
             top: 0.8rem;
@@ -314,10 +313,26 @@
         .bento-large h3 { color: var(--brand-gold); }
         .bento-large p { color: rgba(255,255,255,0.8); }
 
+        /* FIXED ABOUT US SPLIT */
         .about-section { background-color: var(--bg-base); padding: 6rem 0; }
         .about-grid { display: grid; grid-template-columns: 1fr; gap: 4rem; align-items: center; }
-        .about-img-container { width: 100%; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.08); background-color: var(--brand-purple-light); }
-        .about-img-container img { width: 100%; height: auto; display: block; object-fit: cover; }
+        
+        /* Updated Container and Image Properties */
+        .about-img-container { 
+            width: 100%; 
+            border-radius: 24px; 
+            overflow: hidden; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08); 
+            background-color: var(--brand-purple-light);
+            aspect-ratio: 1 / 1; /* Creates a perfect square so it doesn't stretch too tall */
+        }
+        .about-img-container img { 
+            width: 100%; 
+            height: 100%; 
+            display: block; 
+            object-fit: cover; 
+            object-position: center 20%; /* Keeps Talon's face in the upper part of the frame */
+        }
         
         .services-section { background-color: var(--text-main); padding: 6rem 0; color: var(--text-light); text-align: center; }
         .services-section h2 { color: var(--text-light); margin-bottom: 4rem; }
@@ -355,37 +370,16 @@
         .footer-legal-links a { color: rgba(255, 255, 255, 0.5); font-size: 0.875rem; text-decoration: underline; }
         .footer-legal-links a:hover { color: var(--brand-gold); }
 
-        /* Desktop Optimization */
         @media (min-width: 992px) {
             .menu-icon { display: none; }
-            
-            /* The Grid trick that perfectly centers the menu */
-            .nav-container { 
-                display: grid; 
-                grid-template-columns: 1fr auto 1fr; 
-                align-items: center; 
-                gap: 0;
-            }
-            
+            .nav-container { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 0; }
             .logo { justify-self: start; }
-            
-            .nav-menu { 
-                justify-self: center; /* Centers the links in the middle column */
-                position: static; 
-                height: auto; 
-                width: auto; 
-                background-color: transparent; 
-                flex-direction: row; 
-            }
-            
+            .nav-menu { justify-self: center; position: static; height: auto; width: auto; background-color: transparent; flex-direction: row; }
             .nav-menu ul { display: flex; list-style: none; gap: 3rem; margin: 0; padding: 0; }
             .nav-menu a { font-size: 1rem; margin: 0; font-weight: 500; color: var(--text-light); }
             .nav-menu a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0; background-color: var(--brand-gold); transition: width 0.3s ease; }
             .nav-menu a:hover::after { width: 100%; }
-            
-            .header-actions { justify-self: end; margin-left: 0; } /* Pushes button to far right */
-            
-            /* ... (keep the rest of your desktop optimizations below here) ... */
+            .header-actions { justify-self: end; margin-left: 0; }
             
             .hero-grid { grid-template-columns: 1.2fr 0.8fr; gap: 6rem; }
             .hero-content h1 { font-size: 5.5rem; }
@@ -395,7 +389,9 @@
             .bento-grid { grid-template-columns: repeat(2, 1fr); }
             .bento-large { grid-column: span 2; }
             
-            .about-grid { grid-template-columns: 1fr 1.5fr; gap: 6rem; }
+            /* Rebalanced About Grid */
+            .about-grid { grid-template-columns: 1fr 1.2fr; gap: 6rem; }
+            
             .services-grid { grid-template-columns: repeat(3, 1fr); gap: 4rem; }
             .test-grid { grid-template-columns: repeat(3, 1fr); }
             
