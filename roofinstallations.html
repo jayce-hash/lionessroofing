@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lioness Roofing installs every roof with precision, transparency, and craftsmanship designed to last decades. Premium materials, 1-day installs, lifetime warranties.">
+    <meta name="keywords" content="Roof Installation, Roof Replacement, Lioness Roofing, Georgia Roof Installers, Roofing Contractor">
+    <meta name="author" content="Lioness Roofing">
+    <title>Roof Installations | Lioness Roofing</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Roof Installations",
+      "provider": {
+        "@type": "RoofingContractor",
+        "name": "Lioness Roofing",
+        "telephone": "770-588-8830",
+        "url": "https://www.lionessroofing.com/"
+      },
+      "description": "Expert roof installation featuring full tear-offs, premium underlayment, proper ventilation, and lifetime workmanship warranties."
+    }
+    </script>
+
+    <style>
+        /* CSS Variables - Exact Brand Identity */
+        :root {
+            --bg-base: #fafafa;
+            --bg-surface: #ffffff;
+            --brand-purple: #381b3e; 
+            --brand-purple-light: #4d2655;
+            --brand-gold: #a37c4f; 
+            --brand-gold-dark: #8b6841;
+            --text-main: #1d1d1f; 
+            --text-muted: #6e6e73;
+            --text-light: #f5f5f7;
+            --border-color: rgba(0, 0, 0, 0.08);
+            --font-stack: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --nav-height: 80px;
+        }
+
+        /* Reset & Base Styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--font-stack);
+            background-color: var(--bg-surface);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+            padding-top: var(--nav-height);
+        }
+
+        a { text-decoration: none; transition: all 0.3s ease; }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            letter-spacing: -0.03em;
+            font-weight: 800;
+            line-height: 1.1;
+            color: var(--brand-purple);
+        }
+
+        h1 { font-size: 3.5rem; margin-bottom: 1.5rem; text-align: center; }
+        h2 { font-size: 2.25rem; margin-bottom: 1.5rem; }
+        h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-main); font-weight: 700; }
+        h4 { font-size: 1.25rem; margin-bottom: 1rem; color: var(--text-main); }
+
+        p {
+            font-size: 1.125rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
+
+        ul {
+            margin-bottom: 1.5rem;
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 0.75rem;
+            font-size: 1.125rem;
+            color: var(--text-muted);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        li::before {
+            content: '•';
+            color: var(--brand-gold);
+            font-weight: bold;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+
+        /* Layout Utilities */
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        
+        /* Header Navigation */
+        header {
+            position: fixed; top: 0; left: 0; width: 100%; height: var(--nav-height);
+            background-color: var(--brand-purple); border-bottom: 1px solid rgba(163, 124, 79, 0.2);
+            z-index: 1000; display: flex; align-items: center;
+        }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+        .logo { z-index: 1001; display: flex; align-items: center; }
+        .logo-img { max-height: 50px; width: auto; display: block; }
+
+        /* Mobile Menu */
+        .menu-toggle { display: none; }
+        .menu-icon { cursor: pointer; padding: 1rem 0 1rem 1rem; z-index: 1001; display: block; }
+        .navicon {
+            background: var(--brand-gold); display: block; height: 2px; position: relative; transition: background .2s ease-out; width: 24px;
+        }
+        .navicon:before, .navicon:after {
+            background: var(--brand-gold); content: ''; display: block; height: 100%; position: absolute; transition: all .2s ease-out; width: 100%;
+        }
+        .navicon:before { top: 7px; }
+        .navicon:after { top: -7px; }
+        .menu-toggle:checked ~ .menu-icon .navicon { background: transparent; }
+        .menu-toggle:checked ~ .menu-icon .navicon:before { transform: rotate(-45deg); top: 0; }
+        .menu-toggle:checked ~ .menu-icon .navicon:after { transform: rotate(45deg); top: 0; }
+        .nav-menu {
+            position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; background-color: var(--brand-purple);
+            display: flex; flex-direction: column; justify-content: center; align-items: center; transition: right 0.3s ease; z-index: 1000;
+        }
+        .menu-toggle:checked ~ .nav-menu { right: 0; }
+        .nav-menu a { color: var(--text-light); font-size: 1.5rem; font-weight: 600; margin: 1.5rem 0; display: block; position: relative; }
+        .nav-menu a:hover { color: var(--brand-gold); }
+        .header-actions { display: flex; align-items: center; gap: 1rem; z-index: 1001; }
+        .btn-header-call {
+            background-color: var(--brand-gold); color: var(--text-light); padding: 0.6rem 1.5rem;
+            font-size: 0.875rem; font-weight: 700; border-radius: 50px;
+        }
+        .btn-header-call:hover { background-color: var(--brand-gold-dark); transform: scale(1.02); }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 1.1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--brand-purple);
+            color: var(--text-light);
+            box-shadow: 0 4px 14px rgba(56, 27, 62, 0.2);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--brand-purple-light);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(56, 27, 62, 0.3);
+        }
+
+        /* Page Layout Blocks */
+        .page-header {
+            padding: 6rem 0 3rem 0;
+            background-color: var(--bg-surface);
+            text-align: center;
+        }
+
+        .page-header p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.25rem;
+        }
+
+        .info-section {
+            padding: 4rem 0;
+            background-color: var(--bg-base);
+        }
+
+        .info-grid-2 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .info-grid-3 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .info-card {
+            background-color: var(--bg-surface);
+            padding: 3rem;
+            border-radius: 24px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .info-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: transparent;
+            transition: background-color 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+        }
+
+        .info-card:hover::before {
+            background-color: var(--brand-gold);
+        }
+
+        /* CTA Section */
+        .cta-banner {
+            background-color: var(--brand-purple);
+            padding: 5rem 0;
+            text-align: center;
+            color: var(--text-light);
+        }
+
+        .cta-banner h2 {
+            color: var(--brand-gold);
+            margin-bottom: 1rem;
+        }
+
+        .cta-banner p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+            font-size: 1.25rem;
+        }
+
+        .btn-gold {
+            background-color: var(--brand-gold);
+            color: var(--text-light);
+        }
+        
+        .btn-gold:hover {
+            background-color: var(--brand-gold-dark);
+        }
+
+        /* Photo Grid / Process Section */
+        .process-section {
+            padding: 6rem 0;
+            background-color: var(--bg-surface);
+        }
+
+        .process-section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .process-card {
+            display: flex;
+            flex-direction: column;
+            border-radius: 16px;
+            overflow: hidden;
+            background-color: var(--bg-base);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .process-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+        }
+
+        .process-img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            background-color: #e5e5ea; /* Placeholder color before img loads */
+            object-fit: cover;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .process-card h4 {
+            padding: 1.5rem;
+            margin: 0;
+            text-align: center;
+            font-weight: 600;
+            color: var(--brand-purple);
+        }
+
+        /* Standardized Footer */
+        footer {
+            background-color: var(--brand-purple); padding: 5rem 0 2rem 0; color: var(--text-light); border-top: 4px solid var(--brand-gold);
+        }
+        .footer-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; margin-bottom: 4rem; }
+        .logo-img-footer { max-height: 60px; width: auto; display: block; }
+        .footer-col p { color: rgba(255, 255, 255, 0.7); font-size: 1rem; margin-top: 1.5rem; }
+        .footer-col h4 { font-size: 1.125rem; color: var(--brand-gold); margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 1px; }
+        .footer-col a { display: block; color: var(--text-light); margin-bottom: 1rem; font-weight: 300; }
+        .footer-col a:hover { color: var(--brand-gold); transform: translateX(5px); }
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; flex-direction: column; gap: 1rem; }
+        .footer-bottom p { font-size: 0.875rem; color: rgba(255, 255, 255, 0.5); margin: 0; }
+        .footer-legal-links { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+        .footer-legal-links a { color: rgba(255, 255, 255, 0.5); font-size: 0.875rem; text-decoration: underline; }
+        .footer-legal-links a:hover { color: var(--brand-gold); }
+
+        /* Desktop Optimization */
+        @media (min-width: 992px) {
+            .menu-icon { display: none; }
+            .nav-menu { position: static; height: auto; width: auto; background-color: transparent; flex-direction: row; align-items: center; }
+            .nav-menu ul { display: flex; list-style: none; gap: 3rem; margin: 0; padding: 0; }
+            .nav-menu a { font-size: 1rem; margin: 0; font-weight: 500; color: var(--text-light); }
+            .nav-menu a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0; background-color: var(--brand-gold); transition: width 0.3s ease; }
+            .nav-menu a:hover::after { width: 100%; }
+            .nav-container { justify-content: flex-start; gap: 4rem; }
+            .header-actions { margin-left: auto; }
+            
+            .info-grid-2 { grid-template-columns: 1fr 1fr; }
+            .info-grid-3 { grid-template-columns: repeat(3, 1fr); }
+            
+            .footer-grid { grid-template-columns: 2fr 1fr 1fr; }
+            .footer-bottom { flex-direction: row; justify-content: space-between; align-items: center; text-align: left; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="/" class="logo">
+                <img src="LionessRoofing.png" alt="Lioness Roofing Logo" class="logo-img">
+            </a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/faq">FAQ</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="tel:7705888830" class="btn-header-call">Call Now</a>
+                <label for="menu-toggle" class="menu-icon"><span class="navicon"></span></label>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        
+        <section class="page-header container">
+            <h1>Roof Installation You Can Trust</h1>
+            <p>At Lioness Roofing, we install every roof with precision, transparency, and craftsmanship designed to last decades.</p>
+        </section>
+
+        <section class="info-section">
+            <div class="container">
+                
+                <div class="info-grid-2">
+                    <div class="info-card">
+                        <h3>What’s Included in Your Roof Installation</h3>
+                        <ul>
+                            <li>Full tear-off (never layovers)</li>
+                            <li>Decking inspection & replacement</li>
+                            <li>Premium drip edge</li>
+                            <li>High-quality underlayment</li>
+                            <li>Expert shingle installation</li>
+                            <li>Proper ventilation setup</li>
+                            <li>Full cleanup & magnetic sweep</li>
+                            <li>Final inspection + photo report</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>Why Homeowners Choose Lioness</h3>
+                        <ul>
+                            <li>Licensed & insured</li>
+                            <li>No shortcuts - ever</li>
+                            <li>Lifetime workmanship warranty</li>
+                            <li>High quality materials</li>
+                            <li>Clear communication & transparency</li>
+                            <li>Insurance expertise</li>
+                            <li>Fast, clean, and professional crews</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-grid-3">
+                    <div class="info-card">
+                        <h3>How Long Does It Take?</h3>
+                        <p>Most homes are completed in 1 day. Larger or complex roofs may take longer - we’ll always tell you upfront.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Your Property Stays Protected</h3>
+                        <p>We tarp thoroughly, move what’s needed, and sweep your yard multiple times with heavy-duty magnets.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Warranties</h3>
+                        <p>We offer up to a 25 year Lifetime labor warranty and a 50 year Limited Manufacturer shingle warranty. Full documentation provided.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="cta-banner">
+            <div class="container">
+                <h2>Want more information?</h2>
+                <p>See our full step-by-step installation process page.</p>
+                <a href="/process" class="btn btn-gold">Click Here</a>
+            </div>
+        </section>
+
+        <section class="process-section">
+            <div class="container">
+                <div class="process-section-header">
+                    <h2>The Installation Process</h2>
+                </div>
+                
+                <div class="process-grid">
+                    
+                    <div class="process-card">
+                        <img src="jobprep.png" alt="Job Prep" class="process-img">
+                        <h4>Job Prep</h4>
+                    </div>
+
+                    <div class="process-card">
+                        <img src="tearoff.png" alt="Tear Off" class="process-img">
+                        <h4>Tear Off</h4>
+                    </div>
+
+                    <div class="process-card">
+                        <img src="underlayment.png" alt="Underlayment" class="process-img">
+                        <h4>Underlayment</h4>
+                    </div>
+
+                    <div class="process-card">
+                        <img src="cleanup.png" alt="Clean Up" class="process-img">
+                        <h4>Clean Up</h4>
+                    </div>
+
+                    <div class="process-card">
+                        <img src="cuttinginridgevent.png" alt="Cutting in Ridge Vent" class="process-img">
+                        <h4>Cutting in Ridge Vent</h4>
+                    </div>
+
+                    <div class="process-card">
+                        <img src="starterstrip.png" alt="Starter Strip" class="process-img">
+                        <h4>Starter Strip</h4>
+                    </div>
+
+                    <div class="process-card">
+                        <img src="kickout.png" alt="Kickout" class="process-img">
+                        <h4>Kickout</h4>
+                    </div>
+
+                    <div class="process-card">
+                        <img src="qualitycontrol.png" alt="Quality Control" class="process-img">
+                        <h4>Quality Control</h4>
+                    </div>
+
+                    <div class="process-card">
+                        <img src="propertyprotection.png" alt="Property Protection" class="process-img">
+                        <h4>Property Protection</h4>
+                    </div>
+
+                    <div class="process-card">
+                        <img src="deck.png" alt="Deck" class="process-img">
+                        <h4>Deck</h4>
+                    </div>
+
+                    <div class="process-card">
+                        <img src="loadingtheroof.png" alt="Loading the Roof" class="process-img">
+                        <h4>Loading the Roof</h4>
+                    </div>
+
+                    <div class="process-card">
+                        <img src="intake.png" alt="Intake" class="process-img">
+                        <h4>Intake</h4>
+                    </div>
+
+                    <div class="process-card">
+                        <img src="nailing.png" alt="Nailing" class="process-img">
+                        <h4>Nailing</h4>
+                    </div>
+
+                    <div class="process-card">
+                        <img src="shingles.png" alt="Shingles" class="process-img">
+                        <h4>Shingles</h4>
+                    </div>
+
+                    <div class="process-card">
+                        <img src="ridgecap.png" alt="Ridge Cap" class="process-img">
+                        <h4>Ridge Cap</h4>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <img src="LionessRoofing.png" alt="Lioness Roofing Logo" class="logo-img-footer">
+                    </div>
+                    <p>We treat every home as if it were our own, ensuring absolute care for every family we serve across Georgia.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <a href="/">Home</a>
+                    <a href="/faq">FAQ</a>
+                    <a href="/about">About</a>
+                    <a href="/services">Services</a>
+                    <a href="/contact">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <a href="tel:7705888830">770.588.8830</a>
+                    <a href="mailto:contact@lionessroofing.com">contact@lionessroofing.com</a>
+                    <a href="/contact" style="color: var(--brand-gold); margin-top: 1rem; font-weight: 500;">Request an Inspection &rarr;</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lioness Roofing. All rights reserved. | Contractor ID: #25107976</p>
+                <div class="footer-legal-links">
+                    <a href="/privacy">Privacy Policy</a>
+                    <a href="/accessibility">Accessibility Statement</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
