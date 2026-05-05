@@ -1,1 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lioness Roofing ensures every roof repair is done right. We evaluate compatibility, repairability, and availability to protect your home and warranties.">
+    <meta name="keywords" content="Roof Repair, Lioness Roofing, Georgia Roof Repair, Roof Code Compliance, Roof Indemnification">
+    <meta name="author" content="Lioness Roofing">
+    <title>Roof Repairs | Lioness Roofing</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Roof Repairs",
+      "provider": {
+        "@type": "RoofingContractor",
+        "name": "Lioness Roofing",
+        "telephone": "770-588-8830",
+        "url": "https://www.lionessroofing.com/"
+      },
+      "description": "Professional roof repairs evaluated for compatibility, repairability, and availability to ensure code compliance and warranty protection."
+    }
+    </script>
+
+    <style>
+        /* CSS Variables - Exact Brand Identity */
+        :root {
+            --bg-base: #fafafa;
+            --bg-surface: #ffffff;
+            --brand-purple: #381b3e; 
+            --brand-purple-light: #4d2655;
+            --brand-gold: #a37c4f; 
+            --brand-gold-dark: #8b6841;
+            --text-main: #1d1d1f; 
+            --text-muted: #6e6e73;
+            --text-light: #f5f5f7;
+            --border-color: rgba(0, 0, 0, 0.08);
+            --font-stack: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --nav-height: 80px;
+        }
+
+        /* Reset & Base Styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--font-stack);
+            background-color: var(--bg-surface);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+            padding-top: var(--nav-height);
+        }
+
+        a { text-decoration: none; transition: all 0.3s ease; }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            letter-spacing: -0.03em;
+            font-weight: 800;
+            line-height: 1.1;
+            color: var(--brand-purple);
+        }
+
+        h1 { font-size: 3.5rem; margin-bottom: 1.5rem; }
+        h2 { font-size: 2.5rem; margin-bottom: 1.5rem; }
+        h3 { font-size: 1.75rem; margin-bottom: 1rem; }
+
+        p {
+            font-size: 1.125rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
+
+        ul {
+            margin-bottom: 1.5rem;
+            margin-left: 1.5rem;
+            color: var(--text-muted);
+            font-size: 1.125rem;
+        }
+
+        li { margin-bottom: 0.5rem; }
+
+        blockquote {
+            border-left: 4px solid var(--brand-gold);
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            font-size: 1.125rem;
+            color: var(--text-main);
+            background-color: var(--bg-base);
+            padding: 1.5rem;
+            border-radius: 0 12px 12px 0;
+        }
+
+        /* Layout Utilities */
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        
+        /* Header Navigation */
+        header {
+            position: fixed; top: 0; left: 0; width: 100%; height: var(--nav-height);
+            background-color: var(--brand-purple); border-bottom: 1px solid rgba(163, 124, 79, 0.2);
+            z-index: 1000; display: flex; align-items: center;
+        }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+        .logo { z-index: 1001; display: flex; align-items: center; }
+        .logo-img { max-height: 50px; width: auto; display: block; }
+
+        /* Mobile Menu */
+        .menu-toggle { display: none; }
+        .menu-icon { cursor: pointer; padding: 1rem 0 1rem 1rem; z-index: 1001; display: block; }
+        .navicon {
+            background: var(--brand-gold); display: block; height: 2px; position: relative; transition: background .2s ease-out; width: 24px;
+        }
+        .navicon:before, .navicon:after {
+            background: var(--brand-gold); content: ''; display: block; height: 100%; position: absolute; transition: all .2s ease-out; width: 100%;
+        }
+        .navicon:before { top: 7px; }
+        .navicon:after { top: -7px; }
+        .menu-toggle:checked ~ .menu-icon .navicon { background: transparent; }
+        .menu-toggle:checked ~ .menu-icon .navicon:before { transform: rotate(-45deg); top: 0; }
+        .menu-toggle:checked ~ .menu-icon .navicon:after { transform: rotate(45deg); top: 0; }
+        .nav-menu {
+            position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; background-color: var(--brand-purple);
+            display: flex; flex-direction: column; justify-content: center; align-items: center; transition: right 0.3s ease; z-index: 1000;
+        }
+        .menu-toggle:checked ~ .nav-menu { right: 0; }
+        .nav-menu a { color: var(--text-light); font-size: 1.5rem; font-weight: 600; margin: 1.5rem 0; display: block; position: relative; }
+        .nav-menu a:hover { color: var(--brand-gold); }
+        .header-actions { display: flex; align-items: center; gap: 1rem; z-index: 1001; }
+        .btn-header-call {
+            background-color: var(--brand-gold); color: var(--text-light); padding: 0.6rem 1.5rem;
+            font-size: 0.875rem; font-weight: 700; border-radius: 50px;
+        }
+        .btn-header-call:hover { background-color: var(--brand-gold-dark); transform: scale(1.02); }
+
+        /* Alternating Split Sections for 7 Photos */
+        .split-section {
+            padding: 5rem 0;
+            background-color: var(--bg-surface);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .split-section:nth-child(even) {
+            background-color: var(--bg-base);
+        }
+
+        .split-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .split-content h2 { margin-bottom: 1rem; }
+
+        .split-img-container {
+            width: 100%;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            background-color: var(--brand-purple-light);
+        }
+
+        .split-img-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Buttons & Links */
+        .btn-link {
+            display: inline-flex;
+            align-items: center;
+            border: 2px solid var(--brand-purple);
+            color: var(--brand-purple);
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            margin-right: 1rem;
+        }
+
+        .btn-link:hover {
+            background-color: var(--brand-purple);
+            color: var(--text-light);
+        }
+
+        .btn-link-gold {
+            border-color: var(--brand-gold);
+            color: var(--brand-gold-dark);
+        }
+
+        .btn-link-gold:hover {
+            background-color: var(--brand-gold);
+            color: var(--text-light);
+        }
+
+        /* Standardized Footer */
+        footer {
+            background-color: var(--brand-purple); padding: 5rem 0 2rem 0; color: var(--text-light); border-top: 4px solid var(--brand-gold);
+        }
+        .footer-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; margin-bottom: 4rem; }
+        .logo-img-footer { max-height: 60px; width: auto; display: block; }
+        .footer-col p { color: rgba(255, 255, 255, 0.7); font-size: 1rem; margin-top: 1.5rem; }
+        .footer-col h4 { font-size: 1.125rem; color: var(--brand-gold); margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 1px; }
+        .footer-col a { display: block; color: var(--text-light); margin-bottom: 1rem; font-weight: 300; }
+        .footer-col a:hover { color: var(--brand-gold); transform: translateX(5px); }
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; flex-direction: column; gap: 1rem; }
+        .footer-bottom p { font-size: 0.875rem; color: rgba(255, 255, 255, 0.5); margin: 0; }
+        .footer-legal-links { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+        .footer-legal-links a { color: rgba(255, 255, 255, 0.5); font-size: 0.875rem; text-decoration: underline; }
+        .footer-legal-links a:hover { color: var(--brand-gold); }
+
+        /* Desktop Optimization */
+        @media (min-width: 992px) {
+            h1 { font-size: 4.5rem; }
+            .menu-icon { display: none; }
+            .nav-menu { position: static; height: auto; width: auto; background-color: transparent; flex-direction: row; align-items: center; }
+            .nav-menu ul { display: flex; list-style: none; gap: 3rem; margin: 0; padding: 0; }
+            .nav-menu a { font-size: 1rem; margin: 0; font-weight: 500; color: var(--text-light); }
+            .nav-menu a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0; background-color: var(--brand-gold); transition: width 0.3s ease; }
+            .nav-menu a:hover::after { width: 100%; }
+            .nav-container { justify-content: flex-start; gap: 4rem; }
+            .header-actions { margin-left: auto; }
+            
+            /* Alternating Desktop Grid Layout */
+            .split-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 5rem;
+            }
+            .split-grid.reverse .split-content { order: 2; }
+            .split-grid.reverse .split-img-container { order: 1; }
+            
+            .footer-grid { grid-template-columns: 2fr 1fr 1fr; }
+            .footer-bottom { flex-direction: row; justify-content: space-between; align-items: center; text-align: left; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="/" class="logo">
+                <img src="LionessRoofing.png" alt="Lioness Roofing Logo" class="logo-img">
+            </a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/faq">FAQ</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="tel:7705888830" class="btn-header-call">Call Now</a>
+                <label for="menu-toggle" class="menu-icon"><span class="navicon"></span></label>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        
+        <section class="split-section">
+            <div class="container split-grid">
+                <div class="split-content">
+                    <h1>Roof Repair</h1>
+                    <h3>How We Ensure Every Roof Repair Is Done the Right Way</h3>
+                    <p>When your roof needs repair, it’s not just about patching holes or replacing a few shingles. It’s about doing the work correctly, using methods that meet code, preserve manufacturer warranties, and stand the test of time.</p>
+                </div>
+                <div class="split-img-container">
+                    <img src="roofrepairs1.png" alt="Lioness Roofing repairing a residential roof">
+                </div>
+            </div>
+        </section>
+
+        <section class="split-section">
+            <div class="container split-grid reverse">
+                <div class="split-content">
+                    <h2>Three Key Factors</h2>
+                    <p>At Lioness Roofing, we evaluate every potential repair using three key factors:</p>
+                    <ul>
+                        <li><strong>Compatibility</strong> – Is the material suitable for today’s standards?</li>
+                        <li><strong>Repairability</strong> – Can it actually be repaired without damage?</li>
+                        <li><strong>Availability</strong> – Can it be sourced in adequate quantity?</li>
+                    </ul>
+                    <p>This process ensures that every repair we perform can be warranted, documented, and indemnified through proper evidence and compliance.</p>
+                </div>
+                <div class="split-img-container">
+                    <img src="roofrepairs2.png" alt="Roof repair evaluation process">
+                </div>
+            </div>
+        </section>
+
+        <section class="split-section">
+            <div class="container split-grid">
+                <div class="split-content">
+                    <h2>1. Compatibility</h2>
+                    <h3>Is the Material Matchable and Code-Compliant?</h3>
+                    <p>Before any work begins, we verify whether the existing roofing material is compatible with the products currently available on the market. We identify the manufacturer, model, and specifications of your existing shingles.</p>
+                    <p>If there’s any indication of a discontinued product, we take precise measurements and, if needed, send samples to a lab for analysis. If the product is confirmed discontinued, we advise against mixing it with new materials — as doing so may violate manufacturer recommendations, void warranties, and conflict with building code.</p>
+                    
+                    <blockquote>
+                        <strong>2018 International Residential Code (IRC) Section R904.2:</strong><br>
+                        "Roof assemblies shall be of materials that are compatible with each other per manufacturers’ installation recommendations and with the building or structure to which the materials are applied."
+                    </blockquote>
+                    <p><strong>Why this matters:</strong> Compatibility protects your home’s integrity, helps prevent warranty loss, and ensures your roof system performs as designed.</p>
+                </div>
+                <div class="split-img-container">
+                    <img src="roofrepairs3.png" alt="Checking roof material compatibility and code compliance">
+                </div>
+            </div>
+        </section>
+
+        <section class="split-section">
+            <div class="container split-grid reverse">
+                <div class="split-content">
+                    <h2>2. Repairability</h2>
+                    <h3>Can the Material Be Repaired Without Further Damage?</h3>
+                    <p>Once compatibility is established, we assess repairability - meaning whether the shingle can physically withstand a repair. We test for:</p>
+                    <ul>
+                        <li><strong>Pliability and flexibility:</strong> Can shingles be lifted and resealed without cracking the fiberglass mat?</li>
+                        <li><strong>Seal separation:</strong> Can the adhesive bond be delaminated without material transfer or damage to the lower course?</li>
+                        <li><strong>Nail zone durability:</strong> Can a new fastener be driven without shingle fracture or loss of granules?</li>
+                    </ul>
+                    <p>If the material fails these tests, we will not recommend a repair because it would not be warrantable or reliable. This process follows industry guidelines similar to those published by the National Academy of Forensic Engineers (NAFE).</p>
+                    
+                    <a href="https://journal.nafe.org/ojs/index.php/nafe/article/view/94/835" target="_blank" rel="noopener noreferrer" class="btn-link btn-link-gold">Read Official NAFE Article &rarr;</a>
+                    
+                    <p style="font-size: 0.875rem; margin-top: 1rem;">The NAFE article illustrates conditions we evaluate before approving any repair, such as transfer of asphalt, shingle tearing, and damage propagation across adjoining shingles.</p>
+                </div>
+                <div class="split-img-container">
+                    <img src="roofrepairs4.png" alt="Testing shingle pliability and repairability">
+                </div>
+            </div>
+        </section>
+
+        <section class="split-section">
+            <div class="container split-grid">
+                <div class="split-content">
+                    <h2>3. Availability</h2>
+                    <h3>Can the Material Be Sourced in Quantity?</h3>
+                    <p>Even when a shingle passes both compatibility and repairability, we still have to locate the matching material.</p>
+                    <p>Some shingles are limited to specific regions or discontinued in certain colors. We confirm availability and quantity before approving a repair to ensure full, consistent coverage.</p>
+                    <p>If the material cannot be sourced or is prohibitively expensive to ship, we document this clearly for insurance consideration.</p>
+                </div>
+                <div class="split-img-container">
+                    <img src="roofrepairs5.png" alt="Sourcing available roofing materials">
+                </div>
+            </div>
+        </section>
+
+        <section class="split-section">
+            <div class="container split-grid reverse">
+                <div class="split-content">
+                    <h2>Insurance Indemnification</h2>
+                    <h3>Through Objective Documentation</h3>
+                    <p>Lioness Roofing performs insurance indemnification by providing objective documentation rather than opinion.</p>
+                    <p>We do not speculate or make subjective claims - we provide verifiable evidence through photographs, videos, measurements, and field testing that align with forensic engineering standards such as those cited by NAFE.</p>
+                    <p>Our documentation allows insurance companies to make fair and accurate determinations while protecting homeowners from improper or unsupported denials.</p>
+                </div>
+                <div class="split-img-container">
+                    <img src="roofrepairs6.png" alt="Documenting roof damage for insurance claims">
+                </div>
+            </div>
+        </section>
+
+        <section class="split-section">
+            <div class="container split-grid">
+                <div class="split-content">
+                    <h2>When We Perform a Repair</h2>
+                    <p>Every step is photo and video documented before, during, and after completion. We follow manufacturer specifications, Georgia building code, and HAAG inspection methodology. We restore the roof exactly as it should be — not just patched, but professionally repaired.</p>
+                    
+                    <div>
+                        <a href="https://photos.app.goo.gl/Ww6g4Cr9rrE9KSFn6" target="_blank" rel="noopener noreferrer" class="btn-link">View Repair Example 1</a>
+                        <a href="https://photos.app.goo.gl/gXkJvRuhbupW1vCF6" target="_blank" rel="noopener noreferrer" class="btn-link">View Repair Example 2</a>
+                    </div>
+
+                    <h3 style="margin-top: 2rem;">Why homeowners trust Lioness Roofing</h3>
+                    <p>When you hire Lioness Roofing, you’re getting a contractor that prioritizes:</p>
+                    <ul>
+                        <li>Compatibility with modern materials and code.</li>
+                        <li>Repairability proven through real-world testing.</li>
+                        <li>Availability to complete the repair correctly.</li>
+                    </ul>
+                    <p>And you’re also getting objective, insurer-ready documentation that upholds your right to full indemnification under your policy.</p>
+                    <p><strong>We don’t cut corners. We protect your home - like a lioness protects her den.</strong></p>
+                </div>
+                <div class="split-img-container">
+                    <img src="roofrepairs7.png" alt="A completed, professional roof repair by Lioness Roofing">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <img src="LionessRoofing.png" alt="Lioness Roofing Logo" class="logo-img-footer">
+                    </div>
+                    <p>We treat every home as if it were our own, ensuring absolute care for every family we serve across Georgia.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <a href="/">Home</a>
+                    <a href="/faq">FAQ</a>
+                    <a href="/about">About</a>
+                    <a href="/services">Services</a>
+                    <a href="/contact">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <a href="tel:7705888830">770.588.8830</a>
+                    <a href="mailto:contact@lionessroofing.com">contact@lionessroofing.com</a>
+                    <a href="/contact" style="color: var(--brand-gold); margin-top: 1rem; font-weight: 500;">Request an Inspection &rarr;</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lioness Roofing. All rights reserved. | Contractor ID: #25107976</p>
+                <div class="footer-legal-links">
+                    <a href="/privacy">Privacy Policy</a>
+                    <a href="/accessibility">Accessibility Statement</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
