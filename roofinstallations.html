@@ -36,21 +36,24 @@
         h1, h2, h3, h4 { letter-spacing: -0.03em; font-weight: 800; line-height: 1.1; color: var(--brand-purple); }
         h1 { font-size: 3.5rem; margin-bottom: 1.5rem; text-align: center; }
         h2 { font-size: 2.25rem; margin-bottom: 1.5rem; }
-        h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-main); font-weight: 600; }
+        h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-main); font-weight: 700; }
         h4 { font-size: 1.25rem; margin-bottom: 1rem; color: var(--text-main); }
         p { font-size: 1.125rem; color: var(--text-muted); margin-bottom: 1.5rem; font-weight: 400; }
 
+        /* Scoped Custom Bullets */
         main ul { margin-bottom: 1.5rem; list-style: none; }
         main li { margin-bottom: 0.75rem; font-size: 1.125rem; color: var(--text-muted); position: relative; padding-left: 1.5rem; }
         main li::before { content: '•'; color: var(--brand-gold); font-weight: bold; font-size: 1.5rem; position: absolute; left: 0; top: -5px; }
 
         .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
         
+        /* Header Navigation */
         header { position: fixed; top: 0; left: 0; width: 100%; height: var(--nav-height); background-color: var(--brand-purple); border-bottom: 1px solid rgba(163, 124, 79, 0.2); z-index: 1000; display: flex; align-items: center; }
         .nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
         .logo { z-index: 1001; display: flex; align-items: center; }
         .logo-img { max-height: 50px; width: auto; display: block; }
 
+        /* Mobile Menu */
         .menu-toggle { display: none; }
         .menu-icon { cursor: pointer; padding: 1rem 0 1rem 1rem; z-index: 1001; display: block; }
         .navicon { background: var(--brand-gold); display: block; height: 2px; position: relative; transition: background .2s ease-out; width: 24px; }
@@ -75,28 +78,52 @@
         .btn-gold { display: inline-flex; align-items: center; justify-content: center; padding: 1rem 2.5rem; border-radius: 50px; font-weight: 600; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.5px; transition: all 0.3s ease; cursor: pointer; border: none; text-align: center; background-color: var(--brand-gold); color: var(--text-light); box-shadow: 0 4px 14px rgba(163, 124, 79, 0.2); }
         .btn-gold:hover { background-color: var(--brand-gold-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(163, 124, 79, 0.3); }
 
-        .page-header { padding: 6rem 0 2rem 0; background-color: var(--bg-surface); }
+        /* Page Layout Blocks */
+        .page-header { padding: 6rem 0 3rem 0; background-color: var(--bg-surface); text-align: center; }
+        .page-header p { max-width: 800px; margin: 0 auto; font-size: 1.25rem; }
 
-        /* Alternating Split Sections */
-        .split-section { padding: 4rem 0; background-color: var(--bg-surface); }
-        .split-section:nth-child(even) { background-color: var(--bg-base); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); }
-        .split-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center; }
-        .split-content h2 { margin-bottom: 1.5rem; }
-        
-        .split-img-container { width: 100%; border-radius: 12px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.06); background-color: var(--bg-base); border: 1px solid var(--border-color); }
-        .split-img-container img { width: 100%; height: auto; display: block; }
+        /* Sleek Card Grid for Top Text */
+        .info-section { padding: 2rem 0 6rem 0; background-color: var(--bg-surface); }
+        .info-grid-2 { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-bottom: 2rem; }
+        .info-grid-3 { display: grid; grid-template-columns: 1fr; gap: 2rem; }
 
-        /* Gallery Grid */
+        .info-card {
+            background-color: var(--bg-base);
+            padding: 3rem;
+            border-radius: 24px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .info-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: transparent;
+            transition: background-color 0.3s ease;
+        }
+
+        .info-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.06); }
+        .info-card:hover::before { background-color: var(--brand-gold); }
+
+        /* The Process Gallery */
         .process-section { padding: 6rem 0; background-color: var(--bg-base); border-top: 1px solid var(--border-color); }
         .process-section-header { text-align: center; margin-bottom: 4rem; }
         .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; }
         .process-card { display: flex; flex-direction: column; border-radius: 16px; overflow: hidden; background-color: var(--bg-surface); border: 1px solid var(--border-color); transition: transform 0.3s ease, box-shadow 0.3s ease; }
         .process-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.08); }
-        .process-img { width: 100%; aspect-ratio: 4/3; background-color: #e5e5ea; object-fit: cover; border-bottom: 1px solid var(--border-color); }
+        .process-img { width: 100%; aspect-ratio: 4/3; background-color: var(--brand-purple-light); object-fit: cover; border-bottom: 1px solid var(--border-color); }
         .process-card h4 { padding: 1.5rem; margin: 0; text-align: center; font-weight: 600; color: var(--brand-purple); }
 
         .cta-bottom { padding: 5rem 0; text-align: center; background-color: var(--bg-surface); }
 
+        /* Footer */
         footer { background-color: var(--brand-purple); padding: 5rem 0 2rem 0; color: var(--text-light); border-top: 4px solid var(--brand-gold); }
         .footer-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; margin-bottom: 4rem; }
         .logo-img-footer { max-height: 60px; width: auto; display: block; }
@@ -110,6 +137,7 @@
         .footer-legal-links a { color: rgba(255, 255, 255, 0.5); font-size: 0.875rem; text-decoration: underline; }
         .footer-legal-links a:hover { color: var(--brand-gold); }
 
+        /* Desktop Optimization */
         @media (min-width: 992px) {
             .menu-icon { display: none; }
             .nav-menu { position: static; height: auto; width: auto; background-color: transparent; flex-direction: row; align-items: center; }
@@ -120,9 +148,8 @@
             .nav-container { justify-content: flex-start; gap: 4rem; }
             .header-actions { margin-left: auto; }
             
-            .split-grid { grid-template-columns: 1fr 1fr; gap: 5rem; }
-            .split-grid.reverse .split-content { order: 2; }
-            .split-grid.reverse .split-img-container { order: 1; }
+            .info-grid-2 { grid-template-columns: 1fr 1fr; }
+            .info-grid-3 { grid-template-columns: repeat(3, 1fr); }
             
             .footer-grid { grid-template-columns: 2fr 1fr 1fr; }
             .footer-bottom { flex-direction: row; justify-content: space-between; align-items: center; text-align: left; }
@@ -152,68 +179,61 @@
     </header>
 
     <main>
+        
         <section class="page-header container">
             <h1>Roof Installation You Can Trust</h1>
+            <p>At Lioness Roofing, we install every roof with precision, transparency, and craftsmanship designed to last decades.</p>
         </section>
 
-        <section class="split-section">
-            <div class="container split-grid">
-                <div class="split-content">
-                    <h2>What’s Included in Your Roof Installation</h2>
-                    <p>At Lioness Roofing, we install every roof with precision, transparency, and craftsmanship designed to last decades. Here is what you get:</p>
-                    <ul>
-                        <li>Full tear-off (never layovers)</li>
-                        <li>Decking inspection & replacement</li>
-                        <li>Premium drip edge</li>
-                        <li>High-quality underlayment</li>
-                        <li>Expert shingle installation</li>
-                        <li>Proper ventilation setup</li>
-                        <li>Full cleanup & magnetic sweep</li>
-                        <li>Final inspection + photo report</li>
-                    </ul>
-                </div>
-                <div class="split-img-container">
-                    <img src="install-1.png" alt="Premium roof installation process">
-                </div>
-            </div>
-        </section>
-
-        <section class="split-section">
-            <div class="container split-grid reverse">
-                <div class="split-content">
-                    <h2>Why Homeowners Choose Lioness</h2>
-                    <ul>
-                        <li>Licensed & insured</li>
-                        <li>No shortcuts - ever</li>
-                        <li>Lifetime workmanship warranty</li>
-                        <li>High quality materials</li>
-                        <li>Clear communication & transparency</li>
-                        <li>Insurance expertise</li>
-                        <li>Fast, clean, and professional crews</li>
-                    </ul>
-                </div>
-                <div class="split-img-container">
-                    <img src="install-2.png" alt="Professional roofing crew">
-                </div>
-            </div>
-        </section>
-
-        <section class="split-section">
-            <div class="container split-grid">
-                <div class="split-content">
-                    <h2>Protection, Speed, and Warranties</h2>
-                    <h3>How Long Does It Take?</h3>
-                    <p>Most homes are completed in 1 day. Larger or complex roofs may take longer - we’ll always tell you upfront.</p>
+        <section class="info-section">
+            <div class="container">
+                
+                <div class="info-grid-2">
+                    <div class="info-card">
+                        <h3>What’s Included in Your Roof Installation</h3>
+                        <ul>
+                            <li>Full tear-off (never layovers)</li>
+                            <li>Decking inspection & replacement</li>
+                            <li>Premium drip edge</li>
+                            <li>High-quality underlayment</li>
+                            <li>Expert shingle installation</li>
+                            <li>Proper ventilation setup</li>
+                            <li>Full cleanup & magnetic sweep</li>
+                            <li>Final inspection + photo report</li>
+                        </ul>
+                    </div>
                     
-                    <h3>Your Property Stays Protected</h3>
-                    <p>We tarp thoroughly, move what’s needed, and sweep your yard multiple times with heavy-duty magnets.</p>
+                    <div class="info-card">
+                        <h3>Why Homeowners Choose Lioness</h3>
+                        <ul>
+                            <li>Licensed & insured</li>
+                            <li>No shortcuts - ever</li>
+                            <li>Lifetime workmanship warranty</li>
+                            <li>High quality materials</li>
+                            <li>Clear communication & transparency</li>
+                            <li>Insurance expertise</li>
+                            <li>Fast, clean, and professional crews</li>
+                        </ul>
+                    </div>
+                </div>
 
-                    <h3>Industry Leading Warranties</h3>
-                    <p>We offer up to a 25 year Lifetime labor warranty and a 50 year Limited Manufacturer shingle warranty. Full documentation provided.</p>
+                <div class="info-grid-3">
+                    <div class="info-card">
+                        <h3>How Long Does It Take?</h3>
+                        <p>Most homes are completed in 1 day. Larger or complex roofs may take longer - we’ll always tell you upfront.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Your Property Stays Protected</h3>
+                        <p>We tarp thoroughly, move what’s needed, and sweep your yard multiple times with heavy-duty magnets.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Warranties</h3>
+                        <p>We offer up to a 25 year Lifetime labor warranty and a 50 year Limited Manufacturer shingle warranty. Full documentation provided.</p>
+                    </div>
                 </div>
-                <div class="split-img-container">
-                    <img src="install-3.png" alt="Property protection and warranties">
-                </div>
+
             </div>
         </section>
 
