@@ -86,7 +86,7 @@
         /* Layout Utilities */
         .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
         .narrow-container { max-width: 900px; margin: 0 auto; }
-        .section-padding { padding: 6rem 0; }
+        .section-padding { padding: 4rem 0; } /* Tightened for mobile */
 
         /* Header Navigation */
         header {
@@ -226,94 +226,34 @@
             box-shadow: 0 30px 60px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.3);
         }
 
-        .glass-form-card h3 {
-            color: var(--text-light);
-            font-size: 1.75rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .glass-form-card p {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 1rem;
-            margin-bottom: 2rem;
-        }
+        .glass-form-card h3 { color: var(--text-light); font-size: 1.75rem; margin-bottom: 0.5rem; }
+        .glass-form-card p { color: rgba(255, 255, 255, 0.8); font-size: 1rem; margin-bottom: 2rem; }
 
         .form-row { display: grid; grid-template-columns: 1fr; gap: 1rem; }
         
         /* Floating Labels CSS */
-        .floating-group {
-            position: relative;
-            margin-bottom: 1.25rem;
-        }
-
+        .floating-group { position: relative; margin-bottom: 1.25rem; }
         .floating-input {
-            width: 100%;
-            padding: 1.25rem 1rem 0.5rem 1rem;
-            font-size: 1rem;
-            color: var(--text-light);
-            background: rgba(0, 0, 0, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            font-family: var(--font-stack);
+            width: 100%; padding: 1.25rem 1rem 0.5rem 1rem; font-size: 1rem; color: var(--text-light);
+            background: rgba(0, 0, 0, 0.2); border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px; transition: all 0.3s ease; font-family: var(--font-stack);
         }
-
-        .floating-input:focus {
-            outline: none;
-            background: rgba(0, 0, 0, 0.4);
-            border-color: var(--brand-gold);
-            box-shadow: 0 0 0 4px rgba(163, 124, 79, 0.2);
-        }
-
-        .floating-label {
-            position: absolute;
-            top: 50%;
-            left: 1rem;
-            transform: translateY(-50%);
-            font-size: 1rem;
-            color: rgba(255, 255, 255, 0.6);
-            pointer-events: none;
-            transition: all 0.2s ease;
-        }
-
-        .floating-input:focus ~ .floating-label,
-        .floating-input:not(:placeholder-shown) ~ .floating-label {
-            top: 0.8rem;
-            font-size: 0.75rem;
-            color: var(--brand-gold-light);
-            font-weight: 600;
-        }
+        .floating-input:focus { outline: none; background: rgba(0, 0, 0, 0.4); border-color: var(--brand-gold); box-shadow: 0 0 0 4px rgba(163, 124, 79, 0.2); }
+        .floating-label { position: absolute; top: 50%; left: 1rem; transform: translateY(-50%); font-size: 1rem; color: rgba(255, 255, 255, 0.6); pointer-events: none; transition: all 0.2s ease; }
+        .floating-input:focus ~ .floating-label, .floating-input:not(:placeholder-shown) ~ .floating-label { top: 0.8rem; font-size: 0.75rem; color: var(--brand-gold-light); font-weight: 600; }
 
         .btn-submit-glass {
-            width: 100%;
-            padding: 1.125rem;
-            margin-top: 1rem;
-            background: var(--brand-gold);
-            color: var(--text-light);
-            border: none;
-            border-radius: 12px;
-            font-size: 1.125rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 20px rgba(163, 124, 79, 0.3);
+            width: 100%; padding: 1.125rem; margin-top: 1rem; background: var(--brand-gold); color: var(--text-light);
+            border: none; border-radius: 12px; font-size: 1.125rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 1px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 10px 20px rgba(163, 124, 79, 0.3);
         }
+        .btn-submit-glass:hover { background: var(--brand-gold-dark); transform: translateY(-2px); box-shadow: 0 15px 25px rgba(163, 124, 79, 0.4); }
 
-        .btn-submit-glass:hover {
-            background: var(--brand-gold-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 15px 25px rgba(163, 124, 79, 0.4);
-        }
-
-        /* --- REST OF THE SITE (Bento Grid, About, etc.) --- */
-        
+        /* Bento Grid Features Section */
         .features-section { background-color: var(--bg-base); }
         .section-header { text-align: center; margin-bottom: 3rem; }
         
         .bento-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
-
         .bento-card {
             background-color: var(--bg-surface); padding: 3rem; border-radius: 24px;
             border: 1px solid var(--border-color); transition: all 0.4s ease; position: relative; overflow: hidden;
@@ -326,41 +266,43 @@
         .bento-large h3 { color: var(--brand-gold); }
         .bento-large p { color: rgba(255,255,255,0.8); }
 
-        /* FIXED ABOUT US SPLIT */
-        .about-section { background-color: var(--bg-base); padding: 6rem 0; }
+        /* About Us Split */
+        .about-section { background-color: var(--bg-base); padding: 4rem 0; }
         .about-grid { display: grid; grid-template-columns: 1fr; gap: 4rem; align-items: center; }
-        
-        /* Updated Container and Image Properties */
         .about-img-container { 
-            width: 100%; 
-            border-radius: 24px; 
-            overflow: hidden; 
-            box-shadow: 0 20px 40px rgba(0,0,0,0.08); 
-            background-color: var(--brand-purple-light);
-            aspect-ratio: 1 / 1; /* Creates a perfect square so it doesn't stretch too tall */
+            width: 100%; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.08); 
+            background-color: var(--brand-purple-light); aspect-ratio: 1 / 1; 
         }
-        .about-img-container img { 
-            width: 100%; 
-            height: 100%; 
-            display: block; 
-            object-fit: cover; 
-            object-position: center 20%; /* Keeps Talon's face in the upper part of the frame */
+        .about-img-container img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center 20%; }
+
+        /* Mobile Swipe Carousels for Services & Testimonials */
+        .services-section { background-color: var(--text-main); padding: 4rem 0; color: var(--text-light); text-align: center; }
+        .services-section h2 { color: var(--text-light); margin-bottom: 4rem; }
+        
+        .services-grid, .test-grid { 
+            display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 1.5rem; 
+            padding-bottom: 1.5rem; -webkit-overflow-scrolling: touch; scrollbar-width: none; 
+        }
+        .services-grid::-webkit-scrollbar, .test-grid::-webkit-scrollbar { display: none; }
+        
+        .service-card, .test-card { 
+            min-width: 85vw; scroll-snap-align: center; flex-shrink: 0; text-align: left; 
         }
         
-        .services-section { background-color: var(--text-main); padding: 6rem 0; color: var(--text-light); text-align: center; }
-        .services-section h2 { color: var(--text-light); margin-bottom: 4rem; }
-        .services-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; text-align: left; }
+        .service-card { padding: 2.5rem; background-color: rgba(255,255,255,0.05); border-radius: 24px; border: 1px solid rgba(255,255,255,0.1); }
         .service-card h3 { color: var(--text-light); border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem; margin-bottom: 1.5rem; }
         .service-card p { color: rgba(255,255,255,0.7); }
 
-        .parallax-divider { width: 100%; height: 400px; background-size: cover; background-position: center; background-attachment: fixed; }
+        /* Parallax Fix for Mobile (Normal scroll so it doesn't disappear) */
+        .parallax-divider { width: 100%; height: 300px; background-size: cover; background-position: center; background-attachment: scroll; }
 
+        /* Testimonials */
         .testimonials { background-color: var(--bg-surface); }
-        .test-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
-        .test-card { padding: 3rem; background-color: var(--bg-base); border-radius: 24px; border: 1px solid var(--border-color); }
+        .test-card { padding: 2.5rem; background-color: var(--bg-base); border-radius: 24px; border: 1px solid var(--border-color); }
         .test-card h4 { color: var(--text-main); margin-bottom: 1rem; font-size: 1.25rem; }
         .test-card p { font-style: italic; font-size: 1rem; color: var(--text-muted); }
 
+        /* FAQ Accordions */
         .faq-section { background-color: var(--bg-base); }
         details { background-color: var(--bg-surface); border: 1px solid var(--border-color); border-radius: 16px; margin-bottom: 1rem; transition: all 0.3s ease; overflow: hidden; }
         details:hover { border-color: var(--brand-gold); }
@@ -370,6 +312,7 @@
         summary::-webkit-details-marker { display: none; }
         .faq-answer { padding: 0 1.5rem 1.5rem 1.5rem; color: var(--text-muted); font-size: 1.05rem; line-height: 1.6; }
 
+        /* Footer */
         footer { background-color: var(--brand-purple); padding: 5rem 0 2rem 0; color: var(--text-light); border-top: 4px solid var(--brand-gold); }
         .footer-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; margin-bottom: 4rem; }
         .logo-img-footer { max-height: 120px; width: auto; display: block; margin-bottom: 1.5rem; }
@@ -383,6 +326,7 @@
         .footer-legal-links a { color: rgba(255, 255, 255, 0.5); font-size: 0.875rem; text-decoration: underline; }
         .footer-legal-links a:hover { color: var(--brand-gold); }
 
+        /* Desktop Optimization */
         @media (min-width: 992px) {
             .menu-icon { display: none; }
             .nav-container { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 0; }
@@ -394,6 +338,11 @@
             .nav-menu a:hover::after { width: 100%; }
             .header-actions { justify-self: end; margin-left: 0; }
             
+            /* Restore Desktop Padding */
+            .section-padding { padding: 6rem 0; }
+            .about-section { padding: 6rem 0; }
+            .services-section { padding: 6rem 0; }
+            
             .hero-grid { grid-template-columns: 1.2fr 0.8fr; gap: 6rem; }
             .hero-content h1 { font-size: 5.5rem; }
             .hero-content h2 { font-size: 3rem; }
@@ -402,11 +351,16 @@
             .bento-grid { grid-template-columns: repeat(2, 1fr); }
             .bento-large { grid-column: span 2; }
             
-            /* Rebalanced About Grid */
             .about-grid { grid-template-columns: 1fr 1.2fr; gap: 6rem; }
             
-            .services-grid { grid-template-columns: repeat(3, 1fr); gap: 4rem; }
-            .test-grid { grid-template-columns: repeat(3, 1fr); }
+            /* Turn Parallax BACK ON for Desktop */
+            .parallax-divider { height: 400px; background-attachment: fixed; }
+
+            /* Restore Desktop Grids (Turns off the mobile swipe effect) */
+            .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4rem; overflow-x: visible; padding-bottom: 0; }
+            .test-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; overflow-x: visible; padding-bottom: 0; }
+            .service-card, .test-card { min-width: auto; }
+            .service-card { background-color: transparent; border: none; padding: 0; }
             
             .footer-grid { grid-template-columns: 2fr 1fr 1fr; }
             .footer-bottom { flex-direction: row; justify-content: space-between; align-items: center; text-align: left; }
@@ -436,12 +390,10 @@
     </header>
 
     <main>
-        
         <section class="hero">
             <div class="hero-bg"></div>
             <div class="hero-overlay"></div>
             <div class="container hero-grid">
-                
                 <div class="hero-content">
                     <div class="hero-badge">Georgia's Premium Roofing Contractor</div>
                     <h1>Lioness<br>Roofing</h1>
@@ -474,7 +426,6 @@
                         <button type="submit" class="btn-submit-glass">Submit Request</button>
                     </form>
                 </div>
-
             </div>
         </section>
 
@@ -530,6 +481,7 @@
         <section class="services-section">
             <div class="container">
                 <h2>Our Services</h2>
+                
                 <div class="services-grid">
                     <div class="service-card">
                         <h3>Roof Repair</h3>
@@ -544,6 +496,7 @@
                         <p>Everything starts with a thorough, 10-point inspection to ensure we understand exactly what type of damage your roof has and which service will best meet your needs.</p>
                     </div>
                 </div>
+
                 <div style="text-align: center; margin-top: 5rem;">
                     <a href="tel:7705888830" class="btn" style="background-color: #ffffff; color: var(--text-main);">Call Now to Protect Your Den</a>
                 </div>
@@ -557,6 +510,7 @@
                 <div class="section-header">
                     <h2>Client Testimonials</h2>
                 </div>
+                
                 <div class="test-grid">
                     <div class="test-card">
                         <h4>Chris</h4>
@@ -571,6 +525,7 @@
                         <p>"Talon is the best roofer by far! We were in a spot where we had hail damage to our roof and our insurance company Allstate was denying us. Talon and one of his associates came by and helped us through what seemed like a very complicated process, and got us completely covered... He didn't even stop with our roof, he made sure that we got paid for everything that was damaged... High level of communication, definitely satisfied with the product that he gave us."</p>
                     </div>
                 </div>
+
             </div>
         </section>
 
