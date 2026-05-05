@@ -55,7 +55,9 @@
         li { margin-bottom: 0.5rem; }
 
         .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
-        .legal-container { max-width: 800px; margin: 0 auto; padding: 6rem 1.5rem; }
+        
+        /* Adjusted mobile padding */
+        .legal-container { max-width: 800px; margin: 0 auto; padding: 4rem 1.5rem; }
         
         header { position: fixed; top: 0; left: 0; width: 100%; height: var(--nav-height); background-color: var(--brand-purple); border-bottom: 1px solid rgba(163, 124, 79, 0.2); z-index: 1000; display: flex; align-items: center; }
         .nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
@@ -105,6 +107,9 @@
             .nav-menu a:hover::after { width: 100%; }
             .header-actions { justify-self: end; margin-left: 0; }
             
+            /* Restores larger padding for desktop screens */
+            .legal-container { padding: 6rem 1.5rem; }
+
             .footer-grid { grid-template-columns: 2fr 1fr 1fr; }
             .footer-bottom { flex-direction: row; justify-content: space-between; align-items: center; text-align: left; }
         }
