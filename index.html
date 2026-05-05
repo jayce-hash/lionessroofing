@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Lioness Roofing provides premium, uncompromising roofing services, replacements, and repairs in Georgia. Led by Talon Brown. Contractor ID #25107976.">
+    <meta name="description" content="Lioness Roofing: Tough Like A Mother. Premium, code-compliant roofing installations, repairs, and inspections in Georgia. Family-owned and operated.">
     <meta name="keywords" content="Roofing, Lioness Roofing, Talon Brown, Roof Repair, Roof Replacement, Georgia Premium Contractor">
     <meta name="author" content="Lioness Roofing">
-    <title>Lioness Roofing | Precision Quality Roofing</title>
+    <title>Lioness Roofing | Tough Like A Mother</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,11 +26,6 @@
         "@type": "PostalAddress",
         "addressRegion": "GA",
         "addressCountry": "US"
-      },
-      "identifier": {
-        "@type": "PropertyValue",
-        "name": "Contractor ID",
-        "value": "25107976"
       }
     }
     </script>
@@ -53,529 +48,237 @@
         }
 
         /* Reset & Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
             font-family: var(--font-stack);
             background-color: var(--bg-base);
             color: var(--text-main);
-            line-height: 1.5;
+            line-height: 1.6;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             overflow-x: hidden;
             padding-top: var(--nav-height);
         }
 
-        a {
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
+        a { text-decoration: none; transition: all 0.3s ease; }
 
         /* Typography */
-        h1, h2, h3 {
-            letter-spacing: -0.04em;
+        h1, h2, h3, h4 {
+            letter-spacing: -0.03em;
             font-weight: 800;
-            line-height: 1.05;
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
+            line-height: 1.1;
             color: var(--brand-purple);
         }
 
-        p {
-            font-size: 1.125rem;
-            color: var(--text-muted);
-            margin-bottom: 2rem;
-            font-weight: 400;
-        }
-
-        /* Buttons */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1.1rem 2.5rem;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            border: none;
-            text-align: center;
-        }
-
-        .btn-primary {
-            background-color: var(--brand-purple);
-            color: var(--text-light);
-            box-shadow: 0 4px 14px rgba(56, 27, 62, 0.2);
-        }
-
-        .btn-primary:hover {
-            background-color: var(--brand-purple-light);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(56, 27, 62, 0.3);
-        }
-
-        .btn-accent {
-            background-color: var(--brand-gold);
-            color: var(--text-light);
-        }
-
-        .btn-accent:hover {
-            background-color: var(--brand-gold-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(163, 124, 79, 0.3);
-        }
+        h1 { font-size: 4rem; margin-bottom: 0.5rem; }
+        h2 { font-size: 2.5rem; margin-bottom: 1.5rem; }
+        h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-main); font-weight: 700; }
+        p { font-size: 1.125rem; color: var(--text-muted); margin-bottom: 1.5rem; font-weight: 400; }
 
         /* Layout Utilities */
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        .narrow-container { max-width: 800px; margin: 0 auto; }
+        .section-padding { padding: 6rem 0; }
 
-        .section-padding {
-            padding: 8rem 0;
-        }
-
-        /* Header & Navigation - Bold Purple Theme */
+        /* Header Navigation */
         header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: var(--nav-height);
-            background-color: var(--brand-purple);
-            border-bottom: 1px solid rgba(163, 124, 79, 0.2);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
+            position: fixed; top: 0; left: 0; width: 100%; height: var(--nav-height);
+            background-color: var(--brand-purple); border-bottom: 1px solid rgba(163, 124, 79, 0.2);
+            z-index: 1000; display: flex; align-items: center;
         }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+        .logo { z-index: 1001; display: flex; align-items: center; }
+        .logo-img { max-height: 50px; width: auto; display: block; }
 
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-        }
-
-        .logo {
-            z-index: 1001;
-            display: flex;
-            align-items: center;
-        }
-
-        .logo-img {
-            max-height: 50px; 
-            width: auto;
-            display: block;
-        }
-
-        /* Hamburger Menu Setup */
+        /* Mobile Menu */
         .menu-toggle { display: none; }
-
-        .menu-icon {
-            cursor: pointer;
-            padding: 1rem 0 1rem 1rem;
-            z-index: 1001;
-            display: block;
-        }
-
-        .navicon {
-            background: var(--brand-gold); 
-            display: block;
-            height: 2px;
-            position: relative;
-            transition: background .2s ease-out;
-            width: 24px;
-        }
-
-        .navicon:before,
-        .navicon:after {
-            background: var(--brand-gold);
-            content: '';
-            display: block;
-            height: 100%;
-            position: absolute;
-            transition: all .2s ease-out;
-            width: 100%;
-        }
-
-        .navicon:before { top: 7px; }
-        .navicon:after { top: -7px; }
-
+        .menu-icon { cursor: pointer; padding: 1rem 0 1rem 1rem; z-index: 1001; display: block; }
+        .navicon { background: var(--brand-gold); display: block; height: 2px; position: relative; transition: background .2s ease-out; width: 24px; }
+        .navicon:before, .navicon:after { background: var(--brand-gold); content: ''; display: block; height: 100%; position: absolute; transition: all .2s ease-out; width: 100%; }
+        .navicon:before { top: 7px; } .navicon:after { top: -7px; }
         .menu-toggle:checked ~ .menu-icon .navicon { background: transparent; }
         .menu-toggle:checked ~ .menu-icon .navicon:before { transform: rotate(-45deg); top: 0; }
         .menu-toggle:checked ~ .menu-icon .navicon:after { transform: rotate(45deg); top: 0; }
-
         .nav-menu {
-            position: fixed;
-            top: 0;
-            right: -100%;
-            width: 100%;
-            height: 100vh;
-            background-color: var(--brand-purple);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            transition: right 0.3s ease;
-            z-index: 1000;
+            position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; background-color: var(--brand-purple);
+            display: flex; flex-direction: column; justify-content: center; align-items: center; transition: right 0.3s ease; z-index: 1000;
         }
-
         .menu-toggle:checked ~ .nav-menu { right: 0; }
+        .nav-menu ul { list-style: none; padding: 0; margin: 0; }
+        .nav-menu a { color: var(--text-light); font-size: 1.5rem; font-weight: 600; margin: 1.5rem 0; display: block; position: relative; }
+        .nav-menu a:hover { color: var(--brand-gold); }
 
-        .nav-menu a {
-            color: var(--text-light);
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin: 1.5rem 0;
-            display: block;
-            position: relative;
-        }
-
-        .nav-menu a:hover {
-            color: var(--brand-gold);
-        }
-
-        .header-actions {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            z-index: 1001;
-        }
-
+        .header-actions { display: flex; align-items: center; gap: 1rem; z-index: 1001; }
         .btn-header-call {
-            background-color: var(--brand-gold);
-            color: var(--text-light);
-            padding: 0.6rem 1.5rem;
-            font-size: 0.875rem;
-            font-weight: 700;
-            border-radius: 50px;
+            background-color: var(--brand-gold); color: var(--text-light); padding: 0.6rem 1.5rem;
+            font-size: 0.875rem; font-weight: 700; border-radius: 50px;
         }
+        .btn-header-call:hover { background-color: var(--brand-gold-dark); transform: scale(1.02); }
 
-        .btn-header-call:hover {
-            background-color: var(--brand-gold-dark);
-            transform: scale(1.02);
+        /* Buttons */
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; padding: 1rem 2.5rem;
+            border-radius: 50px; font-weight: 600; font-size: 1rem; text-transform: uppercase;
+            letter-spacing: 0.5px; transition: all 0.3s ease; cursor: pointer; border: none; text-align: center;
         }
+        .btn-primary { background-color: var(--brand-purple); color: var(--text-light); }
+        .btn-primary:hover { background-color: var(--brand-purple-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(56, 27, 62, 0.2); }
+        .btn-gold { background-color: var(--brand-gold); color: var(--text-light); }
+        .btn-gold:hover { background-color: var(--brand-gold-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(163, 124, 79, 0.2); }
+        .btn-outline { border: 2px solid var(--brand-purple); color: var(--brand-purple); background: transparent; }
+        .btn-outline:hover { background-color: var(--brand-purple); color: var(--text-light); }
 
-        /* REDESIGNED HERO SECTION - Sleek Apple Style */
+        /* Hero Section */
         .hero {
-            background-color: var(--bg-surface);
-            padding: 6rem 0 4rem 0;
-            text-align: center;
+            padding: 5rem 0;
+            background: linear-gradient(180deg, var(--bg-surface) 0%, var(--bg-base) 100%);
             border-bottom: 1px solid var(--border-color);
         }
 
-        .hero-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            color: var(--brand-purple);
-            margin-bottom: 1.5rem;
-        }
-
-        .hero h1 span {
-            color: var(--brand-gold);
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            max-width: 700px;
-            margin-bottom: 2.5rem;
-            color: var(--text-muted);
-        }
-
-        .hero-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            width: 100%;
-            max-width: 400px;
-        }
-
-        .hero-stats {
-            display: flex;
-            flex-direction: column;
-            gap: 3rem;
-            width: 100%;
-            margin-top: 5rem;
-            padding-top: 3rem;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .stat-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .stat-num {
-            font-size: 3.5rem;
-            font-weight: 800;
-            color: var(--brand-purple);
-            line-height: 1;
-            letter-spacing: -0.05em;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-num small {
-            font-size: 1.5rem;
-            color: var(--brand-gold);
-            font-weight: 600;
-            margin-left: 0.2rem;
-        }
-
-        .stat-label {
-            font-size: 0.875rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 700;
-            color: var(--text-muted);
-        }
-
-        /* Services Grid */
-        .services {
-            background-color: var(--bg-base);
-        }
-
-        .services-header {
-            text-align: center;
-            margin-bottom: 5rem;
-        }
-
-        .services-header p {
-            margin: 0 auto;
-            max-width: 600px;
-        }
-
-        .grid {
+        .hero-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 2rem;
+            gap: 4rem;
+            align-items: center;
         }
 
-        .card {
+        .hero-content h1 { color: var(--brand-gold); font-size: 1.5rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; }
+        .hero-content h2 { font-size: 4.5rem; line-height: 1; color: var(--brand-purple); margin-bottom: 1.5rem; }
+
+        .hero-form-card {
             background-color: var(--bg-surface);
-            border: 1px solid var(--border-color);
+            padding: 2.5rem;
             border-radius: 24px;
-            padding: 3rem 2.5rem;
-            text-align: left;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+            border: 1px solid var(--border-color);
+        }
+
+        .hero-form-card h3 { margin-bottom: 0.5rem; color: var(--brand-purple); }
+        .hero-form-card p { font-size: 1rem; margin-bottom: 2rem; }
+
+        .form-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+        .form-group { display: flex; flex-direction: column; gap: 0.25rem; }
+        .form-group label { font-size: 0.875rem; font-weight: 600; color: var(--text-main); }
+        .form-control {
+            padding: 0.875rem 1rem; border: 1px solid var(--border-color); border-radius: 8px;
+            font-family: var(--font-stack); font-size: 1rem; background-color: var(--bg-base);
+            transition: all 0.3s ease; color: var(--text-main); width: 100%;
+        }
+        .form-control:focus { outline: none; border-color: var(--brand-gold); box-shadow: 0 0 0 3px rgba(163, 124, 79, 0.1); background-color: var(--bg-surface); }
+
+        /* Bento Grid Features Section */
+        .features-section { background-color: var(--bg-base); }
+        .section-header { text-align: center; margin-bottom: 3rem; }
+        
+        .bento-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .bento-card {
+            background-color: var(--bg-surface);
+            padding: 3rem;
+            border-radius: 24px;
+            border: 1px solid var(--border-color);
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-        }
-
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background-color: var(--brand-gold);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.4s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(56, 27, 62, 0.08);
-            border-color: transparent;
-        }
-
-        .card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--brand-purple);
-        }
-
-        .card p {
-            font-size: 1rem;
-            margin-bottom: 0;
-        }
-
-        /* Standardized Footer */
-        footer {
-            background-color: var(--brand-purple);
-            padding: 5rem 0 2rem 0;
-            color: var(--text-light);
-            border-top: 4px solid var(--brand-gold);
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 3rem;
-            margin-bottom: 4rem;
-        }
-
-        .logo-img-footer {
-            max-height: 60px;
-            width: auto;
-            display: block;
-        }
-
-        .footer-col p {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 1rem;
-            margin-top: 1.5rem;
-        }
-
-        .footer-col h4 {
-            font-size: 1.125rem;
-            color: var(--brand-gold);
-            margin-bottom: 1.5rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .footer-col a {
-            display: block;
-            color: var(--text-light);
-            margin-bottom: 1rem;
-            font-weight: 300;
-        }
-
-        .footer-col a:hover {
-            color: var(--brand-gold);
-            transform: translateX(5px);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            justify-content: space-between;
+            align-items: flex-start;
         }
 
-        .footer-bottom p {
-            font-size: 0.875rem;
-            color: rgba(255, 255, 255, 0.5);
-            margin: 0;
-        }
-        
-        .footer-legal-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
+        .bento-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            border-color: var(--brand-gold);
         }
 
-        .footer-legal-links a {
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 0.875rem;
-            text-decoration: underline;
-        }
+        .bento-card h3 { color: var(--brand-purple); margin-bottom: 1rem; }
+        .bento-card p { margin-bottom: 2rem; flex-grow: 1; }
+        .bento-large { background-color: var(--brand-purple); color: var(--text-light); }
+        .bento-large h3 { color: var(--brand-gold); }
+        .bento-large p { color: rgba(255,255,255,0.8); }
 
-        .footer-legal-links a:hover {
-            color: var(--brand-gold);
+        /* About Block */
+        .about-block {
+            background-color: var(--brand-gold);
+            padding: 6rem 0;
+            text-align: center;
+            color: var(--brand-purple);
         }
+        .about-block h2 { color: var(--brand-purple); }
+        .about-block p { color: var(--brand-purple); max-width: 800px; margin: 0 auto; font-weight: 500; font-size: 1.25rem; }
+
+        /* Services Preview */
+        .services-preview { background-color: var(--bg-surface); }
+        .services-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+        .service-card { padding: 3rem 2rem; background-color: var(--bg-base); border-radius: 24px; text-align: center; border: 1px solid var(--border-color); }
+        .service-card h3 { color: var(--brand-purple); }
+
+        /* Testimonials */
+        .testimonials { background-color: var(--bg-base); }
+        .test-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+        .test-card {
+            background-color: var(--bg-surface); padding: 3rem; border-radius: 24px;
+            border: 1px solid var(--border-color); position: relative;
+        }
+        .test-card::before { content: '"'; position: absolute; top: 1.5rem; left: 2rem; font-size: 4rem; color: var(--brand-gold); opacity: 0.3; font-family: serif; line-height: 1; }
+        .test-card p { font-style: italic; position: relative; z-index: 2; margin-bottom: 1.5rem; font-size: 1rem; }
+        .test-card h4 { color: var(--brand-purple); margin: 0; font-size: 1.125rem; }
+
+        /* FAQ Accordions */
+        .faq-section { background-color: var(--bg-surface); }
+        details { background-color: var(--bg-base); border: 1px solid var(--border-color); border-radius: 16px; margin-bottom: 1rem; transition: all 0.3s ease; overflow: hidden; }
+        details:hover { border-color: var(--brand-gold); }
+        summary { padding: 1.5rem; font-size: 1.125rem; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; color: var(--brand-purple); }
+        summary::after { content: '+'; font-size: 1.5rem; color: var(--brand-gold); font-weight: 400; transition: transform 0.3s ease; }
+        details[open] summary::after { content: '−'; transform: rotate(180deg); }
+        summary::-webkit-details-marker { display: none; }
+        .faq-answer { padding: 0 1.5rem 1.5rem 1.5rem; color: var(--text-muted); font-size: 1.05rem; }
+
+        /* Standardized Footer */
+        footer { background-color: var(--brand-purple); padding: 5rem 0 2rem 0; color: var(--text-light); border-top: 4px solid var(--brand-gold); }
+        .footer-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; margin-bottom: 4rem; }
+        .logo-img-footer { max-height: 60px; width: auto; display: block; }
+        .footer-col p { color: rgba(255, 255, 255, 0.7); font-size: 1rem; margin-top: 1.5rem; }
+        .footer-col h4 { font-size: 1.125rem; color: var(--brand-gold); margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 1px; }
+        .footer-col a { display: block; color: var(--text-light); margin-bottom: 1rem; font-weight: 300; }
+        .footer-col a:hover { color: var(--brand-gold); transform: translateX(5px); }
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; flex-direction: column; gap: 1rem; }
+        .footer-bottom p { font-size: 0.875rem; color: rgba(255, 255, 255, 0.5); margin: 0; }
+        .footer-legal-links { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+        .footer-legal-links a { color: rgba(255, 255, 255, 0.5); font-size: 0.875rem; text-decoration: underline; }
+        .footer-legal-links a:hover { color: var(--brand-gold); }
 
         /* Desktop Optimization */
         @media (min-width: 992px) {
-            /* Desktop Navigation */
             .menu-icon { display: none; }
-
-            .nav-menu {
-                position: static;
-                height: auto;
-                width: auto;
-                background-color: transparent;
-                flex-direction: row;
-                align-items: center;
-            }
-
-            .nav-menu ul {
-                display: flex;
-                list-style: none;
-                gap: 3rem;
-            }
-
-            .nav-menu a {
-                font-size: 1rem;
-                margin: 0;
-                font-weight: 500;
-                color: var(--text-light);
-            }
-
-            .nav-menu a::after {
-                content: '';
-                position: absolute;
-                width: 0;
-                height: 2px;
-                bottom: -4px;
-                left: 0;
-                background-color: var(--brand-gold);
-                transition: width 0.3s ease;
-            }
-
-            .nav-menu a:hover::after {
-                width: 100%;
-            }
-
-            .nav-container {
-                justify-content: flex-start;
-                gap: 4rem;
-            }
-
+            .nav-menu { position: static; height: auto; width: auto; background-color: transparent; flex-direction: row; align-items: center; }
+            .nav-menu ul { display: flex; list-style: none; gap: 3rem; margin: 0; padding: 0; }
+            .nav-menu a { font-size: 1rem; margin: 0; font-weight: 500; color: var(--text-light); }
+            .nav-menu a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0; background-color: var(--brand-gold); transition: width 0.3s ease; }
+            .nav-menu a:hover::after { width: 100%; }
+            .nav-container { justify-content: flex-start; gap: 4rem; }
             .header-actions { margin-left: auto; }
-
-            /* Desktop Hero Layout */
-            .hero { padding: 10rem 0 6rem 0; }
-            .hero h1 { font-size: 5.5rem; }
-            .hero p { font-size: 1.5rem; }
             
-            .hero-buttons {
-                flex-direction: row;
-                justify-content: center;
-                max-width: none;
-                gap: 1.5rem;
-            }
+            .hero { padding: 8rem 0; }
+            .hero-grid { grid-template-columns: 1.2fr 0.8fr; gap: 6rem; }
+            .hero-content h2 { font-size: 5.5rem; }
 
-            .hero-stats {
-                flex-direction: row;
-                justify-content: space-around;
-                margin-top: 6rem;
-                padding-top: 4rem;
-            }
+            /* Bento Grid Layout */
+            .bento-grid { grid-template-columns: repeat(2, 1fr); }
+            .bento-large { grid-column: span 2; }
+            
+            .services-grid { grid-template-columns: repeat(3, 1fr); }
+            .test-grid { grid-template-columns: repeat(3, 1fr); }
+            .form-grid.row-2 { grid-template-columns: 1fr 1fr; }
 
-            /* Desktop Grids */
-            .grid { grid-template-columns: repeat(3, 1fr); }
             .footer-grid { grid-template-columns: 2fr 1fr 1fr; }
-            .footer-bottom {
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-                text-align: left;
-            }
+            .footer-bottom { flex-direction: row; justify-content: space-between; align-items: center; text-align: left; }
         }
     </style>
 </head>
@@ -583,12 +286,8 @@
 
     <header>
         <div class="container nav-container">
-            <a href="/" class="logo">
-                <img src="LionessRoofing.png" alt="Lioness Roofing Logo" class="logo-img">
-            </a>
-            
+            <a href="/" class="logo"><img src="LionessRoofing.png" alt="Lioness Roofing Logo" class="logo-img"></a>
             <input type="checkbox" id="menu-toggle" class="menu-toggle">
-            
             <nav class="nav-menu">
                 <ul>
                     <li><a href="/">Home</a></li>
@@ -598,7 +297,6 @@
                     <li><a href="/contact">Contact</a></li>
                 </ul>
             </nav>
-
             <div class="header-actions">
                 <a href="tel:7705888830" class="btn-header-call">Call Now</a>
                 <label for="menu-toggle" class="menu-icon"><span class="navicon"></span></label>
@@ -607,61 +305,187 @@
     </header>
 
     <main>
+        
         <section class="hero">
-            <div class="container hero-content">
+            <div class="container hero-grid">
                 
-                <h1>Defend Your Domain.<br><span>With Precision.</span></h1>
-                <p>Uncompromising structural integrity. Engineered for ultimate protection. Crafted with absolute attention to detail for Georgia homeowners.</p>
-                
-                <div class="hero-buttons">
-                    <a href="/contact" class="btn btn-primary">Request Inspection</a>
-                    <a href="/services" class="btn btn-accent">Our Systems</a>
+                <div class="hero-content">
+                    <h1>Lioness Roofing</h1>
+                    <h2>Tough Like A Mother.</h2>
+                    <p>Every roof we install is engineered to meet and exceed building code standards. We don't just replace shingles; we design complete roofing systems built for longevity.</p>
                 </div>
 
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-num">50<small>Yrs</small></span>
-                        <span class="stat-label">Material Warranty</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-num">25<small>Yrs</small></span>
-                        <span class="stat-label">Workmanship Guarantee</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-num">100<small>%</small></span>
-                        <span class="stat-label">Veteran Integrity</span>
-                    </div>
+                <div class="hero-form-card">
+                    <h3>Get In Touch</h3>
+                    <p>Request your professional inspection today.</p>
+                    <form action="/contact" method="POST">
+                        <div class="form-grid row-2">
+                            <div class="form-group">
+                                <label for="firstName">First name*</label>
+                                <input type="text" id="firstName" name="firstName" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last name*</label>
+                                <input type="text" id="lastName" name="lastName" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-grid" style="margin-top: 1rem;">
+                            <div class="form-group">
+                                <label for="phone">Phone*</label>
+                                <input type="tel" id="phone" name="phone" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email*</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="margin-top: 0.5rem; width: 100%;">Submit</button>
+                        </div>
+                    </form>
                 </div>
 
             </div>
         </section>
 
-        <section class="services section-padding">
+        <section class="features-section section-padding">
             <div class="container">
-                <div class="services-header">
-                    <h2>Engineered Excellence.</h2>
-                    <p>Premium solutions tailored to secure your most valuable assets, backed by industry-leading certifications.</p>
+                <div class="section-header">
+                    <h2>Why Choose Lioness</h2>
                 </div>
-                <div class="grid">
-                    <div class="card">
-                        <h3>Architectural Systems</h3>
-                        <p>Total architectural renewal. We strip away the old and engineer a flawless, weather-impervious barrier designed to last decades using premium asphalt shingle technology.</p>
+
+                <div class="bento-grid">
+                    
+                    <div class="bento-card bento-large">
+                        <h3>Code-Compliant Craftsmanship</h3>
+                        <p>Every roof we install is engineered to meet - and exceed - building code standards. We don't just replace shingles; we design complete roofing systems built for longevity. From matching proper materials to the roof's pitch to ensuring precise ventilation and watertight protection, every detail is evaluated with durability and compliance in mind. We build our roofs to last - because a Lioness protects her den for life.</p>
+                        <a href="tel:7705888830" class="btn btn-gold" style="align-self: flex-start;">Call Now</a>
                     </div>
-                    <div class="card">
-                        <h3>Impact Resistance</h3>
-                        <p>Shield your home against extreme weather. We specialize in Class 3 and Class 4 impact-resistant installations that provide superior defense against hail and wind.</p>
+
+                    <div class="bento-card">
+                        <h3>Flashing Done Right</h3>
+                        <p>Most roof failures begin where flashing fails. That’s why we go above and beyond - custom-fitting every piece with the proper gauge metal and precision detailing. While many roofers overlook this critical step or skip cutting flashing into brick, stone, or stucco, we never do. Our flashing is engineered, not improvised, because lasting protection starts at the details.</p>
+                        <a href="/contact" class="btn btn-outline">Get in Touch</a>
                     </div>
-                    <div class="card">
-                        <h3>Storm Restoration</h3>
-                        <p>Rapid response structural defense. When nature strikes, we advocate for you during the insurance process to restore safety and total peace of mind without shortcuts.</p>
+
+                    <div class="bento-card">
+                        <h3>Enhanced Protection at All Penetrations</h3>
+                        <p>We apply ice and water shield around all roof penetrations - and wherever your roof meets a wall, not just where it is required like the valleys - to ensure your home stays protected from water intrusion, even in vulnerable areas.</p>
+                        <a href="/services" class="btn btn-outline">Protect Your Home</a>
                     </div>
+
+                    <div class="bento-card">
+                        <h3>Lifetime-Grade Materials</h3>
+                        <p>Every roof includes lifetime silicone pipe jacks, not the cheap rubber ones that dry out and crack within a decade. We believe in doing it once - and doing it right.</p>
+                        <a href="/roofinspections" class="btn btn-outline">Call For Inspection</a>
+                    </div>
+
+                    <div class="bento-card">
+                        <h3>Detail-Driven Service</h3>
+                        <p>We’re obsessed with the little things — the details most roofers assume you’ll never notice. Like leaving no caulked nails showing, granulating every caulked nail, and designing our roofs to be not only functionally long lasting, but aesthetically seamless. From start to finish, we prioritize long-term quality over shortcuts.</p>
+                        <a href="/about" class="btn btn-outline">See For Yourself</a>
+                    </div>
+
                 </div>
             </div>
         </section>
+
+        <section class="about-block">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>At Lioness Roofing, we take pride in being a family-owned and locally operated business. Our roots run deep in this community, and every roof we build is a reflection of our commitment to the families who live here. We treat every home as if it were our own, combining trusted craftsmanship with a neighborly approach you can count on. When you choose Lioness Roofing, you're not hiring a big, faceless corporation - you're supporting a local family that's dedicated to protecting yours.</p>
+            </div>
+        </section>
+
+        <section class="services-preview section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Services</h2>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>Roof Repair</h3>
+                        <p>Sometimes all you need is a small repair, and we are dedicated to making sure they are done right. Call us to ensure your repairs are done in a way that maintains the integrity of your roof.</p>
+                        <a href="/roofrepairs" class="btn btn-outline" style="margin-top: 1rem;">View Details</a>
+                    </div>
+                    <div class="service-card">
+                        <h3>Roof Installation</h3>
+                        <p>Our installations are thorough, detail-oriented, and done right the first time. Our teams are dedicated to providing you with a high-quality roof equipped to last you a lifetime.</p>
+                        <a href="/roofinstallations" class="btn btn-outline" style="margin-top: 1rem;">View Details</a>
+                    </div>
+                    <div class="service-card">
+                        <h3>10-Point Inspection</h3>
+                        <p>Everything starts with a thorough, 10-point inspection to ensure we understand exactly what type of damage your roof has and which service will best meet your needs.</p>
+                        <a href="/roofinspections" class="btn btn-outline" style="margin-top: 1rem;">View Details</a>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 4rem;">
+                    <a href="tel:7705888830" class="btn btn-primary">Call Now to Protect Your Den</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Client Testimonials</h2>
+                </div>
+                <div class="test-grid">
+                    
+                    <div class="test-card">
+                        <p>"Talon was referred by a friend. He did a full roof replacement for them and came out to inspect mine. I was very impressed by Talon's honesty. He found that I had exposed nails, clogged gutters, and one wind damage shingle. Talon fixed all of that and it took him less than an hour, and he didn't charge me a thing... Highly recommend this guy."</p>
+                        <h4>Chris</h4>
+                    </div>
+
+                    <div class="test-card">
+                        <p>"Talon is the best! He helped us through a difficult process with our insurance company Allstate... Talon helped negotiate with Allstate to get me a max settlement. Then he gave me a big discount on the roof! We financed it through our bank, and Talon gave us a lifetime roof package! The work was done in a day and it was very impressive... Call this company, you won't regret it!"</p>
+                        <h4>John B.</h4>
+                    </div>
+
+                    <div class="test-card">
+                        <p>"Talon is the best roofer by far! We were in a spot where we had hail damage to our roof and our insurance company Allstate was denying us. Talon and one of his associates came by and... got us completely covered. He didn't even stop with our roof, he made sure that we got paid for everything that was damaged... High level of communication, definitely satisfied with the product."</p>
+                        <h4>Kristine B.</h4>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section section-padding">
+            <div class="container narrow-container">
+                <div class="section-header">
+                    <h2>Frequently Asked Questions</h2>
+                </div>
+                
+                <details>
+                    <summary>What sets Lioness Roofing apart from other roofers?</summary>
+                    <div class="faq-answer">
+                        We don’t just “shingle and go.” We design and install complete roofing systems with precision - overseeing the decking, underlayment, ventilation, flashing, and finishing stages with a plan to go above manufacture and building code standards - a lioness watches over every corner of her den. Our approach is rooted in craftsmanship, honesty, and doing the job right the first time.
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Do you help with storm damage and insurance claims?</summary>
+                    <div class="faq-answer">
+                        Yes. It’s one of our specialties. From free inspections to claim documentation and meeting with adjusters, we stand by your side like a lioness shielding her cubs. We ensure your claim reflects true damage, not shortcuts.
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Are you licensed, insured, and local?</summary>
+                    <div class="faq-answer">
+                        Yes! Lioness Roofing is licensed and insured. We’re locally rooted, family-owned, and proud to serve our community with integrity, passion, and purpose. We don’t chase storms—we build trust.
+                    </div>
+                </details>
+
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="/faq" class="btn btn-outline">View All FAQs</a>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer>
-        <div class="container footer-container">
+        <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
                     <div class="logo">
